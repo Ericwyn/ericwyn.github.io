@@ -1,0 +1,477 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#202529">
+  <meta name="description" content="">
+  <meta name="author" content="Ericwyn">
+  <meta name="keywords" content="Java,Golang,Coding,Programme,Ericwyn">
+  
+  <title>Nexus5X-AOSP编译问题记录 - 点石斋</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.meetwhy.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>点石斋</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                主页 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives">
+                
+                归档 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags">
+                
+                标签 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links">
+                
+                友链 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about">
+                
+                关于 
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Nexus5X-AOSP编译问题记录">
+              
+                Nexus5X-AOSP编译问题记录
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-11-04 11:00" pubdate>
+        2018年11月4日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      11
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Nexus5X-AOSP编译问题记录</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2018年11月20日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>入坑 Android Framework ，所以先尝试着自己编译一个 ROM，因为手上有的设备是 Nexus 5X ，没有开发板，所以就先拿着可怜的小5X 来测试吧</p>
+<p>照着 <a target="_blank" rel="noopener" href="https://blog.csdn.net/w_xue/article/details/77418011">为nexus 5x编译android n固件
+</a> 里面的教程一步步的做，先在 tuna 下载 AOSP 源码，然后又去官网下载驱动</p>
+<p>然后用 <code>make -j4</code> 编译，以下是自己遇到的大坑</p>
+<h2 id="趟坑记录"><a href="#趟坑记录" class="headerlink" title="趟坑记录"></a>趟坑记录</h2><h3 id="JDK-版本问题"><a href="#JDK-版本问题" class="headerlink" title="JDK 版本问题"></a>JDK 版本问题</h3><p>Android 8.1 要求编译时候使用 OpenJDK，虽然我的电脑上面是装了 OpenJDK 和 Oracle JDK，但是一直用的都是 Oracle JDK，一开始使用</p>
+<pre><code>    sudo update-alternatives --config java
+</code></pre>
+<p>切换版本，但是却不起作用，就觉得的很奇怪，我用的用户 <code>ericwyn</code> 下面，JDK 是  Oracle的，而切换到了 <code>sudo</code> 之后，JDK 就是 <code>OpenJDK</code> 了，懒得折腾然后直接用 <code>sudo make -j4</code> 来运行（然而这样是错的，这里又挖了一个坑，后面会提到），最后还是修改了 ~/.bashrc 环境变量文件来设置 OpenJDK，而后再使用 <code>make -j4</code> 编译</p>
+<h3 id="jack-server-问题"><a href="#jack-server-问题" class="headerlink" title="jack-server 问题"></a>jack-server 问题</h3><ul>
+<li>sudo 下没有 jack-server 上面提到的，一开始我因为JDK 版本的问题，使用 sudo 来编译，然而却发现找不到 <code>jack-server</code>。 起初我就只是一直在命令行 <code>jack-admin start-server</code> 来测试而已，结果发现没问题啊，但是后面才醒悟，用 sudo 编译的话，也要 <code>sudo jack-admin start-server</code>，然后才发现问题所在，sudo 下面并没有 jack-admin … 解决的方法就是上面，配置普通用户的环境变量，使用 OpenJDK 在普通用户下编译</li>
+</ul>
+<ul>
+<li>Jack server failed to (re)start jack server 无法启动，很奇怪的错误，<ul>
+<li>我先是 rm 了 <code>/home/ericwyn/.jack-server</code> 文件夹</li>
+<li>然后 <code>jack-admin install-server</code> 重新安装 server</li>
+<li>尝试 <code>jack-admin start-server</code> 启动，<code>ps</code> 查看进程之后发现 jack-server 已经启动了，然后尝试重新编译</li>
+</ul>
+</li>
+</ul>
+<h3 id="Ubuntu-18-04-下编译输出-lexer-cpp-失败"><a href="#Ubuntu-18-04-下编译输出-lexer-cpp-失败" class="headerlink" title="Ubuntu 18.04 下编译输出  lexer.cpp 失败"></a>Ubuntu 18.04 下编译输出  <code>lexer.cpp</code> 失败</h3><p>提示 </p>
+<pre><code>FAILED: out/target/product/gordon_peak_xen/obj/STATIC_LIBRARIES/libedify_intermediates/lexer.cpp
+</code></pre>
+<p>在 <a target="_blank" rel="noopener" href="http://rangerzhou.top/2018/08/29/Ubuntu18.04%E7%BC%96%E8%AF%91%E9%97%AE%E9%A2%98/">Ubuntu18.04编译问题</a> 中看到解决方案</p>
+<p>解决方法是</p>
+<ul>
+<li>把 <code>export LC_ALL=C</code> 这行代码添加到 bashrc 文件中，<code>LC_ALL=C</code> 是为了去除所有本地化的设置，让命令能正确执行</li>
+</ul>
+<h2 id="等待编译"><a href="#等待编译" class="headerlink" title="等待编译"></a>等待编译</h2><p>我个人觉得，如果编译的话如果能够跑完前面的 10% ，那么一般后面的 90% 应该也不会有问题了。</p>
+<p>关于编译时间，我的电脑是 Thinkpad T450 ，配置 I5-5300U，系统是 Ubuntu 18.04 ，用 <code>make -j4</code> 使用四个核心来编译，一共是用了 <code>04:58:01</code>，我的 CPU 一直满载了 5 个小时啊天…. </p>
+<pre><code>#### build completed successfully (04:58:01 (hh:mm:ss)) ####
+</code></pre>
+<p>无比羡慕那些一个小时就能跑完的 dalao</p>
+<p>编译过程中一般会有很多 warning，无视就好了</p>
+<h2 id="刷入-Image"><a href="#刷入-Image" class="headerlink" title="刷入 Image"></a>刷入 Image</h2><p>先设定输出目录，就是你的 IMG 编译好的地方</p>
+<pre><code>export ANDROID_PRODUCT_OUT=/your/path/to/img
+</code></pre>
+<p>找到编译输出的  fastboot 的所在，然后进入到所在的文件夹</p>
+<pre><code>whitch fastboot
+</code></pre>
+<p>先切换到 su（避免权限问题）， 用这里的 fastboot 的 devices 命令找到连接的设备</p>
+<pre><code>./fastboot devices      
+// 输入如下 
+00c996d81da7a82f    fastboot
+</code></pre>
+<p>然后开始刷机</p>
+<pre><code>./fastboot -w flashall 
+</code></pre>
+<p>刷机的过程一般很快的，刷完之后会自动重启，然后就可以看到清水出芙蓉的 AOSP 了</p>
+<p>另外如果出现像 <code>error: neither -p product specified nor ANDROID_PRODUCT_OUT set</code> 的错误提示的话，是因为你没有设置 <code>ANDROID_PRODUCT_OUT</code>，使用下面的命令设置就好了</p>
+<pre><code>export ANDROID_PRODUCT_OUT=&#123;你输出的文件夹，例如 out/target/product/bullhead&#125;
+</code></pre>
+<h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>吐槽一下，我电脑只有两个固态，加起来不过600 g 的空间…对于编译 AOSP 来说确实不太够呜呜呜，以后一定要买个 1T 的固态口亨</p>
+<p>另外用 Thinkpad T 系列这么久，是在编译 AOSP 的时候，才第一次深刻发觉，CPU 真的是不太够用啊，我这样一边编译，一边写博文，居然是已经卡到不能自拔了…</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/AOSP/">AOSP</a>
+                    
+                      <a class="hover-with-bg" href="/tags/AndroidFramework/">AndroidFramework</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/add-apks-in-aosp-build.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">AOSP植入第三方应用趟坑记录</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/java-jni-quick-start.html">
+                        <span class="hidden-mobile">Java-JNI简单教程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

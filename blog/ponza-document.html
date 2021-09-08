@@ -1,0 +1,516 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#202529">
+  <meta name="description" content="">
+  <meta name="author" content="Ericwyn">
+  <meta name="keywords" content="Java,Golang,Coding,Programme,Ericwyn">
+  
+  <title>Ponza博客评论系统-文档 - 点石斋</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.meetwhy.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>点石斋</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                主页 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives">
+                
+                归档 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags">
+                
+                标签 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links">
+                
+                友链 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about">
+                
+                关于 
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Ponza博客评论系统-文档">
+              
+                Ponza博客评论系统-文档
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-12-07 22:00" pubdate>
+        2018年12月7日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      551 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Ponza博客评论系统-文档</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2018年12月7日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="Ponza"><a href="#Ponza" class="headerlink" title="Ponza"></a>Ponza</h1><p>静态博客评论框架，灵感来自 Gitment</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="增加-key"><a href="#增加-key" class="headerlink" title="增加 key"></a>增加 key</h3><pre><code>.ponza -k &quot;blog.meetwhy.com&quot;
+// 显示如下
+key: b9df8d72b06f4f8399c71ab520600130 for host: blog.meetwhy.com
+</code></pre>
+<p>为项目新建一个 key，该 key 只允许使用在来自域名 <code>blog.meetwhy.com</code> 的访问</p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><pre><code>.ponza
+</code></pre>
+<p>启动项目在 localhost:2334 端口</p>
+<h3 id="配置反向代理"><a href="#配置反向代理" class="headerlink" title="配置反向代理"></a>配置反向代理</h3><p>将你的 ponza 服务域名反向代理到 localhost:2334，如果你的 caddy 配置示例如下</p>
+<pre><code>api.ponza.host.com &#123;
+    proxy / localhost:2334 &#123;    
+        transparent
+    &#125;
+&#125;
+</code></pre>
+<h3 id="引入-Ponza-的-js-和-css"><a href="#引入-Ponza-的-js-和-css" class="headerlink" title="引入 Ponza 的 js 和 css"></a>引入 Ponza 的 js 和 css</h3><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;ponza.css&quot;&gt;
+&lt;script src=&quot;js/ponza.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><pre><code>Ponza(&quot;test&quot;,&#123;                                       // 配置评论所在 dom
+    page:window.location.pathname,                      // 配置页面标记
+    server:&quot;https://wx.meetwhy.com&quot;,                    // 配置服务器地址
+    key:&quot;b9df8d72b06f4f8399c71ab520600130&quot;,             // 配置 key
+&#125;);
+</code></pre>
+<h2 id="后台数据库"><a href="#后台数据库" class="headerlink" title="后台数据库"></a>后台数据库</h2><p>Ponza 将全部数据都存储在本地的 json 文件当中，不需要依赖于数据库<br>存储的地址是 <code>.ponza</code> 文件夹，每个文件以 <code>host.json</code> 来命名，存储该网站下面所有的评论数据</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="上传评论接口"><a href="#上传评论接口" class="headerlink" title="上传评论接口"></a>上传评论接口</h3><ul>
+<li><code>/api/uploadComm</code></li>
+<li><code>POST</code></li>
+<li>参数<ul>
+<li><code>key</code> ponza 的 key</li>
+<li><code>page</code> 页面的标记 </li>
+<li><code>comm</code> 评论正文</li>
+<li><code>name</code> 评论的昵称</li>
+<li><code>mail</code> 邮箱</li>
+</ul>
+</li>
+<li>返回<pre><code> &quot;upload message success&quot;
+</code></pre>
+</li>
+</ul>
+<h3 id="获取评论接口"><a href="#获取评论接口" class="headerlink" title="获取评论接口"></a>获取评论接口</h3><ul>
+<li><code>/api/getComm</code></li>
+<li><code>POST</code></li>
+<li>参数<ul>
+<li><code>key</code> ponza 的 key</li>
+<li><code>page</code> 页面的标记</li>
+</ul>
+</li>
+<li>返回<pre><code> &#123;
+     &quot;page&quot;: &quot;/blog/ubuntu-bash-ch.html&quot;,
+     &quot;comment&quot;: [
+         &#123;
+             &quot;comm&quot;: &quot;评论 : 1544173519984&quot;,
+             &quot;time&quot;: &quot;2018-12-07T17:05:20+08:00&quot;,
+             &quot;name&quot;: &quot;Ericwyn&quot;,
+             &quot;mail&quot;: &quot;ericwyn.chen@gmail.com&quot;,
+             &quot;agent&quot;: &quot;Ubuntu 18.04 上的 Chrome 71.0 浏览器&quot;
+         &#125;,
+         &#123;
+             &quot;comm&quot;: &quot;评论 : 1544173530023&quot;,
+             &quot;time&quot;: &quot;2018-12-07T17:05:30+08:00&quot;,
+             &quot;name&quot;: &quot;Ericwyn&quot;,
+             &quot;mail&quot;: &quot;ericwyn.chen@gmail.com&quot;,
+             &quot;agent&quot;: &quot;Ubuntu 18.04 上的 Chrome 71.0 浏览器&quot;
+         &#125;
+     ]
+ &#125;
+</code></pre>
+</li>
+</ul>
+<h3 id="评论初始化接口"><a href="#评论初始化接口" class="headerlink" title="评论初始化接口"></a>评论初始化接口</h3><p>当评论接口或者上传接口返回 4003 时候代表页面的评论数据未创建，使用该接口创建该页面的数据配置</p>
+<ul>
+<li><code>api/initComm</code></li>
+<li><code>POST</code></li>
+<li>参数<ul>
+<li><code>key</code> ponza 的 key</li>
+<li><code>page</code> 页面的标记</li>
+</ul>
+</li>
+<li>返回<pre><code> &quot;page create success&quot;
+</code></pre>
+</li>
+</ul>
+<h3 id="错误码"><a href="#错误码" class="headerlink" title="错误码"></a>错误码</h3><pre><code>   &#123;&quot;code&quot;:&quot;4003&quot;&#125;
+</code></pre>
+<ul>
+<li>4000     服务器错误</li>
+<li>4001     host 错误</li>
+<li>4002     key 错误</li>
+<li>4003     page 错误</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Golang/">Golang</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/fuck-maimai.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">和脉脉斗智斗勇的一个晚上</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/ubuntu-bash-ch.html">
+                        <span class="hidden-mobile">Ubuntu 终端乱码解决方法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

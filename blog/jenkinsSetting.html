@@ -1,0 +1,528 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#202529">
+  <meta name="description" content="">
+  <meta name="author" content="Ericwyn">
+  <meta name="keywords" content="Java,Golang,Coding,Programme,Ericwyn">
+  
+  <title>使用 Jenkins 自动构建项目 - 点石斋</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.meetwhy.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>点石斋</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                主页 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives">
+                
+                归档 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags">
+                
+                标签 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links">
+                
+                友链 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about">
+                
+                关于 
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="使用 Jenkins 自动构建项目">
+              
+                使用 Jenkins 自动构建项目
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-09-07 16:00" pubdate>
+        2018年9月7日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      929 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">使用 Jenkins 自动构建项目</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2018年11月20日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>公司项目开发到后期需要放到服务器上面去运行测试，但是不想每次都在本地编译成 jar 之后传到服务器再运行，于是使用 Jenkins 来完成这些步骤</p>
+<h2 id="安装-jenkins"><a href="#安装-jenkins" class="headerlink" title="安装 jenkins"></a>安装 jenkins</h2><pre><code># 需要先安装 java
+apt install software-properties-common
+add-apt-repository ppa:webupd8team/java
+apt-get update
+apt-get install oracle-java8-installer
+
+# 安装 jenkins
+wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c &#39;echo deb http://pkg.jenkins-ci.org/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list&#39;
+sudo apt-get update
+sudo apt-get install jenkins
+</code></pre>
+<h2 id="配置-jenkins"><a href="#配置-jenkins" class="headerlink" title="配置 jenkins"></a>配置 jenkins</h2><pre><code>vim /etc/default/jenkins 
+</code></pre>
+<p>修改里面的 http 端口</p>
+<h2 id="caddy-反向代理"><a href="#caddy-反向代理" class="headerlink" title="caddy 反向代理"></a>caddy 反向代理</h2><pre><code>jenkins.domain.com &#123;
+        proxy / localhost:8080 &#123;
+                transparent
+        &#125;
+&#125;
+</code></pre>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><pre><code>/etc/init.d/jenkins start
+# 或者 service jenkins start
+</code></pre>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>访问 <code>jenkins.domain.com</code> 完成配置，<br>一般直接选择默认配置就好了<br>一开始需要获取默认密码，使用</p>
+<pre><code>cat /var/lib/jenkins/secrets/initialAdminPassword
+</code></pre>
+<p>可以获取</p>
+<h2 id="获取-API-TOKEN"><a href="#获取-API-TOKEN" class="headerlink" title="获取 API TOKEN"></a>获取 API TOKEN</h2><ul>
+<li><p>面板右边的系统管理</p>
+</li>
+<li><p>管理用户</p>
+</li>
+<li><p>用户列表右边的图标</p>
+</li>
+<li><p>拿到用户的 USER ID 和 API TOKEN</p>
+<pre><code>User ID : root
+API TOKEN : 7d77089fq8f86906px5b5d707d13d
+</code></pre>
+<p> <img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv11qft8ifj21h60r2af1.jpg" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ul>
+<h2 id="安装Hudson-Post-build-task-插件"><a href="#安装Hudson-Post-build-task-插件" class="headerlink" title="安装Hudson Post build task 插件"></a>安装<code>Hudson Post build task</code> 插件</h2><p>因为我们要让项目在构建成功之后自动运行，所以要手动增加一个插件 <code>Hudson Post build task</code></p>
+<h3 id="1-进入插件管理中心"><a href="#1-进入插件管理中心" class="headerlink" title="1 进入插件管理中心"></a>1 进入插件管理中心</h3><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv11zqqc7nj21h30qjjvv.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>搜索到 <code>Hudson Post build task</code> 插件之后安装就好了</p>
+<h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><h3 id="1-新建"><a href="#1-新建" class="headerlink" title="1 新建"></a>1 新建</h3><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv11pse47cj21h80q5gqb.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>一般选择第一个</p>
+<h3 id="2-配置-git-地址"><a href="#2-配置-git-地址" class="headerlink" title="2 配置 git 地址"></a>2 配置 git 地址</h3><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv11tazoeqj214y0nymza.jpg" srcset="/img/loading.gif" lazyload><br>填入 git 地址，如果有用户名和密码的话也要设置好</p>
+<h3 id="3-设置构建触发"><a href="#3-设置构建触发" class="headerlink" title="3 设置构建触发"></a>3 设置构建触发</h3><p><img src="https://ws1.sinaimg.cn/large/ae1a7c45gy1fv12u9agcoj215h0lrgnz.jpg" srcset="/img/loading.gif" lazyload><br>这里要配置一个 TOKEN，后面要用到</p>
+<h3 id="4-配置构建脚本"><a href="#4-配置构建脚本" class="headerlink" title="4 配置构建脚本"></a>4 配置构建脚本</h3><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv11vx8m5mj21590pndhv.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>我的项目是 Spring Boot ，使用 mvn 命令就可以构建了，所以脚本内容如下</p>
+<pre><code>echo $WORKSPACE
+echo $pwd
+mvn install -Dmaven.clean.failOnError=false -Djar.forceCreation -Dmaven.test.skip=true
+</code></pre>
+<h3 id="5-设置构建好之后的运行脚本"><a href="#5-设置构建好之后的运行脚本" class="headerlink" title="5 设置构建好之后的运行脚本"></a>5 设置构建好之后的运行脚本</h3><p>由于我们已经安装了 <code>Hudson Post build task</code>，所以能够选择构建之后运行特定的 Shell 脚本</p>
+<p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv122wpze4j21fl0r940t.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>脚本内容如下</p>
+<pre><code>#!/bin/bash 
+echo &quot;停止之前运行的 jar&quot;
+pid=`ps -ef | grep test-DEBUG-SNAPSHOT-exec | grep -v grep | awk &#39;&#123;print $2&#125;&#39;`
+if [ -n &quot;$pid&quot; ]
+then
+echo &quot;kill -9 的pid:&quot; $pid
+kill -9 $pid
+fi
+# 保持脚本运行
+BUILD_ID=dontKillMe
+
+# 将 jar 复制到运行文件夹
+cp /var/lib/jenkins/workspace/test/target/test-DEBUG-SNAPSHOT* /home/sboot/
+# 启动 jar
+java -jar /home/sboot/test-DEBUG-SNAPSHOT-exec.jar &amp;
+</code></pre>
+<h3 id="6-设置权限"><a href="#6-设置权限" class="headerlink" title="6 设置权限"></a>6 设置权限</h3><p>起初我无法在构建之后运行脚本，一直提示权限不足，后面将 jenkins 设置为 ROOT 权限运行之后，就可以解决了，虽然会有不安全的因素</p>
+<p> 设置步骤如下</p>
+<pre><code>vim /etc/default/jenkins
+# 修改或者增加 JENKINS_USER=&quot;root&quot;
+
+# 然后修改Jenkins home，webroot和日志的所有权
+chown -R root:root /var/lib/jenins
+chown -R root:root /var/cache/jenkins
+chown -R root:root /var/log/jenkins
+
+# 重启 jenkins
+service restart jenkins
+</code></pre>
+<h2 id="设置-webhook"><a href="#设置-webhook" class="headerlink" title="设置 webhook"></a>设置 webhook</h2><p>新建完项目之后我们就可以设置 WebHook 使得我们 push 了之后项目 jenkins 能够知道并有所动作</p>
+<p>因为项目是放在 Gitee 上面的，所以这里就以 Gitee 作为示范</p>
+<p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv12cl707ij20zb0prjv3.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>地址的格式是</p>
+<pre><code>https://&#123;你的User ID&#125;:&#123;你的API TOKEN&#125;@&#123;你的服务器域名&#125;/job/&#123;jenkins上面的项目名称&#125;/build?token=&#123;远程构建的触发认证TOKEN&#125;
+</code></pre>
+<p>例如</p>
+<pre><code>https://admin:7d77089fq8f86906px5b5d707d13d@jenkins.domains.com/job/Test/build?token=Build-TOKEN
+</code></pre>
+<p>填进去之后就可以测试了，如果 Webhook 无法生效的话，可能是 jenkins 设置了跨域访问限制，可以在</p>
+<pre><code>系统管理 -&gt; 全局安全配置 -&gt; CSRF Protection
+</code></pre>
+<p>  设置，取消跨域访问限制</p>
+<p> 后面的就是测试构建能够成功，以及根据输出来修改构建脚本或者运行脚本吧</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Server/">Server</a>
+                    
+                      <a class="hover-with-bg" href="/tags/jenkins/">jenkins</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/spring-boot-custom-annotation.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Spring Boot当中使用自定义注解</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/201877.html">
+                        <span class="hidden-mobile">鹊桥仙 七夕</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

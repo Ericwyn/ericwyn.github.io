@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>浪淘沙 折戟锈千年</title>
+    <link href="/blog/ci-20200830.html"/>
+    <url>/blog/ci-20200830.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>折戟锈千年，青史留篇英雄自古另谁怜誓语桃园期共死，未有成全蜀道可登天，荆益难连空教忠骨冢长眠洒尽生前皆血泪，弹指如烟</code></pre><p>浪淘沙 填于 二零二零年八月三十日</p><p>最近重看央视版三国演义，只到凤雏落坡便 “不忍卒读”， 此后刘备诸葛入川，关羽失荆州，再有三兄弟接连死去</p><p>可叹蜀汉尚未建国，便已盛极将衰<br>三国、蜀汉这般招人喜欢，我想便是因为小说其中，有属于国人的浪漫英雄主意 那是一个英雄的时代</p><p>恰巧南山博物馆有三国志展，某周六晚前去参观 只觉三国征战，汉晋相交，无数征伐故事，在往后数千年历史长河里面，亦不过只如清烟一阵，不胜感慨 展台上一把折戟，满满铁锈，不知道千年之前又是谁人手持？</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>鹊桥仙 七夕（二）</title>
+    <link href="/blog/ci-20200825.html"/>
+    <url>/blog/ci-20200825.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>长空冉冉，星云熠熠，此夜鹊桥飞砌。烦劳月老几多人，检书册、翻寻次第。还曾相劝，太白斟起，不受别离迭继。却也百载换姻缘，至今日，红绳来系。</code></pre><p>二零二零年，七夕夜作</p><p>又是一年七夕，想起两年之前七夕夜，和信轩在网吧中度过<br>那时填了一首鹊桥仙，有</p><p>劝君不如，太白甄起，忘却情愁思绪， 料想人间姻缘事，也只是，红绳牵与。</p><p>当时何等寂寥，而后一年，偶遇子安，至今已一起度过一年有余<br>然而去年七夕只身北京，只可遥寄相思，到今年才第一次有在七夕夜携手相伴<br>曾经填到 “料想…” 云云，至今方可来 “还愿”</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>古风 渡口相别</title>
+    <link href="/blog/20190915.html"/>
+    <url>/blog/20190915.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>兰舟一叶孤帆直此去烟涛夜露湿皎皎我心如碧月潮声过海语君知</code></pre><p>2019年9月15日，九州渡口别后，舟船上作</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>卜算子慢 星霜换尽</title>
+    <link href="/blog/ci-20190626.html"/>
+    <url>/blog/ci-20190626.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>星霜换尽，鸿雁再临，客路又添肠断未唱阳关，酒醉数回几案旧欣欢，只换樽前叹皎月里，飞花树下，还凭泪眼相看驻马长亭慢有日暮烟波，草临秋岸此去天涯，尺素寄来几段盼忆起，桑蚕故里，有当时人面</code></pre><p>2019年6月26日，代填</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ubuntu 18.04 顶部状态栏图标消失解决办法</title>
+    <link href="/blog/ubuntu1804-gnome-top-panel-icons-disapear.html"/>
+    <url>/blog/ubuntu1804-gnome-top-panel-icons-disapear.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Ubuntu 18.04 从刚刚发布不久，我一直用到现在，原先由 Ubuntu 16.04 升级而来，一路当中用的还是挺舒畅的。但是有时候也有些小问题，其中一个困扰我很久的就是顶部状态栏有时候，ICON 可能会消失，例如 网易云音乐，微信，Seafile 等的 ICON 都没法显示。</p><h2 id="简单解决方法"><a href="#简单解决方法" class="headerlink" title="简单解决方法"></a>简单解决方法</h2><ul><li>方法1，重启电脑或者注销在登录</li><li>方法2，重启 GNOME ，<code>alt + f2</code>,输入  <code>r</code> ，回车</li></ul><h2 id="正经的解决方法"><a href="#正经的解决方法" class="headerlink" title="正经的解决方法"></a>正经的解决方法</h2><h3 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h3><p>参照</p><blockquote><p>Indicator icons do not appear after upgrade to Ubuntu 17.10<br>  <a href="https://askubuntu.com/questions/966987/indicator-icons-do-not-appear-after-upgrade-to-ubuntu-17-10">https://askubuntu.com/questions/966987/indicator-icons-do-not-appear-after-upgrade-to-ubuntu-17-10</a></p></blockquote><p>和 </p><blockquote><p>Why top panel icons disapear on Gnome after installing Unity?<br> <a href="https://askubuntu.com/questions/1045301/why-top-panel-icons-disapear-on-gnome-after-installing-unity">https://askubuntu.com/questions/1045301/why-top-panel-icons-disapear-on-gnome-after-installing-unity</a></p></blockquote><p>里面提到可能是 Unity 遗留了一些文件导致出现了冲突，直接运行 </p><pre><code>sudo apt remove indicator-application</code></pre><p>然后重启就好了。</p><h3 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h3><p>有可能是你的装了什么 GNOME 拓展导致 ICON 无法显示，chrome 打开</p><pre><code>https://extensions.gnome.org/local/</code></pre><p>查看自己安装的拓展，禁用掉一些 Error 或者是与状态栏相关的拓展试试</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Ubuntu 使用日常</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>解压google 官方 ota 包获得 img 文件</title>
+    <link href="/blog/extract_android_ota_payload.html"/>
+    <url>/blog/extract_android_ota_payload.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>下载了一个 Pixel2 的官方 ota 包, 但是却不知道怎么解压出 system.img 那一堆东西, 搜了一下发现 github 上面已经有了这样的工具了, 但是却是用 python 写的, 用起来有点麻烦, 记录一下</p><p><a href="https://github.com/cyxx/extract_android_ota_payload">https://github.com/cyxx/extract_android_ota_payload</a></p><h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><p>下载两个文件</p><ul><li>extract_android_ota_payload.py</li><li>update_metadata_pb2.py</li></ul><h2 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h2><pre><code>pip install protobuf</code></pre><p>注意: 如果提示 pip 不存在的话, ubuntu 直接先安装 pip 就行了</p><pre><code>sudo apt install python-pip</code></pre><h2 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h2><pre><code>python extract_android_ota_payload.py walleye-ota-pq2a.190205.002-f8793f98.zip tmp/</code></pre><p>这样就可以了</p><p>py 用起来还是有点麻烦, 必须先安装环境, 或者什么时候考虑用 go 写一个解压软件吧</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Ubuntu 使用日常</tag>
+      
+      <tag>Android</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>从零开始的微信支付接入（一）用户认证</title>
+    <link href="/blog/wxpay-start.html"/>
+    <url>/blog/wxpay-start.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="一，前言"><a href="#一，前言" class="headerlink" title="一，前言"></a>一，前言</h1><p>最近接到项目需要，需要接入微信支付。微信支付的麻烦早有耳闻，所以之前也一直不敢接这样的项目，但是没办法为了生计，还是要学习。本篇教程主要讲述如何接入微信支付，分为微信浏览器内h5网页调起支付，以及小程序内调起支付。</p><p>其实微信支付出来这么久了，各种教程基本 Google 就都会有，但是自己在写的时候却好像没有特别完整的，再加上微信官网文档不知道为什么总有一种让人觉得很难看懂的感觉（对不起是我太菜了 <em>(:з」∠)</em></p><p>所以在对接成功了之后决定写下这么一篇教程，来完整的记录自己的对接过程，既是教程，也是我自己的备忘录。</p><h2 id="1-1-开发参考"><a href="#1-1-开发参考" class="headerlink" title="1.1 开发参考"></a>1.1 开发参考</h2><p>整个对接过程，参考的最多的东西，主要是下面几个</p><ul><li><a href="https://github.com/Wechat-Group/WxJava">WxJava - 微信开发 Java SDK（开发工具包）</a> 的文档</li><li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_1">微信支付官方文档-JSAPI支付</a></li><li><a href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_1">微信支付官方文档-小程序支付</a></li></ul><h2 id="1-2-到底微信支付是个啥子流程"><a href="#1-2-到底微信支付是个啥子流程" class="headerlink" title="1.2 到底微信支付是个啥子流程"></a>1.2 到底微信支付是个啥子流程</h2><p>其实微信支付的流程那里，官网的示例图已经表达的很清楚了，花点心思看一下大概就懂了</p><p><img src="https://ws1.sinaimg.cn/large/ae1a7c45gy1g0gnu1vne9j20ot0rzt9d.jpg"></p><p>其中最主要就是三步</p><ul><li>【业务服务器】 通过接受前端用户的消息（例如商品 id 啊什么的），向【微信支付服务器】发出请求，来创建一个预付订单</li><li>【业务服务器】 获得【微信支付服务器】返回的预付订单信息返回给前端用户</li><li>前端用户通过预付订单信息，调起手机端app的支付操作，并进行支付</li></ul><br><p>所以整个对接的流程我会分成这几块过来讲</p><ul><li>（一）用户认证<br> 如何在微信浏览器内的网页中、小程序中，获取用户的 OpenId 标识</li><li>（二）支付订单发起<br> 如何在我们的服务器服务器里面，创建一个预付订单，并且返回给前端用户</li><li>（三）用户端发起支付<br> 用户在网页、小程序里面，如何通过已有的预付订单信息，来调起支付，</li></ul><br><h2 id="1-3-开始之前"><a href="#1-3-开始之前" class="headerlink" title="1.3 开始之前"></a>1.3 开始之前</h2><p>而在开始之前呢，你需要以下东西</p><ul><li>一个认证了的公众号</li><li>一个认证了的小程序</li><li>一个商户号</li></ul><br><p>如果你没有以上的条件呢，2333 就只能出门左转（划掉），其实也是可以继续看教程的<del>只是没法实操而已</del></p><h1 id="二，用户认证"><a href="#二，用户认证" class="headerlink" title="二，用户认证"></a>二，用户认证</h1><h2 id="2-1-为什么需要做用户认证"><a href="#2-1-为什么需要做用户认证" class="headerlink" title="2.1 为什么需要做用户认证"></a>2.1 为什么需要做用户认证</h2><p>我们作为商家，在收钱的时候，肯定是需要知道是谁发钱过来的。微信支付也是这样的，在微信支付的预付订单创建接口，一个比需要传递的参数就是用户的 openid</p><p>因此在支付之前，我们需要先进行用户认证，获取用户的openid 。所以实际上，对用户的认证，也就是获取用户的 openid。关于 openid 的介绍可以看这里</p><blockquote><p>小程序账户系统（openid和unionid）简介 <a href="https://zhuanlan.zhihu.com/p/34032336">https://zhuanlan.zhihu.com/p/34032336</a> </p></blockquote><p>小程序和网页里，获取 openid 的操作是不一样的，网页获取 openid 比起网页更加困难</p><h2 id="2-2-在微信网页当中获取用户-openid"><a href="#2-2-在微信网页当中获取用户-openid" class="headerlink" title="2.2 在微信网页当中获取用户 openid"></a>2.2 在微信网页当中获取用户 openid</h2><h3 id="2-2-1-业务流程"><a href="#2-2-1-业务流程" class="headerlink" title="2.2.1 业务流程"></a>2.2.1 业务流程</h3><p>官方文档地址：<a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140842">微信网页授权</a></p><p>微信服务器有个专门认证的网址，当用户在微信浏览器当中访问这个网址的时候就可以获得一个 code，当然为了后续方便的操作，这个网址非常复杂，其中包含了获得 code 之后跳转的网址等。而业务服务器可以通过这个获得的 code 来向微信服务器换取用户的 openid，具体的流程如下</p><br><ul><li><p>我们有个接口 <code>URI_A</code>，该接口不返回任何信息，而只是做一个 redirect 而已，让用户跳转过去访问微信服务器地址，而具体的这个微信服务器地址的拼接，就在 <code>URI_A</code> 里面完成</p><pre><code> // 微信公众号的 id 和 secret private static final String appid=&quot;wxad92dbbbcfehuxAfe&quot;; private static final String secret=&quot;a7df6e8b55feffeufexhufidaslkf442&quot;; //    //正式部署时候的域名,关系到用户获取了登录的 code 能否跳转回来 private static final String runDomain = &quot;https://wx.meetwhy.com&quot;; // 一个中途转跳的 URI，用户在允许微信鉴权之后，跳转到 URI_REDIRECT?code=CODE private static final String URI_REDIRECT = &quot;/user/wx/code&quot;;  /**  * 通过这个地址转跳去微信官方地址，以获取微信登录的 code  * 并在之后跳转到正式登录接口  *  * @return  */ @RequestMapping(&quot;/user/wx/login&quot;) public String redirectToWechat()&#123;     return &quot;redirect:https://open.weixin.qq.com/connect/oauth2/authorize?appid=&quot;+appid+&quot;&amp;redirect_uri=&quot;+ URLEncoder.encode(runDomain+ URI_REDIRECT)+&quot;&amp;response_type=code&amp;scope=snsapi_base&amp;state=STATE#wechat_redirect&quot;; &#125;</code></pre></li><li><p>我们有个 <code>URI_REDIRECT</code>,这个 URI 用户是不会自己访问的，而是由微信服务器在发给用户 code 之后跳转过来，在获得 code 之后会跳转到 <code>URI_REDIRECT?code=USER_CODE</code>, 所以在 <code>URI_REDIRECT</code> 里面我们就要对 USER_CODE 进行获取，有了这个 <code>code</code> ，加上我们的 <code>appid</code> 和 <code>appsecrect</code> 就可以向微信服务器兑换用户的 openid，兑换了 openid 之后，我们就让用户返回业务页面，比如业务主页等。</p><pre><code> /**  * 获取 Code 之后用户就访问这个地址，URI里面会带上一个 code 参数  *  * @param request  * @return  * @throws HttpException  * @throws IOException  */ @RequestMapping(value = URI_REDIRECT) public String wexinRegister(HttpServletRequest request) throws IOException &#123;     String openid ;     //用户微信登录获取openid     String code = (String) request.getParameter(&quot;code&quot;);     System.out.println(&quot; code 是 &quot; + code);     if(code == null)&#123;         return &quot;redirect:ErrorPageInWechatLogin.html&quot;;     &#125;     // 这里用了 Okhttp3     Request wxRequest = new Request.Builder()             .url(String.format(&quot;https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&amp;secret=%s&amp;code=%s&amp;grant_type=authorization_code&quot;, appid,secret,code))             .get()             .build();     Response response = httpClient.newCall(wxRequest).execute();     if (response.isSuccessful())&#123;         String respText = response.body().string();         JSONObject json = JSONObject.parseObject(respText);         openid = json.getString(&quot;openid&quot;);         // 成功之后就跳转回一个页面，带上 openid，当业务中应该是用户的 token，openid 应当保存在服务器         return (&quot;redirect:&quot;+runDomain+&quot;/wx.html?openid=&quot;+ openid);     &#125;else &#123;         return (&quot;redirect:&quot;+runDomain+&quot;/wx.html?openid=获取id失败&quot;);     &#125; &#125;</code></pre></li><li><p>至此，当用户跳转到 <code>wx.html</code> 的时候，就是已经获得自己的 openid （或者是服务器分发的 token 的了）</p></li></ul><br><p>这部分的更加详细代码可以在 <a href="https://gist.github.com/Ericwyn/03eda7c3b8da0625c3eaad596345a39c">这个 gist </a> 里面看到</p><h2 id="2-3-在微信小程序当中获取-openid"><a href="#2-3-在微信小程序当中获取-openid" class="headerlink" title="2.3 在微信小程序当中获取 openid"></a>2.3 在微信小程序当中获取 openid</h2><p>小程序的 openid 获取大致流程和网页获取差不多，只是后台这边获取 openid 有点修改而已（小程序传参的时候会用 json 格式，所以需要加上 JSON 解析类）</p><br><ul><li><p>小程序获取 code ，直接调用 wx.login 就可以了</p><pre><code> wx.login(&#123;   success: res =&gt; &#123;     console.log(&quot;登录数据&quot;)     console.log(res.code)     // 发送 res.code 到后台换取 openId, sessionKey, unionId     wx.request(&#123;         url: &quot;https://wx.meetwhy.com/api/wx/login&quot;,         data: &#123;         &quot;code&quot;:res.code,         &quot;errMsg&quot;:res.errMsg       &#125;,         method: &#39;POST&#39;, // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT         // header: &#123;&#125;, // 设置请求的 header         success: function(res)&#123;          console.log(res)         if (res.data.code === 1000)&#123;           console.log(&quot;获取 openid 成功 &quot; + res.data.data.openid)           wx.setStorageSync(&#39;openid&#39;, res.data.data.openid);//存储openid           &#125; else &#123;           console.log(&quot;获取 openid 失败&quot; + res.data.msg)         &#125;       &#125;       &#125;);   &#125; &#125;)</code></pre></li><li><p>后台对应的接口，这里使用 FastJson 来解析小程序的 http 请求参数</p><pre><code> /**  * 微信用户登录  * &lt;p&gt;  * POST  * code        前台调用微信接口返回  * errMsg      同上  *  * @param jsonParam  * @return  */ @RequestMapping(value = &quot;/api/wx/login&quot;, method = RequestMethod.POST, produces = &quot;application/json; charset=utf-8&quot;) public ResJson wechatLogin(@RequestBody JSONObject jsonParam) &#123;     String code = jsonParam.getString(&quot;code&quot;);     String errMsg = jsonParam.getString(&quot;errMsg&quot;);     String url = &quot;https://api.weixin.qq.com/sns/jscode2session?appid=&quot; + properties.getAppId() + &quot;&amp;secret=&quot; + properties.getAppSecret() + &quot;&amp;grant_type=authorization_code&amp;js_code=&quot; + code;     Request request = new Request.Builder()             .url(url)             .header(&quot;content-type&quot;, &quot;application/json&quot;)             .build();     Response response = null;     try &#123;         response = client.newCall(request).execute();         if (response.isSuccessful()) &#123;             String resp = response.body().string();             if (resp.contains(&quot;session_key&quot;) &amp;&amp; resp.contains(&quot;openid&quot;)) &#123;                 JSONObject obj = JSON.parseObject(resp);                 HashMap&lt;String, String&gt; resMap = new HashMap&lt;&gt;();                 resMap.put(&quot;openid&quot;, obj.getString(&quot;openid&quot;));                 return ResJson.successJson(&quot;login Success&quot;, resMap);             &#125; else &#123;                 return ResJson.failJson(-1, &quot;获取 openid 失败&quot;, null);             &#125;         &#125; else &#123;             return ResJson.failJson(-1, &quot;获取 openid 失败&quot;, null);         &#125;     &#125; catch (IOException e) &#123;         e.printStackTrace();         return ResJson.serverErrorJson(&quot;无法请求远程 openid&quot;);     &#125; &#125;</code></pre></li></ul><p>同样，这里也会有安全问题，openid 不应该直接传给客户端，而是因为保存在服务端（例如 session 里），这里只是个测试，正式写项目的时候要修改鸭~</p><h1 id="三，总结"><a href="#三，总结" class="headerlink" title="三，总结"></a>三，总结</h1><p>至此我们就完成了微信用户的认证了，下一篇就到了核心的操作——我们如何去对接微信服务器，创建一个预付订单。恭喜你学会了百分之30的微信支付技能鸭~</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>微信开发</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>古风 上元有感</title>
+    <link href="/blog/20160222-1.html"/>
+    <url>/blog/20160222-1.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>    寒梅落尽小亭轩    独身不忍玉壶前    今夕还望汾江月    寂寥人间总团圆          </code></pre><p>2016.02.22</p><p>丙申猴年上元之夜，应吐槽之外邀约写就</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>相见欢 东风千缕花前</title>
+    <link href="/blog/20160222-2.html"/>
+    <url>/blog/20160222-2.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>    东风千缕花前，似争妍    已是元宵灯影自相连    清晖浅，烛光艳，醉亭轩    如梦人间今夜是团圆        2016年2月22日    丙申猴年上元之日     </code></pre><p>丙申猴年上元之夜，应吐槽之外邀约，作诗一首，后又作词 相见欢一首。</p><p>今又逢上元佳节，留纪于此</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>香菇粉丝斋菜</title>
+    <link href="/blog/food1902131824.html"/>
+    <url>/blog/food1902131824.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们家里都有大年初一第一顿要吃斋菜的习惯，于是几乎每年的大年初一，都会有香菇炒粉丝吃，简单的香菇和粉丝，老爸能将他们炒的特别的香，放少一点盐我觉得这完全能当作主食！</p><h2 id="材料选择"><a href="#材料选择" class="headerlink" title="材料选择"></a>材料选择</h2><ul><li>大蒜（或者叫大葱？）</li><li>蒜头</li><li>粉丝</li><li>香菇</li></ul><h2 id="预先处理"><a href="#预先处理" class="headerlink" title="预先处理"></a>预先处理</h2><ul><li>粉丝泡水泡软 如果不泡软的话，等下炒的过程中要不断的加水，高手段位操作，学不来哈哈哈哈哈哈</li><li>香菇泡软 可以再处理一下，切掉伞柄</li></ul><h2 id="预炒香菇"><a href="#预炒香菇" class="headerlink" title="预炒香菇"></a>预炒香菇</h2><ul><li>蒜头切碎，和香菇一起放下去炒 这里可以下盐，避免最后香菇没有味道或者太淡，大火爆香，炒一两分钟后捞起香菇放到碟子里备用，爆香的蒜头就不需要拿起来了</li></ul><h2 id="炒粉丝"><a href="#炒粉丝" class="headerlink" title="炒粉丝"></a>炒粉丝</h2><p>首先，粉丝的一大特性就是干（所以会疯狂吸水），于是要求我们一开始就要把粉丝泡软泡透，而今天老爸因为赶时间所以没有泡软，于是炒的时候就不断的拿碗装一小半碗一小半碗的水加进去，期间不断通过铲子判断粉丝的软硬程度</p><p>具体的炒制步骤如下</p><ul><li><p>顺着上一个步骤爆香的蒜头，放入粉丝</p><p> 火不需要太大，但也不能太小，中火吧。炒的时间大概就是4分钟左右。等到粉丝颜色稍微变透明了，铲子按着觉得软硬程度好了就是好了</p></li><li><p>刀把大蒜头拍扁，斜着削成大概一个指节的长度，放下去一起炒</p><p> 这一步老爸切大蒜的刀法让我觉得很新奇哈哈哈哈，居然是削的动作</p></li><li><p>下盐，一些油，鸡粉，继续炒一两分钟</p><p> 这期间可以适当的加些水（四分之一碗？），因为大蒜在炒的时候可能会太干导致后面口感不好</p></li><li><p>然后把起初炒好的香菇放下来一起炒，再炒一会，就可以起锅了</p></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>人间烟火</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>一般青菜的烹饪</title>
+    <link href="/blog/food201902111938.html"/>
+    <url>/blog/food201902111938.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>青菜的做法总是相似的，大概就是清水煮好，然后做些酱汁淋上去</p><h2 id="青菜的选购"><a href="#青菜的选购" class="headerlink" title="青菜的选购"></a>青菜的选购</h2><ul><li>生菜<ul><li>生菜的话感觉随便买就好了，只要不烂就可以了</li></ul></li><li>白菜<ul><li>尽量选择那种小一点的白菜（嫩一点？），如果是那种很大颗的白菜的话就尽量不要买了，因为会有丝，口感不好难以吞下</li></ul></li></ul><h2 id="清水煮菜"><a href="#清水煮菜" class="headerlink" title="清水煮菜"></a>清水煮菜</h2><p>一般的菜感觉都可以先清水煮，至于什么时候煮熟呢，我感觉大部分菜只要颜色变深，就大概可以关掉火了（不过青菜总是可以生吃的，所以感觉哪怕煮不熟也没什么关系）</p><p>专门问了一下母上大人，是否要在煮的时候下盐？得到的回答是不需要，说下盐的话，煮了之后菜会变得韧。感觉是因为盐的存在让菜脱水？导致口感变差？</p><p>清水煮完之后放到盘子上准备淋酱汁~</p><h2 id="酱汁的制作"><a href="#酱汁的制作" class="headerlink" title="酱汁的制作"></a>酱汁的制作</h2><p>酱汁是这道菜的灵魂，是这盘青菜煮了之后好不好吃的关键。而酱汁的制作，其基础感觉在于“炸香的蒜头”</p><p>蒜头的香味会让普通的植物，升华成大部分人类都喜欢的食物。</p><ul><li>蒜头切碎</li><li>倒油热锅（油并不用太多，大概够爆香蒜头就好了）</li><li>放蒜头，等蒜头稍微变金黄的时候…</li><li>未完待续……</li><li>（某天里老爸在这一步里加了一些生粉勾芡）</li><li>制作完酱汁之后淋上去就好了</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>人间烟火</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>猪肝汤的制作</title>
+    <link href="/blog/food201902111940.html"/>
+    <url>/blog/food201902111940.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这个是我数年之前的一个笔记，那段时间特别喜欢猪肝汤，然后母上大人制作的猪肝汤实在是让我喝得很开心，但是猪肝这东西，一人，一个星期，最高，2两，别吃多了，吃多了胆固醇高… </p><h2 id="猪肝的预处理"><a href="#猪肝的预处理" class="headerlink" title="猪肝的预处理"></a>猪肝的预处理</h2><p>猪肝，和猪肾一样，有一股猪内脏的气味，那气味对于很多人来说，可能是难以忍受的。所以，处理猪肝的关键，就是去掉猪肝的那股味道。母上大人给出的处理方案是：先进行短时间的腌制。</p><ul><li>将猪肝洗净切好，切成薄数毫米的薄块 </li><li>面粉，酱油，盐，姜切细丝与猪肝一齐腌制，姜丝有去腥的作用（感觉如果要炒猪腰也可以用这个方法先腌制一下？）</li></ul><h2 id="炒制猪肝"><a href="#炒制猪肝" class="headerlink" title="炒制猪肝"></a>炒制猪肝</h2><ul><li>切好蒜末</li><li>油入锅，热油<ul><li>（注意，油不能太多，太多的话后面的汤会有很多油花泛着）</li></ul></li><li>爆香蒜头</li><li>放下猪肝，炒到8成熟。<ul><li>(这一步是关键，凭此去除猪肝本身的气味）</li></ul></li><li>猪肝捞起，放碟子里，然后开始做汤。</li></ul><h2 id="汤的制作"><a href="#汤的制作" class="headerlink" title="汤的制作"></a>汤的制作</h2><ul><li>水入锅，调咸淡</li><li>开了之后，放入刚刚炒好的猪肝，蒜末</li><li>再等水开，即可上锅。 </li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>人间烟火</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Spring Boot使用Redis整合Spring Cache</title>
+    <link href="/blog/spring-boot-with-spring-cache.html"/>
+    <url>/blog/spring-boot-with-spring-cache.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>业务中要求在 Spring Boot 框架上使用缓存来提高数据加载速度，减少对数据库的访问，于是使用 Spring Cache 来作为 Spring Boot 的缓存。</p><h2 id="一，加入依赖"><a href="#一，加入依赖" class="headerlink" title="一，加入依赖"></a>一，加入依赖</h2><p>由于需要使用 Redis，所以添加 Redis 的依赖是免不了的</p><h3 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml"></a><code>pom.xml</code></h3><pre><code>&lt;!--Spring redis--&gt;&lt;dependency&gt;    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;    &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;&lt;/dependency&gt;</code></pre><h3 id="加入配置-application-properties"><a href="#加入配置-application-properties" class="headerlink" title="加入配置 application.properties"></a>加入配置 <code>application.properties</code></h3><pre><code>spring.redis.database=5spring.redis.host=127.0.0.1spring.redis.port=6379spring.redis.password=password# 旧版本 Spring Boot 中的 redis 配置# spring.redis.jedis.pool.max-wait=-1ms# spring.redis.jedis.pool.max-active=8# spring.redis.jedis.pool.max-idle=8# spring.redis.jedis.pool.min-idle=0spring.redis.timeout=10000ms# Spring Boot 2.0.3 默认使用 lettuce 链接 redis，配置要变成这样# 连接池最大连接数（使用负值表示没有限制） 默认 8spring.redis.lettuce.pool.max-active=8# 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1spring.redis.lettuce.pool.max-wait=-1ms# 连接池中的最大空闲连接 默认 8spring.redis.lettuce.pool.max-idle=8# 连接池中的最小空闲连接 默认 0spring.redis.lettuce.pool.min-idle=0</code></pre><h2 id="二，引入-Spring-Cache"><a href="#二，引入-Spring-Cache" class="headerlink" title="二，引入 Spring Cache"></a>二，引入 Spring Cache</h2><p>在启动类添加注解，以引入 Spring Cache</p><pre><code>@SpringBootApplication@ServletComponentScan@EnableCachingpublic class FontainerApplication &#123;    public static void main(String[] args) &#123;        SpringApplication.run(FontainerApplication.class, args);    &#125;    &#125;</code></pre><h2 id="三，配置-Cache-注解"><a href="#三，配置-Cache-注解" class="headerlink" title="三，配置 Cache 注解"></a>三，配置 Cache 注解</h2><p>Cache 注解主要有下面几个，参考 <a href="https://www.jianshu.com/p/fd950f65aec7">spring-boot-cache使用实战-简书</a> 当中的表格介绍</p><pre><code>@Cacheable (存在缓存则直接返回,不存在则调用业务方法,保存到缓存)@CacheEvict (清楚缓存,可清楚cache里全部缓存)@CachePut (不管缓存存不存在,调用业务方法,将返回值set到缓存里面)</code></pre><p>我的话主要是用的是 <code>@Cacheable</code> 和 <code>@CacheEvict</code>，注解的是位于 Service 的方法，其中</p><ul><li><code>@Cacheable</code> 注解各种查询的业务方法，缓存首次查询的结果，后续的方法的时候直接返回首次查询时候缓存的结果</li><li><code>@CacheEvict</code> 注解各种插入的业务方法，因为一旦进行了插入，那么旧的缓存可能就会过期了，因此，使用该注解去清除由 <code>@Cacheable</code> 注解设置的缓存</li></ul><h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>下面的代码是 Service 层的代码，负责 Product 这个对象的查询和插入</p><pre><code>@Servicepublic class ProductService &#123;    @Autowired    ProductRepository productRepository;    @Cacheable(value = &quot;ProductService.listProduct&quot;)    public Page&lt;Product&gt; listProduct(int page, int size)&#123;        return productRepository.findAll(PageRequest.of(page, size));    &#125;        // 使用 CacheEvict 注解，一旦插入的时候    @CacheEvict(value = &quot;ProductService.listProduct&quot;, allEntries = true)    public Product addProduct(String name, String intro, String price, String pic)&#123;        Product product = new Product();        product.setName(name);        product.setIntro(intro);        product.setPrice(price);        product.setPic(pic);        return productRepository.save(product);    &#125;&#125;</code></pre><ul><li><code>listProduct(int page, int size)</code>使用 <code>@Cacheable(value = &quot;ProductService.listProduct&quot;)</code><br> 注解<ul><li>value 为 <code>ProductService.listProduct</code> 代表以这个名称来缓存其结果</li><li>默认的话，缓存的 key 是该方法的入参，也就是当入参一样并且存在缓存的时候，会直接返回已缓存的结果，否则的话会执行一下数据库查询。</li></ul></li><li><code>addProduct(String name, String intro, String price, String pic)</code> 使用 <code>@CacheEvict(value = &quot;ProductService.listProduct&quot;, allEntries = true)</code> 注解<ul><li>CacheEvict 注解的 value 为 <code>ProductService.listProduct</code> 代表要执行该方法的时候，要清楚该名称的缓存，allEntries = true 则代表删除所有 key 的缓存。</li></ul></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>SpringBoot</tag>
+      
+      <tag>Redis</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>烛影摇红 廿二岁生辰自题</title>
+    <link href="/blog/birth2018.html"/>
+    <url>/blog/birth2018.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>连换星霜，几曾院落桐花现。人间来去廿一年，谁教功名显？可笑寒窗已掩，再难得，书读百遍。夜深忽梦，近水楼台，霞烟尚浅。烛影摇红.廿二岁生辰自题</code></pre><p>时至今日，我梦中常常出现的数样东西之一，其一便是高中课室和语文课堂。</p><p>廿二已至，功名未显。毕业将近，寒窗将掩。凭此半阙烛影摇红，自斟自饮，自唱自和。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Sprinp Boot配置文件外置</title>
+    <link href="/blog/spring-boot-external-config.html"/>
+    <url>/blog/spring-boot-external-config.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前 Spring Boot 开发的时候，打包部署会联通 properties 文件一同打包，虽然这样的好处是生成了一个 jar，直接一把梭 <code>nohup java -jar </code>就启动了，但是也有很麻烦的地方，例如需要修改配置文件的时候，就要重新打包。于是学习了 Spring Boot 将配置文件外置的方法</p><h2 id="Spring-Boot-配置文件加载优先级"><a href="#Spring-Boot-配置文件加载优先级" class="headerlink" title="Spring Boot 配置文件加载优先级"></a>Spring Boot 配置文件加载优先级</h2><p>按照规定，Spring Boot 的配置文件加载优先级如下：</p><ul><li>当前目录下的config子目录</li><li>当前目录</li><li>classpath下的config目录</li><li>classpath根路径</li></ul><p><strong>优先级自上而下递减 !</strong></p><h2 id="修改-pom-xml"><a href="#修改-pom-xml" class="headerlink" title="修改 pom.xml"></a>修改 pom.xml</h2><p>因为我们需要使用外置的配置文件，所以先要让 maven 忽略 resource 里面的配置文件，在打包的时候略过他们，方法如下：在 <code>pom.xml</code> 当中添加以下代码</p><pre><code>&lt;build&gt;    &lt;resources&gt;        &lt;resource&gt;            &lt;directory&gt;src/main/resources&lt;/directory&gt;            &lt;excludes&gt;                &lt;exclude&gt;**/*.properties&lt;/exclude&gt;                &lt;exclude&gt;**/*.yml&lt;/exclude&gt;                &lt;exclude&gt;**/*.xml&lt;/exclude&gt;            &lt;/excludes&gt;        &lt;/resource&gt;    &lt;/resources&gt;&lt;/build&gt;</code></pre><h2 id="转移配置"><a href="#转移配置" class="headerlink" title="转移配置"></a>转移配置</h2><ul><li>在项目根目录下面创建 config 文件夹<ul><li>之所以使用 config 文件夹是考虑到这样的话工程目录更加清晰</li></ul></li><li>复制 <code>resource</code> 文件夹当中的配置文件到 config 文件夹里面</li></ul><h2 id="修改代码（可能不需要）"><a href="#修改代码（可能不需要）" class="headerlink" title="修改代码（可能不需要）"></a>修改代码（可能不需要）</h2><p>如果代码当中有些并不是使用自动注入读取的配置的话，要修改获取方式，从前我们使用</p><pre><code>Resource resource = new ClassPathResource(&quot;/application.properties&quot;);</code></pre><p> 现在变成</p><pre><code>Resource resource = new FileSystemResource(&quot;config/application.properties&quot;);</code></pre><p>最后，重新打包项目就可以了~</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>SpringBoot</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>和脉脉斗智斗勇的一个晚上</title>
+    <link href="/blog/fuck-maimai.html"/>
+    <url>/blog/fuck-maimai.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>脉脉作为一个职场交流的软件，在上面还是可以很快看到很多消息的（职言板块感觉有点类似于职场人的微博？，这个功能还是很赞的</p><p>但是脉脉出了名的恶心是对通讯录的盗取以及胡乱使用，为了不让自己的七大姑八大姨也收到什么“xxx把你标记为职场小能手的短信”，又能注册脉脉，于是折腾了大半个晚上</p><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>首先，脉脉是会读取和上传通讯录的（读取和上传通讯录是不一样的），根据朋友的使用体验，发现应该是第一次注册的时候要求上传通讯录，此后不要求上传通讯录（但是可以手动更新通讯录），而至于读取通讯录的话就不知道了。会有这个结论是因为，当第一次成功注册并且上传通讯录之后，关闭掉对短信的读取权限，软件依然可以正常使用。</p><h2 id="开始注册"><a href="#开始注册" class="headerlink" title="开始注册"></a>开始注册</h2><p>起初希望使用 Google Voice 来进行注册，结果脉脉空有外国手机号输入，而却没有实际的给我的 voice 号码发送验证码….让人抓鸡</p><p>所以就只能使用自己的真实手机号注册了</p><p>但是注册了之后发现一定要读取通讯录并且上传，才能够注册成功。于是我拒绝了，开始了探索怎样才能解决这个问题，成功注册。</p><h2 id="使用权限欺骗"><a href="#使用权限欺骗" class="headerlink" title="使用权限欺骗"></a>使用权限欺骗</h2><p>Android上面，使用权限欺骗是可以伪造权限的结果，返回给 App 的，但是要基于 Xposed 才可以，我的手机版本是 Android 9，没有 Xposed ，所以没办法使用这个，（Xposed 的话似乎是使用 App Ops Xposed） 就可以了</p><h2 id="在没有通讯录的手机上面注册"><a href="#在没有通讯录的手机上面注册" class="headerlink" title="在没有通讯录的手机上面注册"></a>在没有通讯录的手机上面注册</h2><p>刚好手边有一台刚刚刷好 AOSP 的测试机，于是装了个脉脉，准备注册，结果发现，如果你的通讯录完全是空白的话，他会认为你没有通讯录…软件上面显示的，和你没有启用通讯录权限时候，是一样的….</p><img style="width: 400px;" src="https://ws1.sinaimg.cn/large/ae1a7c45gy1fy4abn1n99j20u01hcq4o.jpg"><h2 id="添加一个联系人"><a href="#添加一个联系人" class="headerlink" title="添加一个联系人"></a>添加一个联系人</h2><p>然后就添加联系人了，随便添加了一个联系人，重新注册，这个时候就提示联系人太少，无法注册</p><h2 id="添加三个联系人"><a href="#添加三个联系人" class="headerlink" title="添加三个联系人"></a>添加三个联系人</h2><p>随便居然还是提示联系人太少，因为没法知道到底多少个联系人才会解除这个判定，于是决定导入一整批的虚假联系人</p><h2 id="添加多个虚拟联系人"><a href="#添加多个虚拟联系人" class="headerlink" title="添加多个虚拟联系人"></a>添加多个虚拟联系人</h2><p>导出了手机里面的 vcf 格式之后，照着伪造了一份有100个虚假联系人的 vcf，再导入其中，用 js 写的一个小脚本，放到浏览器里跑一下就可以了</p><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs openscad"><span class="hljs-built_in">let</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-keyword">for</span> (<span class="hljs-built_in">let</span> i=<span class="hljs-number">100</span>;i&lt;<span class="hljs-number">199</span>;i++)&#123;<br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;BEGIN:VCARD\n&quot;</span>    <br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;VERSION:3.0\n&quot;</span><br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;N;CHARSET=UTF-8:辣鸡脉脉&quot;</span>+i+<span class="hljs-string">&quot;\n&quot;</span> <br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;FN;CHARSET=UTF-8:辣鸡脉脉&quot;</span>+i+<span class="hljs-string">&quot;\n&quot;</span> <br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;TEL;TYPE=CELL:13500000&quot;</span>+i+<span class="hljs-string">&quot;\n&quot;</span> <br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;END:VCARD\n&quot;</span><br>&#125;<br>console.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">str</span>)<br><br></code></pre></td></tr></table></figure><p>复制输出然后粘贴到一个文件，重命名为 .vcf 格式，传到手机里，导入通讯里，于是终于能够通过那一个对联系人的判断了</p><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>进入软件之后，迎面而来的就是脉脉的老拉新活动，拉一个新用户给老用户发个5块钱红包…而具体的操作，自然也是让你选择向你通讯录当中的哪个好友发送“xxx把你标记为职场小能手”的消息了…实在是无力吐槽了</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Ponza博客评论系统-文档</title>
+    <link href="/blog/ponza-document.html"/>
+    <url>/blog/ponza-document.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="Ponza"><a href="#Ponza" class="headerlink" title="Ponza"></a>Ponza</h1><p>静态博客评论框架，灵感来自 Gitment</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="增加-key"><a href="#增加-key" class="headerlink" title="增加 key"></a>增加 key</h3><pre><code>.ponza -k &quot;blog.meetwhy.com&quot;// 显示如下key: b9df8d72b06f4f8399c71ab520600130 for host: blog.meetwhy.com</code></pre><p>为项目新建一个 key，该 key 只允许使用在来自域名 <code>blog.meetwhy.com</code> 的访问</p><h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><pre><code>.ponza</code></pre><p>启动项目在 localhost:2334 端口</p><h3 id="配置反向代理"><a href="#配置反向代理" class="headerlink" title="配置反向代理"></a>配置反向代理</h3><p>将你的 ponza 服务域名反向代理到 localhost:2334，如果你的 caddy 配置示例如下</p><pre><code>api.ponza.host.com &#123;    proxy / localhost:2334 &#123;            transparent    &#125;&#125;</code></pre><h3 id="引入-Ponza-的-js-和-css"><a href="#引入-Ponza-的-js-和-css" class="headerlink" title="引入 Ponza 的 js 和 css"></a>引入 Ponza 的 js 和 css</h3><pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;ponza.css&quot;&gt;&lt;script src=&quot;js/ponza.js&quot;&gt;&lt;/script&gt;</code></pre><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><pre><code>Ponza(&quot;test&quot;,&#123;                                       // 配置评论所在 dom    page:window.location.pathname,                      // 配置页面标记    server:&quot;https://wx.meetwhy.com&quot;,                    // 配置服务器地址    key:&quot;b9df8d72b06f4f8399c71ab520600130&quot;,             // 配置 key&#125;);</code></pre><h2 id="后台数据库"><a href="#后台数据库" class="headerlink" title="后台数据库"></a>后台数据库</h2><p>Ponza 将全部数据都存储在本地的 json 文件当中，不需要依赖于数据库<br>存储的地址是 <code>.ponza</code> 文件夹，每个文件以 <code>host.json</code> 来命名，存储该网站下面所有的评论数据</p><h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="上传评论接口"><a href="#上传评论接口" class="headerlink" title="上传评论接口"></a>上传评论接口</h3><ul><li><code>/api/uploadComm</code></li><li><code>POST</code></li><li>参数<ul><li><code>key</code> ponza 的 key</li><li><code>page</code> 页面的标记 </li><li><code>comm</code> 评论正文</li><li><code>name</code> 评论的昵称</li><li><code>mail</code> 邮箱</li></ul></li><li>返回<pre><code> &quot;upload message success&quot;</code></pre></li></ul><h3 id="获取评论接口"><a href="#获取评论接口" class="headerlink" title="获取评论接口"></a>获取评论接口</h3><ul><li><code>/api/getComm</code></li><li><code>POST</code></li><li>参数<ul><li><code>key</code> ponza 的 key</li><li><code>page</code> 页面的标记</li></ul></li><li>返回<pre><code> &#123;     &quot;page&quot;: &quot;/blog/ubuntu-bash-ch.html&quot;,     &quot;comment&quot;: [         &#123;             &quot;comm&quot;: &quot;评论 : 1544173519984&quot;,             &quot;time&quot;: &quot;2018-12-07T17:05:20+08:00&quot;,             &quot;name&quot;: &quot;Ericwyn&quot;,             &quot;mail&quot;: &quot;ericwyn.chen@gmail.com&quot;,             &quot;agent&quot;: &quot;Ubuntu 18.04 上的 Chrome 71.0 浏览器&quot;         &#125;,         &#123;             &quot;comm&quot;: &quot;评论 : 1544173530023&quot;,             &quot;time&quot;: &quot;2018-12-07T17:05:30+08:00&quot;,             &quot;name&quot;: &quot;Ericwyn&quot;,             &quot;mail&quot;: &quot;ericwyn.chen@gmail.com&quot;,             &quot;agent&quot;: &quot;Ubuntu 18.04 上的 Chrome 71.0 浏览器&quot;         &#125;     ] &#125;</code></pre></li></ul><h3 id="评论初始化接口"><a href="#评论初始化接口" class="headerlink" title="评论初始化接口"></a>评论初始化接口</h3><p>当评论接口或者上传接口返回 4003 时候代表页面的评论数据未创建，使用该接口创建该页面的数据配置</p><ul><li><code>api/initComm</code></li><li><code>POST</code></li><li>参数<ul><li><code>key</code> ponza 的 key</li><li><code>page</code> 页面的标记</li></ul></li><li>返回<pre><code> &quot;page create success&quot;</code></pre></li></ul><h3 id="错误码"><a href="#错误码" class="headerlink" title="错误码"></a>错误码</h3><pre><code>   &#123;&quot;code&quot;:&quot;4003&quot;&#125;</code></pre><ul><li>4000     服务器错误</li><li>4001     host 错误</li><li>4002     key 错误</li><li>4003     page 错误</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>Golang</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Ubuntu 终端乱码解决方法</title>
+    <link href="/blog/ubuntu-bash-ch.html"/>
+    <url>/blog/ubuntu-bash-ch.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前几天忘了配置了什么，然后忽然间 ubuntu 的终端就中文乱码了，找了网上各种 ubuntu 中文教程，安装各种中文 package，结果都没用，心都碎了</p><p>如下图</p><p><img src="https://ws1.sinaimg.cn/large/ae1a7c45gy1fxtbpbek34j20ow0gd40p.jpg"></p><h2 id="解决方法-1"><a href="#解决方法-1" class="headerlink" title="解决方法 1"></a>解决方法 1</h2><p>后面觉得换个终端试试，于是又 google 了一晚上的 zsh 安装教程，安装完之后发现还是乱码，于是再度 google ，然后发现这里的解决方法</p><blockquote><p><a href="https://github.com/hokein/Wiki/wiki/zsh%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95">zsh中文乱码解决方法</a></p></blockquote><p> 修改一下 <code>~/.zshrc</code> 就可以了，增加下面两行代码</p><pre><code>export LC_ALL=en_US.UTF-8  export LANG=en_US.UTF-8</code></pre><p> 然后就可以中文了！！！！</p><h2 id="后知后觉的解决方法2"><a href="#后知后觉的解决方法2" class="headerlink" title="后知后觉的解决方法2"></a>后知后觉的解决方法2</h2><p>用了两天之后发现 zsh 总是报权限问题…而且用起来也没有原生终端那么习惯，于是又想换回去，但是还是苦恼于中文乱码问题，然后，后知后觉想到说</p><p>“既然编辑 <code>~/.zshrc</code> 就可以解决 zsh 的中文乱码，那么编辑 <code>~/.bashrc</code> 就能够解决 bash 的乱码了吧”</p><p>于是在 <code>~/.bashrc</code> 下面也加了上面两行代码</p><p>问题解决？！！！</p><p>实在是被自己蠢到了，还是决定写这段文字来记录一下</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Ubuntu 使用日常</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>AOSP植入第三方应用趟坑记录</title>
+    <link href="/blog/add-apks-in-aosp-build.html"/>
+    <url>/blog/add-apks-in-aosp-build.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前成功的编译了 AOSP ，使用时候确实发现老旧的 Nexus5X 待机时间大大的提高了，然而 AOSP 实在是太过简陋了，还要自己下载各种常用的 APP，于是考虑能不能，直接植入一些自己常用 APP，免去刷机后重新下载的麻烦，于是找到 stackoverflow 上面的问题</p><blockquote><p><a href="https://stackoverflow.com/questions/10579827/how-do-i-add-apks-in-an-aosp-build">How do I add APKs in an AOSP build?</a></p></blockquote><p>于是就照着操作了</p><h2 id="创建存储-apk-的文件夹"><a href="#创建存储-apk-的文件夹" class="headerlink" title="创建存储 apk 的文件夹"></a>创建存储 apk 的文件夹</h2><p>在 AOSP 根目录下，package/app/下面<br>创建一个文件，例如 <code>Chrome</code><br>然后将 Chrome APK 移入到这个文件夹里面去</p><h2 id="编写-Android-mk"><a href="#编写-Android-mk" class="headerlink" title="编写 Android.mk"></a>编写 Android.mk</h2><p>根据stof给的 makefile 模板</p><pre><code>LOCAL_PATH := $(call my-dir)include $(CLEAR_VARS)LOCAL_MODULE_TAGS := optionalLOCAL_MODULE := &lt; 你的 app 的文件夹的名字 &gt;LOCAL_CERTIFICATE := &lt; desired key &gt;LOCAL_SRC_FILES := &lt; app 的 apk 文件名 &gt;LOCAL_MODULE_CLASS := APPSLOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)include $(BUILD_PREBUILT)</code></pre><h2 id="将文件夹添加到-core-mk"><a href="#将文件夹添加到-core-mk" class="headerlink" title="将文件夹添加到 core.mk"></a>将文件夹添加到 core.mk</h2><p>在【源码根目录/build/target/product/core.mk】文件添加刚才添加的项目文件夹名称</p><pre><code>PRODUCT_PACKAGES += \    CloudMusic \         BasicDreams \    BlockedNumberProvider \    BookmarkProvider \    Browser2 \    BuiltInPrintService \    Calendar \    CalendarProvider \    CaptivePortalLogin \    CertInstaller \    Contacts \    DeskClock \    DocumentsUI \    DownloadProviderUi \    Email \    ExactCalculator \    ExternalStorageProvider \    ......</code></pre><p>然后重新编译（然而这是会翻车的，请继续看下文）</p><h2 id="desired-key"><a href="#desired-key" class="headerlink" title="desired key"></a><strong>desired key</strong></h2><p>起初这个 desired key 我不太懂是什么意思，于是直接注释了，然后编译时候直接报错，于是又再学习了一下这个 desired key </p><p>参考 <a href="https://maoao530.github.io/2017/01/31/android-build-sign/">Android系统build阶段签名机制</a></p><p>Android 系统在 buiild 的时候有 4 组的 key 用户对 build 阶段的 apk 签名，分别是</p><ul><li>Media</li><li>Platform</li><li>Shared</li><li>Testkey</li></ul><p>使用的签名，就由 Android.mk 这里的 <code>LOCAL_CERTIFICATE</code> 来限定的，其取值如下</p><pre><code>LOCAL_CERTIFICATE := testkey   # 普通APK，默认情况下使用。LOCAL_CERTIFICATE := platform  # 该APK完成一些系统的核心功能,这种方式编译出来的APK所在进程的UID为systemLOCAL_CERTIFICATE := shared    # 该APK需要和home/contacts进程共享数据。LOCAL_CERTIFICATE := media     # 该APK是media/download系统中的一环</code></pre><p>如果不指定，默认的话就是使用 testkey</p><p>而再往深入点说，实际上，这个 LOCAL_CERTIFICATE 和 Android 权限有关系，设置 LOCAL_CERTIFICATE 和 UID 来使得程序有特定的访问权限</p><p>参照</p><blockquote><p><a href="http://www.voidcn.com/article/p-vvguhunm-bhu.html">mk中的android:sharedUserId和LOCAL_CERTIFICATE作用</a><br><a href="http://www.voidcn.com/article/p-svbbjtas-bhb.html">Android权限之sharedUserId和签名</a></p></blockquote><p>一开始我用的 LOCAL_CERTIFICATE 是 Platform，后面又更改成 Media，两种情况下，网易云音乐都没法正常运行，会闪退，应用被安装为系统应用,最后哪怕换成了 testkey 也依然会闪退</p><p>然后怀疑是因为权限问题，安装成为系统应用导致无法运行，于是按照 <a href="https://stackoverflow.com/questions/10579827/how-do-i-add-apks-in-an-aosp-build">How do I add APKs in an AOSP build?</a> 上面所以的，在最后添加一个 <code>LOCAL_MODULE_PATH := $(TARGET_OUT_DATA)</code>，使得配置文件变为</p><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs makefile">LOCAL_PATH := <span class="hljs-variable">$(<span class="hljs-built_in">call</span> my-<span class="hljs-built_in">dir</span>)</span><br><span class="hljs-keyword">include</span> <span class="hljs-variable">$(CLEAR_VARS)</span><br>LOCAL_MODULE_TAGS := optional<br>LOCAL_MODULE := CloudMusic<br>LOCAL_CERTIFICATE := testkey<br>LOCAL_SRC_FILES := CloudMusic.apk<br>LOCAL_MODULE_CLASS := APPS<br>LOCAL_MODULE_SUFFIX := <span class="hljs-variable">$(COMMON_ANDROID_PACKAGE_SUFFIX)</span><br><span class="hljs-comment"># install the APK in /data/app</span><br>LOCAL_MODULE_PATH := <span class="hljs-variable">$(TARGET_OUT_DATA)</span><br><span class="hljs-keyword">include</span> <span class="hljs-variable">$(BUILD_PREBUILT)</span><br></code></pre></td></tr></table></figure><p><strong>然而还是翻车了，原因不明…</strong></p><h2 id="改用其他的方法植入-APP"><a href="#改用其他的方法植入-APP" class="headerlink" title="改用其他的方法植入 APP"></a>改用其他的方法植入 APP</h2><p>将上面的修改删除之后，从头开始</p><p>然后又搜索到了 <a href="https://blog.csdn.net/tx422/article/details/77081050">编译Android源码添加apk文件的三种方式</a><br>里面提供了三种方法</p><ul><li>修改 device\mstar\common\app\Android.mk</li><li>修改 device\mstar\mstarcedric3\full_mstarcedric3.mk</li><li>直接将 apk 文件放入到 out\target\product\mstarcedric3\system\app 当中</li></ul><p>然而我在我的 AOSP 源码当中，并没有找到 common 文件夹…，所以只能直接尝试第三种方式</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>AOSP</tag>
+      
+      <tag>AndroidFramework</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Nexus5X-AOSP编译问题记录</title>
+    <link href="/blog/make-nexus5x-aosp.html"/>
+    <url>/blog/make-nexus5x-aosp.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>入坑 Android Framework ，所以先尝试着自己编译一个 ROM，因为手上有的设备是 Nexus 5X ，没有开发板，所以就先拿着可怜的小5X 来测试吧</p><p>照着 <a href="https://blog.csdn.net/w_xue/article/details/77418011">为nexus 5x编译android n固件</a> 里面的教程一步步的做，先在 tuna 下载 AOSP 源码，然后又去官网下载驱动</p><p>然后用 <code>make -j4</code> 编译，以下是自己遇到的大坑</p><h2 id="趟坑记录"><a href="#趟坑记录" class="headerlink" title="趟坑记录"></a>趟坑记录</h2><h3 id="JDK-版本问题"><a href="#JDK-版本问题" class="headerlink" title="JDK 版本问题"></a>JDK 版本问题</h3><p>Android 8.1 要求编译时候使用 OpenJDK，虽然我的电脑上面是装了 OpenJDK 和 Oracle JDK，但是一直用的都是 Oracle JDK，一开始使用</p><pre><code>    sudo update-alternatives --config java</code></pre><p>切换版本，但是却不起作用，就觉得的很奇怪，我用的用户 <code>ericwyn</code> 下面，JDK 是  Oracle的，而切换到了 <code>sudo</code> 之后，JDK 就是 <code>OpenJDK</code> 了，懒得折腾然后直接用 <code>sudo make -j4</code> 来运行（然而这样是错的，这里又挖了一个坑，后面会提到），最后还是修改了 ~/.bashrc 环境变量文件来设置 OpenJDK，而后再使用 <code>make -j4</code> 编译</p><h3 id="jack-server-问题"><a href="#jack-server-问题" class="headerlink" title="jack-server 问题"></a>jack-server 问题</h3><ul><li>sudo 下没有 jack-server 上面提到的，一开始我因为JDK 版本的问题，使用 sudo 来编译，然而却发现找不到 <code>jack-server</code>。 起初我就只是一直在命令行 <code>jack-admin start-server</code> 来测试而已，结果发现没问题啊，但是后面才醒悟，用 sudo 编译的话，也要 <code>sudo jack-admin start-server</code>，然后才发现问题所在，sudo 下面并没有 jack-admin … 解决的方法就是上面，配置普通用户的环境变量，使用 OpenJDK 在普通用户下编译</li></ul><ul><li>Jack server failed to (re)start jack server 无法启动，很奇怪的错误，<ul><li>我先是 rm 了 <code>/home/ericwyn/.jack-server</code> 文件夹</li><li>然后 <code>jack-admin install-server</code> 重新安装 server</li><li>尝试 <code>jack-admin start-server</code> 启动，<code>ps</code> 查看进程之后发现 jack-server 已经启动了，然后尝试重新编译</li></ul></li></ul><h3 id="Ubuntu-18-04-下编译输出-lexer-cpp-失败"><a href="#Ubuntu-18-04-下编译输出-lexer-cpp-失败" class="headerlink" title="Ubuntu 18.04 下编译输出  lexer.cpp 失败"></a>Ubuntu 18.04 下编译输出  <code>lexer.cpp</code> 失败</h3><p>提示 </p><pre><code>FAILED: out/target/product/gordon_peak_xen/obj/STATIC_LIBRARIES/libedify_intermediates/lexer.cpp</code></pre><p>在 <a href="http://rangerzhou.top/2018/08/29/Ubuntu18.04%E7%BC%96%E8%AF%91%E9%97%AE%E9%A2%98/">Ubuntu18.04编译问题</a> 中看到解决方案</p><p>解决方法是</p><ul><li>把 <code>export LC_ALL=C</code> 这行代码添加到 bashrc 文件中，<code>LC_ALL=C</code> 是为了去除所有本地化的设置，让命令能正确执行</li></ul><h2 id="等待编译"><a href="#等待编译" class="headerlink" title="等待编译"></a>等待编译</h2><p>我个人觉得，如果编译的话如果能够跑完前面的 10% ，那么一般后面的 90% 应该也不会有问题了。</p><p>关于编译时间，我的电脑是 Thinkpad T450 ，配置 I5-5300U，系统是 Ubuntu 18.04 ，用 <code>make -j4</code> 使用四个核心来编译，一共是用了 <code>04:58:01</code>，我的 CPU 一直满载了 5 个小时啊天…. </p><pre><code>#### build completed successfully (04:58:01 (hh:mm:ss)) ####</code></pre><p>无比羡慕那些一个小时就能跑完的 dalao</p><p>编译过程中一般会有很多 warning，无视就好了</p><h2 id="刷入-Image"><a href="#刷入-Image" class="headerlink" title="刷入 Image"></a>刷入 Image</h2><p>先设定输出目录，就是你的 IMG 编译好的地方</p><pre><code>export ANDROID_PRODUCT_OUT=/your/path/to/img</code></pre><p>找到编译输出的  fastboot 的所在，然后进入到所在的文件夹</p><pre><code>whitch fastboot</code></pre><p>先切换到 su（避免权限问题）， 用这里的 fastboot 的 devices 命令找到连接的设备</p><pre><code>./fastboot devices      // 输入如下 00c996d81da7a82f    fastboot</code></pre><p>然后开始刷机</p><pre><code>./fastboot -w flashall </code></pre><p>刷机的过程一般很快的，刷完之后会自动重启，然后就可以看到清水出芙蓉的 AOSP 了</p><p>另外如果出现像 <code>error: neither -p product specified nor ANDROID_PRODUCT_OUT set</code> 的错误提示的话，是因为你没有设置 <code>ANDROID_PRODUCT_OUT</code>，使用下面的命令设置就好了</p><pre><code>export ANDROID_PRODUCT_OUT=&#123;你输出的文件夹，例如 out/target/product/bullhead&#125;</code></pre><h3 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h3><p>吐槽一下，我电脑只有两个固态，加起来不过600 g 的空间…对于编译 AOSP 来说确实不太够呜呜呜，以后一定要买个 1T 的固态口亨</p><p>另外用 Thinkpad T 系列这么久，是在编译 AOSP 的时候，才第一次深刻发觉，CPU 真的是不太够用啊，我这样一边编译，一边写博文，居然是已经卡到不能自拔了…</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>AOSP</tag>
+      
+      <tag>AndroidFramework</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Java-JNI简单教程</title>
+    <link href="/blog/java-jni-quick-start.html"/>
+    <url>/blog/java-jni-quick-start.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近决定入坑 Android Framework 了，这样的话，JNI 就一定是需要了解和会使用的，毕竟 Android Framework 就是各种 JNI 调用 c 和 c++ 的驱动然后提供给上层的 Android APP</p><h2 id="JNI"><a href="#JNI" class="headerlink" title="JNI"></a>JNI</h2><p>JNI 就是 Java Native Interface 的缩写，Java 通过 JNI 来调用 C 的程序和库，这些动态库在 windows 上面以 <code>.dll</code> 的形式存在，在 Unix 世界里以 <code>.so</code> 的形式存在，Android 基于 Linux ，所以实际上 Android Framework 当中调用的各种驱动就是 .so，我在 Linux 上面，尝试使用 Java 调用 c 写的一个方法，输出 Hello World！</p><h2 id="Java-的准备"><a href="#Java-的准备" class="headerlink" title="Java 的准备"></a>Java 的准备</h2><p>Java 这边我们先要声明一个 native 方法，具体的代码如下</p><pre><code>public class HelloWorld &#123;    static &#123;        // 这里导入 hello.dll(windows 下面) 或者 libhello.so (Unixes) 下面        System.loadLibrary(&quot;HelloWorld&quot;);    &#125;        // 声明一个 native 方法    private native void sayHello();    public static void main(String[] args) &#123;        // 调用 native 方法        new HelloWorld().sayHello();    &#125;&#125;</code></pre><h2 id="生成-Native-的头文件"><a href="#生成-Native-的头文件" class="headerlink" title="生成 Native 的头文件"></a>生成 Native 的头文件</h2><p>Native 的头文件，类似于 Java 的接口规范（大概理解，尚不清楚这样到底对不对），java 提供了一个 javah 的工具，帮助我们直接生成 native 头文件 <code>.h</code> 这样的文件，但是使用 javah 之前，要先将 <code>.java</code> 文件编译成 <code>.class</code> 文件，因为 javah 的话是对着 <code>class</code> 文件进行的</p><p>所以我们先使用</p><pre><code>javac HelloWorld.java</code></pre><p>然后使用 javah </p><pre><code>$&#123;JAVA_HOME&#125;/bin/javah -jni -classpath $&#123;ClassOutputPath&#125; -d ./jni com.ericwyn.jni.HelloWorld</code></pre><p>其中 <code>$&#123;JAVA_HOME&#125;</code>是你 Java 的目录。 <code>$&#123;ClassOutputPath&#125;</code>是你 Class 文件的输出所在目录，这个在 Intellij 的话一般是 <code>out</code> 目录下</p><p>然后一般就会生成一个 <code>com_ericwyn_jni_HelloWorld.h</code> 的文件，因为我的类的名字是<br><code>com.ericwyn.jni.HelloWorld</code>，头文件的命名就是将这个类的全名当中的点全部变为下划线这样</p><p>这个 <code>.h</code> 文件具体代码如下</p><pre><code>/* DO NOT EDIT THIS FILE - it is machine generated */#include &lt;jni.h&gt;/* Header for class com_ericwyn_jni_HelloWorld */#ifndef _Included_com_ericwyn_jni_HelloWorld#define _Included_com_ericwyn_jni_HelloWorld#ifdef __cplusplusextern &quot;C&quot; &#123;#endif/* * Class:     com_ericwyn_jni_HelloWorld * Method:    sayHello * Signature: ()V */JNIEXPORT void JNICALL Java_com_ericwyn_jni_HelloWorld_sayHello  (JNIEnv *, jobject);#ifdef __cplusplus&#125;#endif#endif</code></pre><p>里面就是规定了一个 <code>JNIEXPORT void JNICALL Java_com_ericwyn_jni_HelloWorld_sayHello (JNIEnv *, jobject);</code></p><h2 id="调用头文件编写-c-代码"><a href="#调用头文件编写-c-代码" class="headerlink" title="调用头文件编写 c 代码"></a>调用头文件编写 c 代码</h2><p>我们编写一个 c 语言文件，具体代码如下</p><pre><code>#include&lt;jni.h&gt;#include &lt;stdio.h&gt;#include &quot;com_ericwyn_jni_HelloWorld.h&quot;JNIEXPORT void JNICALL Java_com_ericwyn_jni_HelloWorld_sayHello(JNIEnv *env, jobject thisObj)&#123;    printf(&quot;Hello World!\n&quot;);    return ;&#125;</code></pre><p>头部引入了 <code>jni.h</code> ，另外再引入我们之前生成的头文件</p><h2 id="编译-c-代码成为-so"><a href="#编译-c-代码成为-so" class="headerlink" title="编译 c 代码成为 so"></a>编译 c 代码成为 so</h2><p>使用下面的代码来将 c 语言文件编译成 .so 库</p><pre><code>gcc -fPIC -I &quot;/usr/lib/jvm/java-8-oracle/include/&quot; -I &quot;/usr/lib/jvm/java-8-oracle/include/linux/&quot; -shared -o ./lib/libHelloWorld.so  ./jni/HelloWorld.c</code></pre><p>其中 </p><ul><li><code>-fPIC</code> 是产生位置无关代码，就是可以不固定的内存位置执行代码（就是可以动态链接的意思了），动态链接库必须添加。</li><li><code>-I</code> 引入了 Java 的 <code>jni.h</code> 和 不同平台下面的一些头文件</li><li><code>-share</code> 代表这是一个编译成动态链接库而非可执行文件</li><li><code>-o</code> 设置了输出的文件位置</li></ul><h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>首先我们要先在 Intellij 里面设置运行时候，native 库的位置，其实就是运行 java 的时候增加一个 <code>-Djava.library.path=</code>，设置为你的 .so 文件所在的文件夹路径</p><p>直接设置 Intellij 的 Run Configurations ，在 VM options 里面添加 </p><pre><code> -Djava.library.path=/work/JNITest/lib </code></pre><p>然后运行就可以了</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>写 JNI 的时候，特别是编译 c 语言文件的时候，真的感受到了作为初级 Java 程序员的我，对编译链的无知。毕竟 Java 平台无关，对开发者屏蔽了平台差异，这样确确实实便利了开发，但是对我们这些刚刚踏入计算机领域的人来说，又是福兮祸兮呢？</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>AndroidFramework</tag>
+      
+      <tag>java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>文赋 天海阁文集序</title>
+    <link href="/blog/tianhaige.html"/>
+    <url>/blog/tianhaige.html</url>
+    
+    <content type="html"><![CDATA[<p>乙未年秋，余初到大学城，年冬一日，百无聊赖，独寻僻静之处。撞撞跌跌，竟入了此中，发觉了这一妙处所在。 </p><p>初入此中，只觉震撼，昔闻诗言，危楼高百尺，手可摘星辰。此处楼高，虽未到百尺，却也觉己可与星辰比肩。 </p><p>独立栏前，可穷千里之目，能观浩浩河山。而身后一座，只如王者之位，坐于其中，有君临天下之感。于此座上读书，无一页不是沧海之卷，无一字不是山河之言。 </p><p>此后，余常于闲暇之际，独上此中，每每见有书卷数本置于坐旁，却始终不遇其主人身影。于是留书一封于座左，望有人因缘际会，可答复一二，与我作个秘地好友罢。 </p><p>而那日留书归去之后，心中欢喜之情愈盛，感怀之下，想到不知此妙处是否有了名字，也不知该如何称呼，便自顾自地想为其起个名字。念及因坐此处，所阅书卷中，页页之中有沧海之感，字字之间有山河之意，故想起名沧海阁，忽又觉得沧海二字，并无具体所指，此处景象，不过长虹之下，有大江浩荡，奔流到海；天高地阔，万象渺然，虽有沧海之意，却实非沧海之景，故又改为了天海阁。 </p><p>起名之后，又题一联， </p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs">天涯路远，千书作马，随心把酒飞尘道； <br>海角途殊，万卷成舟，纵性言欢过勇涛。 <br></code></pre></td></tr></table></figure><p>而后念及古人风雅，思及此阁立于十层之上，楼下书馆，又藏有万千书卷，想必到得此处的，必不乏风雅之人。而今佳阁已有，定当要有那才子骚人，吟诗作对，赋辞写文。在下不才，愿以一序一联作抛砖之文，以供今后因缘际会者，在这册中挥毫时候作个参考。 </p><p>此册来由，只因我为天海阁命名后一时兴起，便题为天海阁文集罢，不过虽称为文集，此刻初起，却只不过有我这一序一联罢了，只望后来诸君，莫惜笔墨才思，不论文白，不论诗词书画、文章评论，皆可在写于此文之后，集诸君之力，众人之思，成就这天海阁文集。而诸君亦可借着文集一册，神交诸友，岂不快哉。 </p><p>不过此天海阁文集，别无分印，况今后集合诸君才情文字，亦是无可复制，也算颇为珍贵，遂望后来诸君，莫将文集带离天海阁，只将其置于沙发座左即可，使后来之人，皆有机会，可自行观阅填写。 </p><br><br><small>注：此文初写就于 2016 年 6 月中旬，今日偶然又翻到，记录在此 </small>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>古风 夜渡寒江别友</title>
+    <link href="/blog/xin20181014.html"/>
+    <url>/blog/xin20181014.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>    夜渡寒江风有绪    长河一去怎戚戚    又待波烟帆寄起    伴君千里月迷离                    2018年10月14日晚，与桃源小书童分别后写就</code></pre><p>送君自然可以送至千里</p><p>待得真的相隔万水，雪满天山的时候</p><p>思绪又能够怎样飞去呢</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Spring-Boot魔改为 Spring-Cloud项目实践</title>
+    <link href="/blog/spring-boot-to-spring-cloud.html"/>
+    <url>/blog/spring-boot-to-spring-cloud.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近接触到了 Spring Cloud ，虽然还没有正式的在生产环境当中使用，但是那种尽量将一个大的整体才分成小的模块的这种想法，让我不明觉历。恰好最近实训当中写的项目是基于 Spring Boot 的，于是打算魔改成一个简单的 Spring Cloud 项目。也天生 Spring Boot 就和 Spring Cloud 无痛融合。</p><h2 id="关于微服务"><a href="#关于微服务" class="headerlink" title="关于微服务"></a>关于微服务</h2><p>简单的理解和学习了Spring Cloud 和所谓微服务的概念之后，有了以下一些对微服务的个人理解</p><h3 id="1，微服务以服务为核心"><a href="#1，微服务以服务为核心" class="headerlink" title="1，微服务以服务为核心"></a>1，微服务以服务为核心</h3><p>从前我们可能也都习惯在项目当中划分模块这个样子，所以一开始接触微服务的时候，我误以为所谓的微服务、多个服务，就不过是将项目里面的各个模块做成一个服务这样。但后面发现实际上，服务和系统模块，并不一定等同。</p><p>例如我的实训项目当中，起初的模块划分不过只有微信用户模块和管理员模块而已，如果按照这样划分的话，划分出两个 service （service-wechat 和 service-admin ） 就可以，但是实际上，微信用户模块当中，还有更加细粒度的划分，例如专门负责微信用户登录、鉴权的，专门负责微信用户订单处理的，专门负责微信用户之间的留言的。</p><p>而这些才是所谓的服务</p><p>微服务抽象的应该是这些处理具体事务，一个个的功能，将这些当个功能抽取成一个模块才对。</p><p>“一个模块只做一件事，并且只做好一件事情”</p><h3 id="2，微服务的优缺点"><a href="#2，微服务的优缺点" class="headerlink" title="2，微服务的优缺点"></a>2，微服务的优缺点</h3><p>我个人觉得微服务最大的优点，是它所谓的“做好一件事”这样的思想。我们把整个系统划分成很多的“一件事”，而对于系统性能的调配，也能够更加的细粒度，对应到各个“一件事”当中。例如我可以为订单功能划分更多的计算性能（在更多的服务器上面部署订单服务并启用负载均衡），而用户授权认证的话只需要使用之前的那一台服务器就可以满足新增的请求压力了。</p><p>另外就是更加方便了多人之间的开发，各个小组在约定好程序之间沟通逻辑之后，只需要负责好，测试好自己的那一块就好了。</p><p>而最大缺点则是，太过碎片化了。由于原有的单体系统变成了一小块一小块的，各个小块之前，比起之前要耗费多余的资源来负责各个服务之前的沟通和交流。而且对一些需要锁的服务也提高处理难度。</p><h2 id="基本的想法"><a href="#基本的想法" class="headerlink" title="基本的想法"></a>基本的想法</h2><ul><li>将我们的 Spring Boot 项目进行拆分</li><li>将拆分的各个模块变成 Spring Cloud 的一个服务</li><li>创建 Spring Cloud 里面的服务器发现，来组合和管理各个服务</li></ul><p>……</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>SpringBoot</tag>
+      
+      <tag>SpringCloud</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Spring Boot全局统一异常处理</title>
+    <link href="/blog/springBootGolbalExpHandle.html"/>
+    <url>/blog/springBootGolbalExpHandle.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前用 Spring Boot 写 RESTful API 的时候，对于各种错误的捕捉都是直接用 try catch 的，所以在各个方法里面都总是有一些相同的 try catch 代码块，虽然也是能用但是总有点别扭不自在。这两天学习了一下 Spring Boot 当中对于异常的统一处理，发现很简单但是却能让代码优雅不少。</p><h2 id="定义自定义异常"><a href="#定义自定义异常" class="headerlink" title="定义自定义异常"></a>定义自定义异常</h2><p>不多累述</p><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs scala">public <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">JsonParseException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span> </span>&#123;<br><br>    <span class="hljs-keyword">private</span> static <span class="hljs-keyword">final</span> long serialVersionUID = <span class="hljs-number">2008642168824905631</span>L;<br><br>    public <span class="hljs-type">JsonParseException</span>(<span class="hljs-type">String</span> msg)&#123;<br>        <span class="hljs-keyword">super</span>(msg);<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure><h2 id="定义对该异常的处理"><a href="#定义对该异常的处理" class="headerlink" title="定义对该异常的处理"></a>定义对该异常的处理</h2><p>我们可以把对异常的处理全部写在一个 <code>GolbalExpectionHandleConfig</code> 类当中， 具体代码如下</p><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs reasonml">@ControllerAdvice<br>public <span class="hljs-keyword">class</span> GolbalExpectionHandleConfig &#123;<br>    @<span class="hljs-constructor">ExceptionHandler(<span class="hljs-params">value</span> = JsonParseException.<span class="hljs-params">class</span>)</span><br>    @ResponseBody<br>    public ResJson json<span class="hljs-constructor">ParseErrorHandle(HttpServletRequest <span class="hljs-params">req</span>, JsonParseException <span class="hljs-params">jse</span>)</span>&#123;<br>        return <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">ResJson</span>.</span></span>error<span class="hljs-constructor">RequestParam(<span class="hljs-params">jse</span>.<span class="hljs-params">getMessage</span>()</span>+<span class="hljs-string">&quot; --&gt; &quot;</span>+req.get<span class="hljs-constructor">RequestURL()</span>);<br>    &#125;<br><br>    @<span class="hljs-constructor">ExceptionHandler(<span class="hljs-params">value</span> = IOException.<span class="hljs-params">class</span>)</span><br>    @ResponseBody<br>    public ResJson i<span class="hljs-constructor">OExceptionHandle(HttpServletRequest <span class="hljs-params">req</span>, IOException <span class="hljs-params">ioe</span>)</span>&#123;<br>        ioe.print<span class="hljs-constructor">StackTrace()</span>;<br>        return <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">ResJson</span>.</span></span>server<span class="hljs-constructor">ErrorJson(<span class="hljs-string">&quot;系统发生错误，IOExpection ，详情请查看服务器日志 --&gt; &quot;</span>+<span class="hljs-params">req</span>.<span class="hljs-params">getRequestURL</span>()</span>);<br>    &#125;<br><br>    @<span class="hljs-constructor">ExceptionHandler(<span class="hljs-params">value</span> = Exception.<span class="hljs-params">class</span>)</span><br>    @ResponseBody<br>    public ResJson <span class="hljs-keyword">exception</span><span class="hljs-constructor">Handle(HttpServletRequest <span class="hljs-params">req</span>, Exception <span class="hljs-params">e</span>)</span>&#123;<br>        e.print<span class="hljs-constructor">StackTrace()</span>;<br>        return <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">ResJson</span>.</span></span>server<span class="hljs-constructor">ErrorJson(<span class="hljs-string">&quot;系统发生错误，Expection ，详情请查看服务器日志 --&gt; &quot;</span>+<span class="hljs-params">req</span>.<span class="hljs-params">getRequestURL</span>()</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>从 <a href="https://blog.csdn.net/lovesomnus/article/details/73252532">Spring MVC重要注解</a> 这里了解到以下几点</p><ul><li><code>@ControllerAdvice</code> 是一个 <code>@Component</code> ，用于定义<code>@ExceptionHandler</code>，<code>@InitBinder</code>和<code>@ModelAttribute</code>方法，使这些配置适用于所有使用<code>@RequestMapping</code>方法。</li><li>Spring4之前，<code>@ControllerAdvice</code>在同一调度的Servlet中协助所有控制器。Spring4 已经改变：<code>@ControllerAdvice</code> 支持配置控制器的子集，而默认的行为仍然可以利用。</li><li>在Spring4中， <code>@ControllerAdvice</code> 通过 <code>annotations()</code>, <code>basePackageClasses()</code>, <code>basePackages()</code>方法定制用于选择控制器子集。</li></ul><p>然后实际上除了 <code>@ControllerAdvice</code> 还有 <code>@RestControllerAdvice</code>，两者的区别估计是和<code>@Controller</code> 与 <code>@RestController</code> 差不多吧</p><p>之后所有的 RequestMapping 方法如果抛出了异常的话就会被处理了</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>SpringBoot</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Spring Boot当中使用自定义注解</title>
+    <link href="/blog/spring-boot-custom-annotation.html"/>
+    <url>/blog/spring-boot-custom-annotation.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自定义注解算是 Java 这门语言当中我非常喜欢的特性了，因为它能够实实在在的提高开发效率，简化代码而不失可读性。之前仅仅在写入门级 ORM 框架的时候使用过，这两天开发新的项目，看到dalao们在Spring Boot 当中使用自定义注解来完成各种事务，立马就学习了一下</p><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul><li>Spring Boot 2.0.5.RELEASE</li></ul><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>我们希望使用对于方法的注解，来为该方法加入请求鉴权，增加 RESTful API 的安全性</p><h2 id="注解定义"><a href="#注解定义" class="headerlink" title="注解定义"></a>注解定义</h2><p>使用 <code>public @interface</code> 来定义一个公共的注解，具体代码如下</p><pre><code>@Target(ElementType.METHOD)@Retention(RetentionPolicy.RUNTIME)public @interface Authorization &#123;    Class type();&#125;</code></pre><p>这其中的 <code>type</code> 属性我们用来区别用户角色</p><h2 id="编写拦截器"><a href="#编写拦截器" class="headerlink" title="编写拦截器"></a>编写拦截器</h2><p>有了注解之后，我们需要编写一个拦截器，为注解绑定处理流程。Spring MVC 允许我们直接继承一个拦截器适配器 <code>HandlerInterceptorAdapter</code> ，来实现一个自定义拦截器，只需要实现一个 <code>preHandle</code> 方法就可以了，完整代码如下</p><pre><code>@Componentpublic class AuthorizationInterceptors extends HandlerInterceptorAdapter &#123;    @Autowired    TokenService tokenService;    @Override    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception &#123;        if (!(handler instanceof HandlerMethod))&#123;            return true;        &#125;        HandlerMethod handlerMethod = (HandlerMethod)handler;        Method method = handlerMethod.getMethod();        Annotation annotation;        if ((annotation = method.getAnnotation(Authorization.class) ) == null)&#123;            return true;        &#125;        String authorization = request.getHeader(&quot;token&quot;);        AccessToken token = tokenService.getToken(authorization);        if (token == null)&#123;            // 设置但 token 错误的时候返回 401            response.setStatus(401);            return false;        &#125;else &#123;            // 判断 token 对象是否属于特定的角色（管理员、微信用户），然后分开处理            if (((Authorization) annotation).type() == Admin.class &amp;&amp; token.getAdmin()!=null)&#123;                request.setAttribute(&quot;token&quot;, token.getUuid());                return true;            &#125;else if (((Authorization) annotation).type() == Wechater.class &amp;&amp; token.getWechater()!=null)&#123;                request.setAttribute(&quot;token&quot;, token.getUuid());                return true;            &#125;else &#123;                response.setStatus(200);                response.getWriter().append(JSON.toJSONString(ResJson.errorAccessToken()));                return false;            &#125;        &#125;    &#125;&#125;</code></pre><h2 id="将注解添加到-Spring-当中"><a href="#将注解添加到-Spring-当中" class="headerlink" title="将注解添加到 Spring 当中"></a>将注解添加到 Spring 当中</h2><p>注解绑定了处理的事务之后还需要将其添加到Spring 配置当中，新建一个配置类直接实现 <code>WebMvcConfigurer</code> 接口就可以了，然后填充 <code>addInterceptors</code> 方法，完整代码如下</p><pre><code>@Configurationpublic class InterceptorConfig implements WebMvcConfigurer &#123;    @Bean    AuthorizationInterceptors authorizationInterceptor() &#123;        return new AuthorizationInterceptors();    &#125;        @Override    public void addInterceptors(InterceptorRegistry registry) &#123;        // 鉴权的 @Authorization 注解        registry.addInterceptor(authorizationInterceptor()).addPathPatterns(&quot;/**&quot;);        System.out.println(&quot;鉴权 @Authorization 注解增加成功&quot;);    &#125;&#125;</code></pre><h2 id="使用注解"><a href="#使用注解" class="headerlink" title="使用注解"></a>使用注解</h2><pre><code>@RequestMapping(value = &quot;/api/logout&quot;)@Authorization(type = Admin.class)public String test()&#123;    return &quot;success&quot;;&#125;</code></pre><p>这样的话，请求<code>/api/logout</code>的时候，就一定要在 header 里面带上一个 token 参数才可以，token 一般是从登录接口那里获取的</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>SpringBoot</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用 Jenkins 自动构建项目</title>
+    <link href="/blog/jenkinsSetting.html"/>
+    <url>/blog/jenkinsSetting.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>公司项目开发到后期需要放到服务器上面去运行测试，但是不想每次都在本地编译成 jar 之后传到服务器再运行，于是使用 Jenkins 来完成这些步骤</p><h2 id="安装-jenkins"><a href="#安装-jenkins" class="headerlink" title="安装 jenkins"></a>安装 jenkins</h2><pre><code># 需要先安装 javaapt install software-properties-commonadd-apt-repository ppa:webupd8team/javaapt-get updateapt-get install oracle-java8-installer# 安装 jenkinswget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -sudo sh -c &#39;echo deb http://pkg.jenkins-ci.org/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list&#39;sudo apt-get updatesudo apt-get install jenkins</code></pre><h2 id="配置-jenkins"><a href="#配置-jenkins" class="headerlink" title="配置 jenkins"></a>配置 jenkins</h2><pre><code>vim /etc/default/jenkins </code></pre><p>修改里面的 http 端口</p><h2 id="caddy-反向代理"><a href="#caddy-反向代理" class="headerlink" title="caddy 反向代理"></a>caddy 反向代理</h2><pre><code>jenkins.domain.com &#123;        proxy / localhost:8080 &#123;                transparent        &#125;&#125;</code></pre><h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><pre><code>/etc/init.d/jenkins start# 或者 service jenkins start</code></pre><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>访问 <code>jenkins.domain.com</code> 完成配置，<br>一般直接选择默认配置就好了<br>一开始需要获取默认密码，使用</p><pre><code>cat /var/lib/jenkins/secrets/initialAdminPassword</code></pre><p>可以获取</p><h2 id="获取-API-TOKEN"><a href="#获取-API-TOKEN" class="headerlink" title="获取 API TOKEN"></a>获取 API TOKEN</h2><ul><li><p>面板右边的系统管理</p></li><li><p>管理用户</p></li><li><p>用户列表右边的图标</p></li><li><p>拿到用户的 USER ID 和 API TOKEN</p><pre><code>User ID : rootAPI TOKEN : 7d77089fq8f86906px5b5d707d13d</code></pre><p> <img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv11qft8ifj21h60r2af1.jpg"></p></li></ul><h2 id="安装Hudson-Post-build-task-插件"><a href="#安装Hudson-Post-build-task-插件" class="headerlink" title="安装Hudson Post build task 插件"></a>安装<code>Hudson Post build task</code> 插件</h2><p>因为我们要让项目在构建成功之后自动运行，所以要手动增加一个插件 <code>Hudson Post build task</code></p><h3 id="1-进入插件管理中心"><a href="#1-进入插件管理中心" class="headerlink" title="1 进入插件管理中心"></a>1 进入插件管理中心</h3><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv11zqqc7nj21h30qjjvv.jpg"></p><p>搜索到 <code>Hudson Post build task</code> 插件之后安装就好了</p><h2 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h2><h3 id="1-新建"><a href="#1-新建" class="headerlink" title="1 新建"></a>1 新建</h3><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv11pse47cj21h80q5gqb.jpg"></p><p>一般选择第一个</p><h3 id="2-配置-git-地址"><a href="#2-配置-git-地址" class="headerlink" title="2 配置 git 地址"></a>2 配置 git 地址</h3><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv11tazoeqj214y0nymza.jpg"><br>填入 git 地址，如果有用户名和密码的话也要设置好</p><h3 id="3-设置构建触发"><a href="#3-设置构建触发" class="headerlink" title="3 设置构建触发"></a>3 设置构建触发</h3><p><img src="https://ws1.sinaimg.cn/large/ae1a7c45gy1fv12u9agcoj215h0lrgnz.jpg"><br>这里要配置一个 TOKEN，后面要用到</p><h3 id="4-配置构建脚本"><a href="#4-配置构建脚本" class="headerlink" title="4 配置构建脚本"></a>4 配置构建脚本</h3><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv11vx8m5mj21590pndhv.jpg"></p><p>我的项目是 Spring Boot ，使用 mvn 命令就可以构建了，所以脚本内容如下</p><pre><code>echo $WORKSPACEecho $pwdmvn install -Dmaven.clean.failOnError=false -Djar.forceCreation -Dmaven.test.skip=true</code></pre><h3 id="5-设置构建好之后的运行脚本"><a href="#5-设置构建好之后的运行脚本" class="headerlink" title="5 设置构建好之后的运行脚本"></a>5 设置构建好之后的运行脚本</h3><p>由于我们已经安装了 <code>Hudson Post build task</code>，所以能够选择构建之后运行特定的 Shell 脚本</p><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv122wpze4j21fl0r940t.jpg"></p><p>脚本内容如下</p><pre><code>#!/bin/bash echo &quot;停止之前运行的 jar&quot;pid=`ps -ef | grep test-DEBUG-SNAPSHOT-exec | grep -v grep | awk &#39;&#123;print $2&#125;&#39;`if [ -n &quot;$pid&quot; ]thenecho &quot;kill -9 的pid:&quot; $pidkill -9 $pidfi# 保持脚本运行BUILD_ID=dontKillMe# 将 jar 复制到运行文件夹cp /var/lib/jenkins/workspace/test/target/test-DEBUG-SNAPSHOT* /home/sboot/# 启动 jarjava -jar /home/sboot/test-DEBUG-SNAPSHOT-exec.jar &amp;</code></pre><h3 id="6-设置权限"><a href="#6-设置权限" class="headerlink" title="6 设置权限"></a>6 设置权限</h3><p>起初我无法在构建之后运行脚本，一直提示权限不足，后面将 jenkins 设置为 ROOT 权限运行之后，就可以解决了，虽然会有不安全的因素</p><p> 设置步骤如下</p><pre><code>vim /etc/default/jenkins# 修改或者增加 JENKINS_USER=&quot;root&quot;# 然后修改Jenkins home，webroot和日志的所有权chown -R root:root /var/lib/jeninschown -R root:root /var/cache/jenkinschown -R root:root /var/log/jenkins# 重启 jenkinsservice restart jenkins</code></pre><h2 id="设置-webhook"><a href="#设置-webhook" class="headerlink" title="设置 webhook"></a>设置 webhook</h2><p>新建完项目之后我们就可以设置 WebHook 使得我们 push 了之后项目 jenkins 能够知道并有所动作</p><p>因为项目是放在 Gitee 上面的，所以这里就以 Gitee 作为示范</p><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1fv12cl707ij20zb0prjv3.jpg"></p><p>地址的格式是</p><pre><code>https://&#123;你的User ID&#125;:&#123;你的API TOKEN&#125;@&#123;你的服务器域名&#125;/job/&#123;jenkins上面的项目名称&#125;/build?token=&#123;远程构建的触发认证TOKEN&#125;</code></pre><p>例如</p><pre><code>https://admin:7d77089fq8f86906px5b5d707d13d@jenkins.domains.com/job/Test/build?token=Build-TOKEN</code></pre><p>填进去之后就可以测试了，如果 Webhook 无法生效的话，可能是 jenkins 设置了跨域访问限制，可以在</p><pre><code>系统管理 -&gt; 全局安全配置 -&gt; CSRF Protection</code></pre><p>  设置，取消跨域访问限制</p><p> 后面的就是测试构建能够成功，以及根据输出来修改构建脚本或者运行脚本吧</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>Server</tag>
+      
+      <tag>jenkins</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>鹊桥仙 七夕</title>
+    <link href="/blog/201877.html"/>
+    <url>/blog/201877.html</url>
+    
+    <content type="html"><![CDATA[<br><pre><code>    彩云鹊影，双星同聚，照世间痴儿女    相逢一度誓山河 ，谁能料，别离意趣        劝君不如，太白甄起，忘却情愁思绪    料想人间姻缘事，也只是，红绳牵与</code></pre><br><p>丁酉年七月初七晚 孑然填就</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>iMCPortal-连接过程解析及Golang实现</title>
+    <link href="/blog/iMCPortal.html"/>
+    <url>/blog/iMCPortal.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0 前言"></a>0 前言</h1><p>最近学校之前开通了 iMC Portal 无线网络, 只是每次都要开启浏览器才可以登录, 并且需要一直开着一个标签, 这是件很麻烦的事情, 而且最近 (2018-07-11) 发现会出现每隔 15 分钟就断线一次的问题, 所以希望通过抓包来了解连接的过程,之后使用 java 或者其他语言实现模拟登录, 并且在断线之后自动重连</p><h1 id="1-协议解析"><a href="#1-协议解析" class="headerlink" title="1 协议解析"></a>1 协议解析</h1><h2 id="1-1-获取-cookie"><a href="#1-1-获取-cookie" class="headerlink" title="1.1 获取 cookie"></a>1.1 获取 cookie</h2><p>访问学校 iMC portal 页面之后会发现有以下的一些页面请求</p><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1ftfjvp7kftj20t20dqmzl.jpg"></p><p>emmm ? 所以学校 iMC portal 后台还是用 java 写的, 页面还是 jsp ????</p><p>其中 <code>portal/templatePage/20170110154814101/login_custom.jsp</code> 的响应里面有 Set-Cookie 字段, 就是一个 <code>i_p_pl</code> 的 cookie , 先拿小本本记下来~</p><p>话说我还好奇这个 <code>i_p_pl</code>是什么意思来着, 于是想着解密看看</p><p>解密的话, 肯定第一步就是 base64 直接上啦~毕竟用很广泛</p><p>base64 解密结果之后可以得到</p><pre><code>%7B%22errorNumber%22%3A%221%22%2C%22nextUrl%22%3A%22http%3A%2F%2F10.50.15.9%3A80%2Fportal%2FtemplatePage%2F20170110154814101%2Flogin_custom.jsp%22%2C%22quickAuth%22%3Afalse%2C%22clientLanguage%22%3A%22Chinese%22%2C%22assignIpType%22%3A0%2C%22iNodePwdNeedEncrypt%22%3A1%2C%22wlannasid%22%3A%22%22%2C%22wlanssid%22%3A%22%22%2C%22nasIp%22%3A%22%22%2C%22byodServerIp%22%3A%220.0.0.0%22%2C%22byodServerIpv6%22%3A%220000%3A0000%3A0000%3A0000%3A0000%3A0000%3A0000%3A0000%22%2C%22byodServerHttpPort%22%3A%2280%22%2C%22ifTryUsePopupWindow%22%3Afalse%2C%22uamInitCustom%22%3A%220%22%2C%22customCfg%22%3A%22MTA1%22%2C%22regCodeType%22%3A%22MA%22%7D</code></pre><p>然后我们可以发现这是一段经过 url 编码的数据, 所以使用 url 解码再看看咯~</p><p>解码之后发现这是一段 <code>JSON</code></p><pre><code>&#123;    &quot;errorNumber&quot;: &quot;1&quot;,    &quot;nextUrl&quot;: &quot;&quot;,    &quot;quickAuth&quot;: false,    &quot;clientLanguage&quot;: &quot;Chinese&quot;,    &quot;assignIpType&quot;: 0,    &quot;iNodePwdNeedEncrypt&quot;: 1,    &quot;wlannasid&quot;: &quot;&quot;,    &quot;wlanssid&quot;: &quot;&quot;,    &quot;nasIp&quot;: &quot;&quot;,    &quot;byodServerIp&quot;: &quot;0.0.0.0&quot;,    &quot;byodServerIpv6&quot;: &quot;0000:0000:0000:0000:0000:0000:0000:0000&quot;,    &quot;byodServerHttpPort&quot;: &quot;80&quot;,    &quot;ifTryUsePopupWindow&quot;: false,    &quot;uamInitCustom&quot;: &quot;0&quot;,    &quot;customCfg&quot;: &quot;MTA1&quot;,    &quot;regCodeType&quot;: &quot;MA&quot;&#125;</code></pre><p>然而似乎没有发现什么特别厉害的东西啊,就没有管, 先记着再说, 不过倒是发现了网站信息交换时候的一般加密手段似乎就是 单纯的 </p><pre><code>JSON -&gt; URLEncoder -&gt; base64 </code></pre><h2 id="1-2-登录"><a href="#1-2-登录" class="headerlink" title="1.2 登录"></a>1.2 登录</h2><p>尝试登录的时候,发现接口的地址是 <code>portal/pws?t=li</code>, 一个 POST 请求</p><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1ftfjw2nyrfj21150k3dlg.jpg"></p><p>在这里我们就能看到之前获得的 cookie 的用处了</p><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1ftfjw93p75j211l0jvgoy.jpg"></p><p>而在具体的 POST 的数据上面, 有以下的内容</p><pre><code>userName: 1000000000userPwd: MTAwMDAwMDAwMA==userDynamicPwd: userDynamicPwdd: serviceTypeHIDE: serviceType: userurl: userip: basip: language: Chineseusermac: nullwlannasid: wlanssid: entrance: nullloginVerifyCode: userDynamicPwddd: customPageId: 0pwdMode: 0portalProxyIP: 10.50.15.9portalProxyPort: 50200dcPwdNeedEncrypt: 1assignIpType: 0appRootUrl: http://xx.xx.xx.xx/portal/manualUrl: manualUrlEncryptKey: </code></pre><p>尝试了几次之后, 发现其实有改变的就是 <code>userName</code> 和 <code>userPwd</code> 两个参数, 而 <code>userPwd</code> 是一串有两个<code>=</code> 号的密文, 显然就是将用户密码经过 base64 之后得到</p><p>而登录的返回的话是下面这样的一段密文</p><pre><code>JTdCJTIycG9ydFNlcnZFcnJvckNvZGUlMjIlM0ElMjIxJTIyJTJDJTIycG9ydFNlcnZFcnJvckNvZGVEZXNjJTIyJTNBJTIyJUU4JUFFJUJFJUU1JUE0JTg3JUU2JThCJTkyJUU3JUJCJTlEJUU4JUFGJUI3JUU2JUIxJTgyJTIyJTJDJTIyZV9jJTIyJTNBJTIycG9ydFNlcnZFcnJvckNvZGUlMjIlMkMlMjJlX2QlMjIlM0ElMjJwb3J0U2VydkVycm9yQ29kZURlc2MlMjIlMkMlMjJlcnJvck51bWJlciUyMiUzQSUyMjclMjIlN0Q</code></pre><p>和对 cookie 内容的解密一样, 我们用 base64 先解密一次, 然后用 urlDecode 就可以看到原来的 JSON 信息了, 其 JSON 信息如下</p><pre><code>&#123;    &quot;portServErrorCode&quot;: &quot;1&quot;,    &quot;portServErrorCodeDesc&quot;: &quot;设备拒绝请求&quot;,    &quot;e_c&quot;: &quot;portServErrorCode&quot;,    &quot;e_d&quot;: &quot;portServErrorCodeDesc&quot;,    &quot;errorNumber&quot;: &quot;7&quot;&#125;</code></pre><p>而经过多次的尝试之后, 发现根据输入内容及帐号状态的不同, 会有以下的一些返回</p><ul><li><p>设备上已经有帐号登录了</p><pre><code> &#123;     &quot;portServErrorCode&quot;: &quot;1&quot;,     &quot;portServErrorCodeDesc&quot;: &quot;设备拒绝请求&quot;,     &quot;e_c&quot;: &quot;portServErrorCode&quot;,     &quot;e_d&quot;: &quot;portServErrorCodeDesc&quot;,     &quot;errorNumber&quot;: &quot;7&quot; &#125;</code></pre></li><li><p>用户名错误</p><pre><code> &#123;     &quot;portServIncludeFailedCode&quot;: &quot;63018&quot;,     &quot;portServIncludeFailedReason&quot;: &quot;E63018:用户不存在或者用户没有申请该服务。&quot;,     &quot;e_c&quot;: &quot;portServIncludeFailedCode&quot;,     &quot;e_d&quot;: &quot;portServIncludeFailedReason&quot;,     &quot;errorNumber&quot;: &quot;7&quot; &#125;</code></pre></li><li><p>密码错误</p><pre><code> &#123;     &quot;portServIncludeFailedCode&quot;: &quot;63032&quot;,     &quot;portServIncludeFailedReason&quot;: &quot;E63032:密码错误，您还可以重试8次。&quot;,     &quot;e_c&quot;: &quot;portServIncludeFailedCode&quot;,     &quot;e_d&quot;: &quot;portServIncludeFailedReason&quot;,     &quot;errorNumber&quot;: &quot;7&quot; &#125;</code></pre></li><li><p>登录成功</p><pre><code> &#123;     &quot;errorNumber&quot;: &quot;1&quot;,     &quot;heartBeatCyc&quot;: 900000,     &quot;heartBeatTimeoutMaxTime&quot;: 2,     &quot;userDevPort&quot;: &quot;Servers-Aggregation-SW-S5560X-54C-EI-vlan-01-4055@vlan&quot;,     &quot;userStatus&quot;: 99,     &quot;serialNo&quot;: 4686,     &quot;ifNeedModifyPwd&quot;: false,     &quot;browserUrl&quot;: &quot;&quot;,     &quot;clientPrivateIp&quot;: &quot;&quot;,     &quot;userurl&quot;: &quot;&quot;,     &quot;usermac&quot;: null,     &quot;nasIp&quot;: &quot;&quot;,     &quot;clientLanguage&quot;: &quot;Chinese&quot;,     &quot;ifTryUsePopupWindow&quot;: true,     &quot;triggerRedirectUrl&quot;: &quot;&quot;,     &quot;portalLink&quot;: &quot;JTdCJTIyZXJyb3JOdW1iZXIlMjIlM0ElMjIxJTIyJTJDJTIyaGVhcnRCZWF0Q3ljJTIyJTNBOTAwMDAwJTJDJTIyaGVhcnRCZWF0VGltZW91dE1heFRpbWUlMjIlM0EyJTJDJTIydXNlckRldlBvcnQlMjIlM0ElMjJTZXJ2ZXJzLUFnZ3JlZ2F0aW9uLVNXLVM1NTYwWC01NEMtRUktdmxhbi0wMS00MDU1JTQwdmxhbiUyMiUyQyUyMnVzZXJTdGF0dXMlMjIlM0E5OSUyQyUyMnNlcmlhbE5vJTIyJTNBNDY4NiUyQyUyMmlmTmVlZE1vZGlmeVB3ZCUyMiUzQWZhbHNlJTJDJTIyYnJvd3NlclVybCUyMiUzQSUyMiUyMiUyQyUyMmNsaWVudFByaXZhdGVJcCUyMiUzQSUyMiUyMiUyQyUyMnVzZXJ1cmwlMjIlM0ElMjIlMjIlMkMlMjJ1c2VybWFjJTIyJTNBbnVsbCUyQyUyMm5hc0lwJTIyJTNBJTIyJTIyJTJDJTIyY2xpZW50TGFuZ3VhZ2UlMjIlM0ElMjJDaGluZXNlJTIyJTJDJTIyaWZUcnlVc2VQb3B1cFdpbmRvdyUyMiUzQXRydWUlMkMlMjJ0cmlnZ2VyUmVkaXJlY3RVcmwlMjIlM0ElMjIlMjIlN0Q&quot; &#125;</code></pre><ul><li>这里的 portalLink 解密之后如下, 似乎也没有什么有用的内容<blockquote><p>{“errorNumber”:”1”,”heartBeatCyc”:900000,”heartBeatTimeoutMaxTime”:2,”userDevPort”:”Servers-Aggregation-SW-S5560X-54C-EI-vlan-01-4055@vlan”,”userStatus”:99,”serialNo”:4686,”ifNeedModifyPwd”:false,”browserUrl”:””,”clientPrivateIp”:””,”userurl”:””,”usermac”:null,”nasIp”:””,”clientLanguage”:”Chinese”,”ifTryUsePopupWindow”:true,”triggerRedirectUrl”:””}</p></blockquote></li></ul></li></ul><h2 id="1-3-登录成功"><a href="#1-3-登录成功" class="headerlink" title="1.3 登录成功"></a>1.3 登录成功</h2><p>当我们输入正确的帐号和密码后, 网页上的变化是, 跳转到了一个 已登录的提示页面, 从 Chrome 看到的请求有以下这些</p><p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1ftfjwehcl5j20ya0htq8r.jpg"></p><p>出去对静态资源的请求, 剩下的就是</p><br><ul><li>GET <code>afterLogin.jsp</code> 上线提示</li><li>GET <code>online.jsp</code></li><li>GET <code>listenClose.jsp</code></li><li>GET <code>online_heartBeat.jsp</code></li><li>GET <code>online_showTimer.jsp</code></li></ul><br><p>其中第四个 <code>online_heartBeat.jsp</code> 显然是为了为此连接而使用的心跳包, 剩下的, 从结果来看, 似乎都只是一些用于网页上展示的页面文件而已, 例如 <code>online_showTimer.jsp</code> 就是展示倒计时的时钟的</p><p>而测试中发现, 在通过 <code>portal/pws?t=li</code> 接口登录成功之后, 哪怕不往 <code>online_showTimer.jsp</code> 发送一个 GET 请求, 也依然能够联网, 所以实际上我们登录, 就只需要用到 <code>online_showTimer.jsp</code> 接口而已</p><p>那么 <code>online_heartBeat.jsp</code> 接受什么信息呢, 主要是下面的这些 URL 参数</p><pre><code>hlo: nullpl: 上面 cookie 当中获取的值startTime: 1531901701428userName: nulluserPwd: nullloginType: 3innerStr: nullouterStr: nullv_is_selfLogin: 0custompath: templatePage/20170110154814101/uamInitCustom: 0uamInitLogo: H3CcustomCfg: MTA1</code></pre><p>这里面除了 startTime 和 pl 之外, 其他的参数似乎并没有什么变化, 另外就是 Referer 和 Cookie 的 Header</p><h2 id="1-4-退出"><a href="#1-4-退出" class="headerlink" title="1.4 退出"></a>1.4 退出</h2><p>那么当我登录好了, 如果想要退出的话, 应该怎么办呢, 一开始通过 Chrome 查看到, 实际上退出的话, 是向两个地址发送了请求, 分别是</p><ul><li>GET <code>portal/pws?t=lo&amp;language=Chinese&amp;userip=&amp;basip=&amp;_=1531901705967</code></li><li>POST <code>portal/templatePage/20170110154814101/logout.jsp</code></li></ul><p>一开始我以为 GET 请求只是获取页面而已, POST 一定是正正经经的退出接口</p><p>然后尝试了好几次之后我发现我错了</p><p><strong>所以这个 GET 的接口才是正确的退出接口 ????? 为什么是 GET 而不是 POST ?????</strong></p><p>反正我是搞不懂了</p><p>而这个 GET 接口主要接受的这么几个 URL 参数</p><pre><code>pl: 上面 Cookie 中取得的值hlo: nullcustomCfg: MTA1custompath: templatePage/20170110154814101/uamInitCustom: 0uamInitLogo: H3C</code></pre><p>另外带上 Cookie 的 Header 和 Referer 的 Header, 其中 Referer 的值是</p><pre><code>http://xx.xx.xx.xx/portal/templatePage/20170110154814101/online_showTimer.jsp?hlo=null&amp;pl=JTdCJTIyZXJyb3JOdW1iZXIlMjIlM0ElMjIxJTIyJTJDJTIyaGVhcnRCZWF0Q3ljJTIyJTNBOTAwMDAwJTJDJTIyaGVhcnRCZWF0VGltZW91dE1heFRpbWUlMjIlM0EyJTJDJTIydXNlckRldlBvcnQlMjIlM0ElMjJTZXJ2ZXJzLUFnZ3JlZ2F0aW9uLVNXLVM1NTYwWC01NEMtRUktdmxhbi0wMS00MDU1JTQwdmxhbiUyMiUyQyUyMnVzZXJTdGF0dXMlMjIlM0E5OSUyQyUyMnNlcmlhbE5vJTIyJTNBNzE5NiUyQyUyMmlmTmVlZE1vZGlmeVB3ZCUyMiUzQWZhbHNlJTJDJTIyYnJvd3NlclVybCUyMiUzQSUyMiUyMiUyQyUyMmNsaWVudFByaXZhdGVJcCUyMiUzQSUyMiUyMiUyQyUyMnVzZXJ1cmwlMjIlM0ElMjIlMjIlMkMlMjJ1c2VybWFjJTIyJTNBbnVsbCUyQyUyMm5hc0lwJTIyJTNBJTIyJTIyJTJDJTIyY2xpZW50TGFuZ3VhZ2UlMjIlM0ElMjJDaGluZXNlJTIyJTJDJTIyaWZUcnlVc2VQb3B1cFdpbmRvdyUyMiUzQXRydWUlMkMlMjJ0cmlnZ2VyUmVkaXJlY3RVcmwlMjIlM0ElMjIlMjIlN0Q&amp;startTime=1531901701428&amp;userName=null&amp;userPwd=null&amp;loginType=3&amp;innerStr=null&amp;outerStr=null&amp;v_is_selfLogin=0&amp;custompath=templatePage/20170110154814101/&amp;uamInitCustom=0&amp;uamInitLogo=H3C&amp;customCfg=MTA1</code></pre><p>里面的变量除了 pl 之外就是那个 startTime 参数了, 显而易见就是连接开始的时间啦, 但是后面发现似乎怎么设置都没有关系, 因为我是用代码记录下发送登录请求的函数执行时候的时间戳, 然后填到这里来的</p><h2 id="1-5-未解问题"><a href="#1-5-未解问题" class="headerlink" title="1.5 未解问题"></a>1.5 未解问题</h2><p>还是没法知道为什么学校的 iMC Portal 在连接 15 分钟后就会自动断开, 起初我以为是网页错误导致无法发送心跳包, 但是当我用代码模拟的整个过程, 并且每 5 分钟发送一次心跳包的情况下</p><p><strong>连接 15 分钟后, 依然会掉线!!!???</strong></p><p>此处有黑人问号, 只能猜测这样的设计是为了避免大家离开了教学去但是帐号没有下线, 导致无法在宿舍登录校园网?</p><h1 id="2-最终产出"><a href="#2-最终产出" class="headerlink" title="2 最终产出"></a>2 最终产出</h1><p>详细的了解了连接的过程以及对应的数据发送内容之后, 就可以用代码来实现连接过程了, 并且最重要的是, 能够实现自动在断线后重连的功能</p><p>最终程序使用 Golang 实现, 由于 Golang 方便的编译功能, 所以程序能够快速的变成 Linux\Windows\Mac 平台下的二进制文件, 方便使用和传播</p><p>具体的代码在 </p><pre><code>https://github.com/Besfim/iMC-Portal-Login</code></pre><p>其中 Release 已经发布了 V0.1 版本, 下载对应平台的二进制文件就能够使用了, 使用方法如下</p><pre><code>-p string    校园网密码 (default &quot;null&quot;)-u string    学生学号 (default &quot;null&quot;)-d    开启 DEBUG 日志打印-o     强制退出之前登录的帐号, 确保帐号已下线, 也要求输入正确的用户名和密码参数-p s</code></pre><p>更多代码细节请参考 Github 上面的源码</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>Golang</tag>
+      
+      <tag>爬虫</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Norcia文档</title>
+    <link href="/blog/norcia-document.html"/>
+    <url>/blog/norcia-document.html</url>
+    
+    <content type="html"><![CDATA[<h1 id="Norcia"><a href="#Norcia" class="headerlink" title="Norcia"></a>Norcia</h1><p>一个简单的静态博客框架</p><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><ul><li>根目录下的 HTML \ CSS \ JavaScript 文件</li><li><code>document</code> 文件夹用来存放博文 markdown 文件</li><li>config.json 作为静态博客的配置文件以及博客文章索引,该文件在初次设定好个人信息后可由 Norcia 程序自动更新与维护, 详情请看下文介绍</li></ul><h2 id="config-json-自动更新"><a href="#config-json-自动更新" class="headerlink" title="config.json 自动更新"></a>config.json 自动更新</h2><h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>运行 Norcia 程序就可以自动依照 document 文件夹里面的 markdown 文件的修改, 而自动维护更新 config.json 索引了</p><p>Norcia 为以下三个平台提供打包好的二进制程序</p><ul><li><code>Norcia_win_amd64</code> 适用于 64 位 windows 系统</li><li><code>Norcia_drawin_amd64</code> 适用于 64 位 Mac OS 系统</li><li><code>Norcia_linux_amd64</code> 适用于 64 位 linux 系统</li></ul><h3 id="格式和说明"><a href="#格式和说明" class="headerlink" title="格式和说明"></a>格式和说明</h3><pre><code>&#123;    &quot;head&quot;: &quot;博客名称&quot;,    &quot;introduce&quot;: &quot;博客介绍&quot;,    &quot;github&quot;: &quot;github地址&quot;,    &quot;weibo&quot;: &quot;weibo地址&quot;,    &quot;articles&quot;: [        &#123;            &quot;title&quot;: &quot;文章标题&quot;,            &quot;tag&quot;: &quot;文章标签&quot;,            &quot;create&quot;: &quot;创作日期&quot;,            &quot;update&quot;: &quot;更新日期&quot;            &quot;mini&quot;: &quot;文章缩略前300个字&quot;        &#125;,        &#123;            &quot;title&quot;: &quot;文章标题&quot;,            &quot;tag&quot;: &quot;文章标签&quot;,            &quot;create&quot;: &quot;创作日期&quot;,            &quot;update&quot;: &quot;更新日期&quot;            &quot;mini&quot;: &quot;文章缩略前300个字&quot;        &#125;    ]&#125;</code></pre><h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><p>在工程目录根目录下运行下面命令就可以了</p><ul><li><p><code>Linux</code> 平台</p><pre><code> ./Norcia_linux_amd64</code></pre></li><li><p><code>Mac OS</code> 平台</p><pre><code> ./Norcia_drawin_amd64 </code></pre></li><li><p><code>Windows</code> 平台</p><pre><code> ./Norcia_win_amd64.exe </code></pre></li></ul><p>如果运行正确的话, 会看到下面提示</p><pre><code>update 0 document(s), and create 0 documents(s)</code></pre><h3 id="Norcia-js"><a href="#Norcia-js" class="headerlink" title="Norcia.js"></a>Norcia.js</h3><p><code>Norcia.js</code> 是　<code>Norcia</code>的　js 工具包，封装好了 Norcia 一些前端需要用到的函数，使用示例如下</p><pre><code>// 新建一个 config 对象let config = new NorciaConfig();// 使用回调函数来处理相关事务// 回调函数会在 config.json 数据被读取之后调用config.load([    function loadHead(config) &#123;        console.log(config.head);    &#125;,    function loadTitle(config) &#123;        console.log(config.introduce);    &#125;,    function loadArticle(configTemp) &#123;        console.log(configTemp.articles[0].title);    &#125;]);</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>Norcia</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>markdown测试文档</title>
+    <link href="/blog/markdown-test.html"/>
+    <url>/blog/markdown-test.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是一份Markdown 测试文档，用来测试 Norcia 对 markdown 文件的加载和显示</p><h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><blockquote><h4 id="Markdown是什么？"><a href="#Markdown是什么？" class="headerlink" title="Markdown是什么？"></a>Markdown是什么？</h4><h4 id="谁创造了它？"><a href="#谁创造了它？" class="headerlink" title="谁创造了它？"></a>谁创造了它？</h4><h4 id="为什么要使用它？"><a href="#为什么要使用它？" class="headerlink" title="为什么要使用它？"></a>为什么要使用它？</h4><h4 id="怎么使用？"><a href="#怎么使用？" class="headerlink" title="怎么使用？"></a>怎么使用？</h4><h4 id="谁在用？"><a href="#谁在用？" class="headerlink" title="谁在用？"></a>谁在用？</h4><h4 id="尝试一下"><a href="#尝试一下" class="headerlink" title="尝试一下"></a>尝试一下</h4></blockquote><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-Markdown是什么？"><a href="#1-Markdown是什么？" class="headerlink" title="1. Markdown是什么？"></a>1. Markdown是什么？</h3><p><strong>Markdown</strong>是一种轻量级<strong>标记语言</strong>，它以纯文本形式(<em>易读、易写、易更改</em>)编写文档，并最终以HTML格式发布。<br><strong>Markdown</strong>也可以理解为将以MARKDOWN语法编写的语言转换成HTML内容的工具。    </p><h3 id="2-谁创造了它？"><a href="#2-谁创造了它？" class="headerlink" title="2. 谁创造了它？"></a>2. 谁创造了它？</h3><p>它由<a href="http://www.aaronsw.com/"><strong>Aaron Swartz</strong></a>和<strong>John Gruber</strong>共同设计，<strong>Aaron Swartz</strong>就是那位于去年（<em>2013年1月11日</em>）自杀,有着<strong>开挂</strong>一般人生经历的程序员。维基百科对他的<a href="http://zh.wikipedia.org/wiki/%E4%BA%9A%E4%BC%A6%C2%B7%E6%96%AF%E6%B2%83%E8%8C%A8">介绍</a>是：<strong>软件工程师、作家、政治组织者、互联网活动家、维基百科人</strong>。    </p><p>他有着足以让你跪拜的人生经历：    </p><ul><li><strong>14岁</strong>参与RSS 1.0规格标准的制订。     </li><li><strong>2004</strong>年入读<strong>斯坦福</strong>，之后退学。   </li><li><strong>2005</strong>年创建<a href="http://infogami.org/">Infogami</a>，之后与<a href="http://www.reddit.com/">Reddit</a>合并成为其合伙人。   </li><li><strong>2010</strong>年创立求进会（Demand Progress），积极参与禁止网络盗版法案（SOPA）活动，最终该提案被撤回。   </li><li><strong>2011</strong>年7月19日，因被控从MIT和JSTOR下载480万篇学术论文并以免费形式上传于网络被捕。     </li><li><strong>2013</strong>年1月自杀身亡。    </li></ul><p><img src="https://github.com/younghz/Markdown/raw/master/resource/Aaron_Swartz.jpg" alt="Aaron Swartz"></p><p>天才都有早逝的归途。</p><h3 id="3-为什么要使用它？"><a href="#3-为什么要使用它？" class="headerlink" title="3. 为什么要使用它？"></a>3. 为什么要使用它？</h3><ul><li>它是易读（看起开舒服）、易写（语法简单）、易更改<strong>纯文本</strong>。处处体现着<strong>极简主义</strong>的影子。</li><li>兼容HTML，可以转换为HTML格式发布。</li><li>跨平台使用。</li><li>越来越多的网站支持Markdown。</li><li>更方便清晰的组织你的电子邮件。（Markdown-here, Airmail）</li><li>摆脱Word（我不是认真的）。</li></ul><h3 id="4-怎么使用？"><a href="#4-怎么使用？" class="headerlink" title="4. 怎么使用？"></a>4. 怎么使用？</h3><p>如果不算<strong>扩展</strong>，Markdown的语法绝对<strong>简单</strong>到让你爱不释手。</p><p>Markdown语法主要分为如下几大部分：<br><strong>标题</strong>，<strong>段落</strong>，<strong>区块引用</strong>，<strong>代码区块</strong>，<strong>强调</strong>，<strong>列表</strong>，<strong>分割线</strong>，<strong>链接</strong>，<strong>图片</strong>，**反斜杠 <code>\</code><strong>，</strong>符号’`’**。</p><h4 id="4-1-标题"><a href="#4-1-标题" class="headerlink" title="4.1 标题"></a>4.1 标题</h4><p>两种形式：<br>1）使用<code>=</code>和<code>-</code>标记一级和二级标题。</p><blockquote><p>一级标题<br><code>=========</code><br>二级标题<br><code>---------</code></p></blockquote><p>效果：</p><blockquote><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题   "></a>一级标题   </h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2></blockquote><p>2）使用<code>#</code>，可表示1-6级标题。</p><blockquote><p># 一级标题<br>## 二级标题<br>### 三级标题<br>#### 四级标题<br>##### 五级标题<br>###### 六级标题    </p></blockquote><p>效果：</p><blockquote><h1 id="一级标题-1"><a href="#一级标题-1" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6></blockquote><h4 id="4-2-段落"><a href="#4-2-段落" class="headerlink" title="4.2 段落"></a>4.2 段落</h4><p>段落的前后要有空行，所谓的空行是指没有文字内容。若想在段内强制换行的方式是使用<strong>两个以上</strong>空格加上回车（引用中换行省略回车）。</p><h4 id="4-3-区块引用"><a href="#4-3-区块引用" class="headerlink" title="4.3 区块引用"></a>4.3 区块引用</h4><p>在段落的每行或者只在第一行使用符号<code>&gt;</code>,还可使用多个嵌套引用，如：</p><blockquote><p>&gt; 区块引用<br>&gt;&gt; 嵌套引用  </p></blockquote><p>效果：</p><blockquote><p>区块引用  </p><blockquote><p>嵌套引用</p></blockquote></blockquote><h4 id="4-4-代码区块"><a href="#4-4-代码区块" class="headerlink" title="4.4 代码区块"></a>4.4 代码区块</h4><p>代码区块的建立是在每行加上4个空格或者一个制表符（如同写代码一样）。如<br>普通段落：</p><p>void main()<br>{<br>    printf(“Hello, Markdown.”);<br>}    </p><p>代码区块：</p><pre><code>void main()&#123;    printf(&quot;Hello, Markdown.&quot;);&#125;</code></pre><p><strong>注意</strong>:需要和普通段落之间存在空行。</p><h4 id="4-5-强调"><a href="#4-5-强调" class="headerlink" title="4.5 强调"></a>4.5 强调</h4><p>在强调内容两侧分别加上<code>*</code>或者<code>_</code>，如：</p><blockquote><p>*斜体*，_斜体_<br>**粗体**，__粗体__</p></blockquote><p>效果：</p><blockquote><p><em>斜体</em>，<em>斜体</em><br><strong>粗体</strong>，<strong>粗体</strong></p></blockquote><h4 id="4-6-列表"><a href="#4-6-列表" class="headerlink" title="4.6 列表"></a>4.6 列表</h4><p>使用<code>·</code>、<code>+</code>、或<code>-</code>标记无序列表，如：</p><blockquote><p>-（+*） 第一项<br>-（+*） 第二项<br>- （+*）第三项</p></blockquote><p><strong>注意</strong>：标记后面最少有一个_空格_或_制表符_。若不在引用区块中，必须和前方段落之间存在空行。</p><p>效果：</p><blockquote><ul><li>第一项</li><li>第二项</li><li>第三项</li></ul></blockquote><p>有序列表的标记方式是将上述的符号换成数字,并辅以<code>.</code>，如：</p><blockquote><p>1 . 第一项<br>2 . 第二项<br>3 . 第三项    </p></blockquote><p>效果：</p><blockquote><ol><li>第一项</li><li>第二项</li><li>第三项</li></ol></blockquote><h4 id="4-7-分割线"><a href="#4-7-分割线" class="headerlink" title="4.7 分割线"></a>4.7 分割线</h4><p>分割线最常使用就是三个或以上<code>*</code>，还可以使用<code>-</code>和<code>_</code>。</p><h4 id="4-8-链接"><a href="#4-8-链接" class="headerlink" title="4.8 链接"></a>4.8 链接</h4><p>链接可以由两种形式生成：<strong>行内式</strong>和<strong>参考式</strong>。<br><strong>行内式</strong>：</p><blockquote><p>[younghz的Markdown库](https:://github.com/younghz/Markdown “Markdown”)。</p></blockquote><p>效果：</p><blockquote><p><a href="https:://github.com/younghz/Markdown" title="Markdown">younghz的Markdown库</a>。</p></blockquote><p><strong>参考式</strong>：</p><blockquote><p>[younghz的Markdown库1][1]<br>[younghz的Markdown库2][2]<br>[1]:https:://github.com/younghz/Markdown “Markdown”<br>[2]:https:://github.com/younghz/Markdown “Markdown”    </p></blockquote><p>效果：</p><blockquote><p><a href="https:://github.com/younghz/Markdown" title="Markdown">younghz的Markdown库1</a><br><a href="https:://github.com/younghz/Markdown" title="Markdown">younghz的Markdown库2</a></p></blockquote><p><strong>注意</strong>：上述的<code>[1]:https:://github.com/younghz/Markdown &quot;Markdown&quot;</code>不出现在区块中。</p><h4 id="4-9-图片"><a href="#4-9-图片" class="headerlink" title="4.9 图片"></a>4.9 图片</h4><p>添加图片的形式和链接相似，只需在链接的基础上前方加一个<code>！</code>。</p><h4 id="4-10-反斜杠"><a href="#4-10-反斜杠" class="headerlink" title="4.10 反斜杠\"></a>4.10 反斜杠<code>\</code></h4><p>相当于<strong>反转义</strong>作用。使符号成为普通符号。</p><h4 id="4-11-符号’-’"><a href="#4-11-符号’-’" class="headerlink" title="4.11 符号’`’"></a>4.11 符号’`’</h4><p>起到标记作用。如：</p><blockquote><p>`ctrl+a`</p></blockquote><p>效果：</p><blockquote><p><code>ctrl+a</code>    </p></blockquote><h4 id="5-谁在用？"><a href="#5-谁在用？" class="headerlink" title="5. 谁在用？"></a>5. 谁在用？</h4><p>Markdown的使用者：</p><ul><li>GitHub</li><li>简书</li><li>Stack Overflow</li><li>Apollo</li><li>Moodle</li><li>Reddit</li><li>等等</li></ul><h4 id="6-尝试一下"><a href="#6-尝试一下" class="headerlink" title="6. 尝试一下"></a>6. 尝试一下</h4><ul><li><strong>Chrome</strong>下的插件诸如<code>stackedit</code>与<code>markdown-here</code>等非常方便，也不用担心平台受限。</li><li><strong>在线</strong>的dillinger.io评价也不错   </li><li><strong>Windowns</strong>下的MarkdownPad也用过，不过免费版的体验不是很好。    </li><li><strong>Mac</strong>下的Mou是国人贡献的，口碑很好。</li><li><strong>Linux</strong>下的ReText不错。    </li></ul><p><strong>当然，最终境界永远都是笔下是语法，心中格式化 :)。</strong></p><hr><p><strong>注意</strong>：不同的Markdown解释器或工具对相应语法（扩展语法）的解释效果不尽相同，具体可参见工具的使用说明。<br>虽然有人想出面搞一个所谓的标准化的Markdown，[没想到还惹怒了健在的创始人John Gruber]<br>(<a href="http://blog.codinghorror.com/standard-markdown-is-now-common-markdown/)%E3%80%82">http://blog.codinghorror.com/standard-markdown-is-now-common-markdown/)。</a></p><hr><p>以上基本是所有traditonal markdown的语法。</p><h3 id="其它："><a href="#其它：" class="headerlink" title="其它："></a>其它：</h3><p>列表的使用(非traditonal markdown)：</p><p>用<code>|</code>表示表格纵向边界，表头和表内容用<code>-</code>隔开，并可用<code>:</code>进行对齐设置，两边都有<code>:</code>则表示居中，若不加<code>:</code>则默认左对齐。</p><table><thead><tr><th align="center">列表1</th><th>列表2</th></tr></thead><tbody><tr><td align="center">内容</td><td>内容</td></tr><tr><td align="center">内容</td><td>内容</td></tr></tbody></table>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>Norcia</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>毕业惜别自题四首</title>
+    <link href="/blog/graduate-1804.html"/>
+    <url>/blog/graduate-1804.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>16年中时候某天中午看到他们搬校区，又看到公众号上写满离愁别恨，那时候还年轻所以也不知道什么，只是就着假想的离别心情写了几行字，这就是第一首诗的由来。眨眼间却忽然发现已经到了自己的师兄毕业和离开的时候了。</p><h3 id="其（一）"><a href="#其（一）" class="headerlink" title="其（一）"></a>其（一）</h3><pre><code>    淅水荷花今又红         年华易逝总匆匆         只欲为君折赠远         相逢仍记旧音容</code></pre><h3 id="其（二）"><a href="#其（二）" class="headerlink" title="其（二）"></a>其（二）</h3><pre><code>    骊歌今日对苍穹         而后青山隔万重         杯酒浮沉且饮尽         何妨天下拭襟胸</code></pre><h3 id="其（三）"><a href="#其（三）" class="headerlink" title="其（三）"></a>其（三）</h3><pre><code>    且推杯盏诉衷肠         而后天涯两渺茫         零落红尘三万丈         一壶浊酒为君藏</code></pre><h3 id="其（四）"><a href="#其（四）" class="headerlink" title="其（四）"></a>其（四）</h3><pre><code>    当时年少轻别离         数度春衫醉锦几         千古长亭流泪处         问君何日是归期</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Markmobi开发记录</title>
+    <link href="/blog/Markmobi.html"/>
+    <url>/blog/Markmobi.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自己使用 Kindle 已经有好几年的历史了，从高中时期看各种古文，后来一口气的看一大堆小说，再到后来看看一些技术书籍，而最近发现 Kindle 的另外一个用处就是看 Github 上面的一些电子书籍。</p><p>Github 上面是有很多的技术书籍的，因为 Github 有着开放和包容的特性，所以很多的人会翻译各种技术专业的文档或者相关的书，并变成一个 repo ，后续不断更新和提交。从这看来，Github 其实像是一个大的书库。另外哪怕不是书籍，Github 上面也有很多可能并不太适合在电脑上面阅读的 README，以及那种超长的那种项目文档。某天我翻阅的时候，忽然发现或许拿 Kindle 来阅读，应该会舒服很多吧。于是就开始了探索如何把 Github 上面的文档挪到 Kindle 上面阅读的问题。准确的说来，这个问题应该是——如何让 Markdown 文档变成合适 Kindle 存储和阅读的 mobi 文件。</p><p> 那既然说起将 Markdown 文件变成书，变成 Mobi，大家可能马上就可以想到 Gitbook。毕竟人家有下载按钮，有直接变成 Mobi 格式的功能。可是最大的问题在于并不是所有 Github 上面的 repo 都同样的在 Gitbook 拥有一个 repo 啊，所以说到底，还是需要一个工具来帮我们转换。</p><p> 可惜，在我 google 了巨久之后，我也没有发现什么工具能够直接输入一个 markdown 文件，输出一个 mobi 文件。比较曲折的过程是 ：</p><ul><li>使用 <code>pandoc</code> 将 markdown 转换成 html</li><li>使用 <code>KindleGen</code> 再将 html 转换成 mobi</li></ul><p> 虽然曲折，但是按着流程操作了两遍，发现真的还行来着，毕竟只要是 mobi 就可以，字体大小什么的都可以交给 kindle 设置。</p><p> 可是每次都这么操作真的是很麻烦，作为一个程序员自然就想写一个工具过来把这些步骤放到一次完成啦，甚至是做成一个在线工具，直接上传 markdown 然后转换成 mobi ，并提供下载链接</p><p> 于是就写了个 <code>Markmobi</code></p><p> 实际上这只是一个调用 <code>pandoc</code> 和 <code>kindleGen</code> 的整合工具而已，内里还是使用 <code>pandoc</code>和<code>kindleGen</code>在工作</p><h2 id="Markdown-文档要求"><a href="#Markdown-文档要求" class="headerlink" title="Markdown 文档要求"></a>Markdown 文档要求</h2><ul><li>文档的资源文件夹（如图片存放文件夹等），需要与markdown 放在同一目录下，且使用文档中需要使用相对路径进行引用</li><li>文档的命名不可包含空格</li></ul><h2 id="转换过程"><a href="#转换过程" class="headerlink" title="转换过程"></a>转换过程</h2><ul><li>markdown –&gt; HTML</li><li>HTML ——&gt; Mobi</li></ul><h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><h3 id="1-Pandoc"><a href="#1-Pandoc" class="headerlink" title="1 , Pandoc"></a>1 , Pandoc</h3><ul><li>安装方法<pre><code>apt-get install pandoc</code></pre></li></ul><h3 id="2-KindleGen"><a href="#2-KindleGen" class="headerlink" title="2 , KindleGen"></a>2 , KindleGen</h3><ul><li>去 Kindle 官网上面找、或者 Google 搜索一下就好了</li></ul><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul><li><code>markmobi.cfg</code> 文件，需要设置 Kindlegen 的绝对路径<pre><code>KINDLEGEN_PATH = /media/ericwyn/kindlegen ;</code></pre></li></ul><h2 id="运行示例"><a href="#运行示例" class="headerlink" title="运行示例"></a>运行示例</h2><ul><li>转换成功<pre><code> check KindleGen successful Version : V2.9  check Pandoc successful version : 1.16.0.2 build success /media/Java并发_convert.mobi  Process finished with exit code 0 </code></pre></li><li>转换失败<pre><code> check KindleGen successful Version : V2.9  check Pandoc successful version : 1.16.0.2 build fail  ----------------------- log -----------------------   *************************************************************  Amazon kindlegen(Linux) V2.9 build 1028-0897292   A command line e-book compiler   Copyright Amazon.com and its Affiliates 2014  *************************************************************  Error(kindlegen):E30005: Could not find file  题解_convert.mobi   Process finished with exit code 0</code></pre></li></ul><h2 id="源码所在"><a href="#源码所在" class="headerlink" title="源码所在"></a>源码所在</h2><p> <a href="https://github.com/Ericwyn/Markmobi/">Github_Markmobi</a></p><p> 代码是使用 Java 写的，说实话总觉得用起来还是有点麻烦，并且效率也不怎么高，不过好处是我能够用这个在外面套一个 Spring Boot 和一个简单的前端之后，写成一个在线服务</p><p> 当然啦～有机会的话还是觉得用 Go 来重写会比较好，交叉编译成三端二进制这一点我能吹爆！</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>腾讯云CVM安装Win10</title>
+    <link href="/blog/install-win10-in-tencent-cvm.html"/>
+    <url>/blog/install-win10-in-tencent-cvm.html</url>
+    
+    <content type="html"><![CDATA[<p>##前言<br>遇到一个奇怪的需求,某个软件只能在win10上面运行,而在win server 环境下会迷幻出错,本身租用了一台腾讯云CVM 想着拿来做运算,结果gg了,无奈之下只能尝试安装系统为 Win10.这里吐槽一下,为毛各个云服务器厂商就是不提供win10系统呢(难道是因为要付费么</p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul><li>你的CVM 必须是安装了 windows server 某个版本的(推荐2016版本,毕竟与win10 同一世代</li><li>在腾讯云上下载了 win10 的安装镜像iso</li><li>备份了驱动<br> 这里额外说一下驱动备份,起初我天真地认为 驱动精灵就能够解决,后面发现驱动精灵居然不支持server 系统…只好百度一个个找了,找到一个的<code>DiverMax</code>,下载下来之后按着提示备份了一遍驱动,后面又害怕翻车,所以又下载了一个 万能网卡驱动备用</li><li>一个与C盘隔离开的系统分区(可以是从原来的系统盘分区,也可以是挂载的云硬盘,我这边是用云硬盘</li><li><strong>重要</strong> :记下来网络连接的信息,包括ipv4地址,网管,dns服务器等等,因为不然的话重装了之后会无法联网,哪怕有网卡驱动也不行的</li></ul><h2 id="重装"><a href="#重装" class="headerlink" title="重装"></a>重装</h2><p> 加压iso文件,选择 <code>setup.exe</code>,按照操作一步一步进行就是了,期间远程连接会断开,使用腾讯云控制台哪里的<code>Webvnc</code>再登录就好了</p><h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><ul><li>安装好之后发现好像并不用安装网卡驱动,然后我重新设置一下网络连接信息就可以联网了</li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用Jitpack发布Github项目</title>
+    <link href="/blog/jitpack-use.html"/>
+    <url>/blog/jitpack-use.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>使用 Jitpack 能够很方便的把自己一些 java 的库打包成 jar 发布，并且可以在新项目当中使用 maven 引入，实在是很方便，以下是我一些关于 使用 Jitpack 发布 Github 项目的实践</p><h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><ul><li>intellij IDEA</li></ul><h2 id="gradle"><a href="#gradle" class="headerlink" title="gradle"></a>gradle</h2><pre><code>gradle install</code></pre><p>然后会看到生成的<code>.gradle</code>文件夹</p><h2 id="gradle-build"><a href="#gradle-build" class="headerlink" title="gradle.build"></a>gradle.build</h2><p>在项目根目录下新建一个 <code>gradle.build</code>文件，基础配置如下</p><pre><code>//配置 java pluginapply plugin: &#39;java&#39;//配置生成的jar 名称和版本号jar &#123;    baseName = &#39;EzeOrm&#39;    version = &#39;1.1.0&#39;&#125;//配置代码目录，否则默认实在 src/main/java 里面sourceSets &#123;    main &#123;        java &#123;            srcDir &#39;src&#39;        &#125;    &#125;&#125;</code></pre><h2 id="build"><a href="#build" class="headerlink" title="build"></a>build</h2><pre><code>gradle build </code></pre><p>此时就会看到build文件夹，子文件夹当中class文件夹是编译后的class文件，然后jar文件夹里面是生成的jar，可以查看生成的jar是否有错误</p><h2 id="jitpack"><a href="#jitpack" class="headerlink" title="jitpack"></a>jitpack</h2><p>将项目push到github，然后建立一个新的releases ，稍等一下，然后就能在jitpack里面看到了</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>金缕曲 廿一岁生辰留记</title>
+    <link href="/blog/birth21.html"/>
+    <url>/blog/birth21.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>    今廿年驰隙    换星霜，几人知道，几多如意    洒泪凌波痴梦碎，究竟红笺谁寄    常辗转，辛艰不已    始道人生需患难，怨从前年少轻磨砺    留旧愿，仍相系        恍惚冬尽春来矣    未觉察，栏前病树，绿芽新立    知晓沉舟留侧畔，自在当逾千里    勤艺业，才为长计    如是修身终不枉，对孤觞几度空零涕    路漫漫，自不易</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>R package 打包记录</title>
+    <link href="/blog/auto-package-of-r.html"/>
+    <url>/blog/auto-package-of-r.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="设定工作文件目录"><a href="#设定工作文件目录" class="headerlink" title="设定工作文件目录"></a>设定工作文件目录</h2><p>打包R package 要求两个目录 分别是</p><ul><li><p>工作目录 （存放 R 代码）</p><pre><code> mkdir /home/ericwyn/work </code></pre></li><li><p>包目录 （存放包）</p><pre><code> mkdir /home/ericwyn/Rlibs</code></pre></li><li><p>默认情况下在mydir是找不到mylib下的包的，因为mylib不在包的搜索路径里，解决这个问题只需要在mydir新建一个文 件<code>.Rprofile</code>文件，里面写上：<code>.libPaths(“/home/wentrue/Rlibs”)</code>即可。这样在mydir运行R脚本或启动R终 端，mylib就会被添加到包搜索路径中。</p></li></ul><h2 id="完善目录结构"><a href="#完善目录结构" class="headerlink" title="完善目录结构"></a>完善目录结构</h2><pre><code>once├── data├── DESCRIPTION├── man├── NAMESPACE├── R│   └── arild.R└── src</code></pre><ul><li>必需的是<code>DESCRIPTION</code>文件、<code>man目录</code>和<code>R目录</code> 以及 <code>NAMESPAC</code>文件</li></ul><h3 id="关于目录结构解释"><a href="#关于目录结构解释" class="headerlink" title="关于目录结构解释"></a>关于目录结构解释</h3><ul><li><p><code>DESCRIPTION</code>文件描述包的<code>meta信息</code>，模板如下</p><pre><code> Package: once Version: 0.1 Date: 2017-10-11 Title: Once Test Author: Ericwyn Chen &lt;Ericwyn.chen@gmail.com&gt; Maintainer: Ericwyn Chen &lt;Ericwyn.chen@gmail.com&gt; Depends: R (&gt;= 1.9.0) Description: A Once Test Description License: GPL version 2 or later</code></pre></li><li><p><code>R</code>目录下面存放 R 脚本文件，里面的函数可导出作为包函数库提供给外部使用</p></li><li><p><code>data</code>目录里放一些试验数据（如果需要在包里使用到的话），常用是以<code>csv</code>格式存放，在R终端里data(***)可以载入，这里留空</p></li><li><p><code>man</code>目录是R的帮助文档，即?xxx时显示的那些，有一定的格式要求，这里也留空</p></li><li><p><code>src</code>存 放 <code>c / c++ / fortran</code>源代码，必须同时放置<code>Makefile</code>或<code>Makevars</code>文件指导编译程序工作，这里留空。</p></li><li><p><code>NAMESPACE</code> 文件也是必须的，我一开始因为没有放置这个文件，所以检查的时候一直出错，在 R 3.0.0 以及以后的版本中，所有的package 打包都需要带上一个<code>NAMESPACE</code>文件，最简单的话就是一行</p><pre><code> exportPattern( &quot;.&quot; )</code></pre><p> 参考的网址是</p><blockquote><p><a href="https://stackoverflow.com/questions/17196225/error-a-namespace-file-is-required">https://stackoverflow.com/questions/17196225/error-a-namespace-file-is-required</a></p></blockquote><p> 以及</p><blockquote><p><a href="https://d.cosx.org/d/15991-15991">https://d.cosx.org/d/15991-15991</a></p></blockquote></li></ul><h2 id="检查包是否能正确安装"><a href="#检查包是否能正确安装" class="headerlink" title="检查包是否能正确安装"></a>检查包是否能正确安装</h2><p>以下步骤全部在 mydir 目录下进行操作</p><h3 id="运行-R-CMD-check-once"><a href="#运行-R-CMD-check-once" class="headerlink" title="运行 R CMD check once"></a>运行 R CMD check once</h3><pre><code>R CMD check once</code></pre><p>通常之后你会看到一段的日志，说明了检查状态，以及错误、和警告的信息，我们当然是希望 <code>0  WARNINGs 0ERROR</code> 啦，但是新手上路多多少少总会有些翻车的，具体出现的<code>ERROR</code> 和<code>WORINING</code>就只能自己google然后看着办了，其中我遇到的有以下的问题</p><ul><li><p>缺少 <code>NAMESPACE</code> 文件，日志如下</p><pre><code> * checking if there is a namespace ... ERROR All packages need a namespace as from R 3.0.0. R CMD build will produce a suitable starting point, but it is better to handcraft a NAMESPACE file.</code></pre><p> 增加了<br><code>NAMESPACE</code> 文件之后解决</p></li><li><p>PDF 手册检查错误 ？！ （并不太懂这是什么）</p><pre><code> * checking PDF version of manual without hyperrefs or index ... ERROR Re-running with no redirection of stdout/stderr. Hmm ... looks like a package Error in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :    pdflatex is not available Error in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :    pdflatex is not available 调用tools::texi2pdf()时出了错 You may want to clean up by &#39;rm -rf /tmp/Rtmpx83tzh/Rd2pdf39de438ea1a1&#39;</code></pre><p> 没有理会直接跳过了，因为看到了成功生成的<code>XXX.Rcheck</code>文件夹</p></li></ul><h2 id="生成包"><a href="#生成包" class="headerlink" title="生成包"></a>生成包</h2><h3 id="运行R-CMD-build-once"><a href="#运行R-CMD-build-once" class="headerlink" title="运行R CMD build once"></a>运行R CMD build once</h3><pre><code>R CMD build once</code></pre><p>之后将会生成一个once_0.1.tar.gz 的包</p><h3 id="安装包到opencpu当中"><a href="#安装包到opencpu当中" class="headerlink" title="安装包到opencpu当中"></a>安装包到opencpu当中</h3><p>将包发送到服务器上，在tar.gz 文件所在目录，运行下面命令</p><pre><code>R CMD INSTALL once_0.1.tar.gz --library=/usr/local/lib/R/site-libraryservice opencpu restart</code></pre><p>之后就可以在opencpu 的包列表<br><code>http://OPENCPU_ADDRESS/ocpu/library/once</code> 当中看到这个包了<br>而函数的调用地址则是<br><code>http://OPENCPU_ADDRESS/ocpu/library/once/R/arild</code></p><p>至此打包和安装完毕</p><p>##后记</p><h3 id="自动打包器"><a href="#自动打包器" class="headerlink" title="自动打包器"></a>自动打包器</h3><p>后面自己觉得这个过程太过繁琐，于是决定写一个R 语言的自动打包装置，用Java 调用R CMD 实现了，地址是</p><blockquote><p><a href="https://github.com/Ericwyn/AutoPackingOfR">https://github.com/Ericwyn/AutoPackingOfR</a></p></blockquote>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>R语言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Ubuntu Server 14.04 安装状态监控Linux Dash</title>
+    <link href="/blog/install-linux-dash.html"/>
+    <url>/blog/install-linux-dash.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Linux Dash是一款非常简单的服务器监控程序，可以通过python、php以及LAMP部署运行，此次安装的环境是Ubuntu Server 14.04 LTS,使用Linux Dash的版本是github上面一个同学的2.0汉化版， Github地址是  </p><blockquote><p>linux-dash 的汉化版<br><a href="https://github.com/NoBey/linux-dash-zh">https://github.com/NoBey/linux-dash-zh</a> </p></blockquote><h2 id="安装Git和Python"><a href="#安装Git和Python" class="headerlink" title="安装Git和Python"></a>安装Git和Python</h2><pre><code>省略</code></pre><h2 id="通过Git安装Linux-Dash"><a href="#通过Git安装Linux-Dash" class="headerlink" title="通过Git安装Linux Dash"></a>通过Git安装Linux Dash</h2><pre><code>git clone https://github.com/NoBey/linux-dash-zh.git</code></pre><h2 id="修改运行端口"><a href="#修改运行端口" class="headerlink" title="修改运行端口"></a>修改运行端口</h2><pre><code>vim python-server.py</code></pre><p>然后将默认运行端口改为7890(什么端口随意就好）</p><pre><code>parser.add_argument(&#39;--port&#39;, metavar=&#39;PORT&#39;, type=int, nargs=&#39;?&#39;, default=7890,                help=&#39;Port to run the server on.&#39;)</code></pre><p>现在使用<code>./python-server.py</code>，就已经可以通过 <a href="http://localhost:7890/">http://localhost:7890</a> 访问监控页面了</p><h2 id="守护运行服务"><a href="#守护运行服务" class="headerlink" title="守护运行服务"></a>守护运行服务</h2><p>让程序一直在后台运行</p><pre><code>nohup ./python-server.py &amp;</code></pre><h2 id="加入安全验证"><a href="#加入安全验证" class="headerlink" title="加入安全验证"></a>加入安全验证</h2><p>inux Dash默认没有任何验证，这样的话几乎任何人都可以查看你的服务器状态，我们需要通过nginx加上一层验证，首先我们要通过<code>htpasswd</code>来生成一个用户认证文件，Ubuntu 14.04下面，通过以下命令来安装</p><pre><code>sudo apt-get install apache2-utils</code></pre><p>然后新建一个认证文件，使用<code>htpasswd -c [文件地址] [认证用户名]</code>命令来新建，例如</p><pre><code>htpasswd -c /usr/local/src/nginx/passwd coderschool</code></pre><p>接着安装好nginx，在nginx文件夹下面的conf.d/文件夹下面，新建一个专用的配置文件monit.conf，因为我们需要将用户认证部署在nginx上面，配置如下</p><pre><code>server &#123;  listen       9870;  server_name localhost;  auth_basic &quot;请输入用户名和密码&quot;;      #提示框的提示文字  auth_basic_user_file /home/www/passwd;    #认证文件所在路径    #重定向来自9870的流量到7890端口  location / &#123;    proxy_pass http://localhost:7890;  &#125;&#125;</code></pre><h2 id="最后的防火墙设置"><a href="#最后的防火墙设置" class="headerlink" title="最后的防火墙设置"></a>最后的防火墙设置</h2><p>使用ufw，禁用外部对于7890端口的访问，而允许对9870的访问，以后便可以通过9870端口，来查看Linux Dash的监控信息了 </p><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="https://leanote.meetwhy.com/api/file/getImage?fileId=5943c5b64a0708064e00006e" alt="验证"></p><hr><p><img src="https://leanote.meetwhy.com/api/file/getImage?fileId=5943c5b64a0708064e000070"></p><hr><p><img src="https://leanote.meetwhy.com/api/file/getImage?fileId=5943c5b64a0708064e00006f"></p><hr><p><img src="https://leanote.meetwhy.com/api/file/getImage?fileId=5943c5b64a0708064e000071"></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><blockquote><ul><li><a href="https://github.com/NoBey/linux-dash-zh#%E5%AE%89%E8%A3%85">linux-dash 的汉化版</a></li><li><a href="http://coderschool.cn/2207.html">nginx 配置访问密码</a></li><li><a href="https://linux.cn/article-2489-1.html">UFW 简单配置</a></li></ul></blockquote>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>Server</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>OpenCpu使用笔记</title>
+    <link href="/blog/opencpu-learn-note.html"/>
+    <url>/blog/opencpu-learn-note.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Opencpu 能够将 R package 变成 Web API，以此供其他语言的程序调用</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code># Requires Ubuntu 16.04 (Xenial)sudo add-apt-repository -y ppa:opencpu/opencpu-2.0sudo apt-get update sudo apt-get upgrade# Installs OpenCPU serversudo apt-get install -y opencpu-server# Done! Open http://yourhost/ocpu in your browser# Optional: installs rstudio in http://yourhost/rstudiosudo apt-get install -y rstudio-server </code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>R语言</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>金缕曲 弱冠生辰留记</title>
+    <link href="/blog/birth2017.html"/>
+    <url>/blog/birth2017.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>    虚度韶华否。到如今，二十秋尽，几寻回首。    儿语高明桑梓处，不记当时年幼。对残灯，重慈影瘦。    此后求学游禅桂，幸两三师友同携手。    洒笔墨，纸笺旧。         人生数度别离久。与寒窗，羊城春媚，又来消受。    四五光景新添上，路远羁途随后。仅如愿，初心相守。    且看尘涛风月送，纵逍遥些许能够。    亦不枉，湿衣袖。</code></pre><p>丙申猴年 生辰夜，写就于家中卧室床头书桌之上</p><p>重慈影瘦,心有戚戚</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>御街行 记得当日长亭外</title>
+    <link href="/blog/GoodbyeMug.html"/>
+    <url>/blog/GoodbyeMug.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>    记得当日长亭外，怒马春衫在。    而今重聚过飞尘，依旧从前气概。    金樽未满，羽觞凌月，欢语仍一再         相逢不料别离快，遗恨填沧海。    鲤鱼鸿雁劝知足，勿把思愁轻载。    江湖相忘，千山隔阻，不愿初心改。</code></pre><p>2016.08.10 此日深夜，凌晨时分，困倦之中填就</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>青玉案 醒来夜半香飘散</title>
+    <link href="/blog/middleOfTheNight.html"/>
+    <url>/blog/middleOfTheNight.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>醒来夜半香飘散，断肠处，终虚幻。梦里几回卮酒满。料知今日，只余空叹，君我薄缘断。 无灯白月窗前漫。落地如霜、惹心颤。月下谁曾姣面婉。花残风冷，竹灰星暗，枕畔空名唤。</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>古风 十九岁生辰自题</title>
+    <link href="/blog/birth2016.html"/>
+    <url>/blog/birth2016.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>    二九年华慢挥毫    闲观风月送尘涛    寻梦不知身是客    竹庐檐下雨潇潇</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>古风 逢中秋独坐寄乡</title>
+    <link href="/blog/midAutumn2015.html"/>
+    <url>/blog/midAutumn2015.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>    玉盘如故碧苍穹    千古悲欢聚散空    客路不识杯酒趣    吾乡今夜月朦胧</code></pre><p>2015年9月27日 中秋之夜</p><p>应吐槽之外邀约，零丁而作</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>古风 月夜和潮归</title>
+    <link href="/blog/backHome.html"/>
+    <url>/blog/backHome.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>    游子乘潮家未回    十年风雨两相随    又见月明潮万里    箫声如故喝潮归</code></pre><p>人都该有故乡的温柔</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>对联 题壁一联</title>
+    <link href="/blog/couplet201607.html"/>
+    <url>/blog/couplet201607.html</url>
+    
+    <content type="html"><![CDATA[<pre><code>    斑鬓白须几载疏窗伴误身儒冠    彩英紫苑一朝寒枕随憔赋招魂</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>古月言说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>

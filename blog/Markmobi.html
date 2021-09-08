@@ -1,0 +1,492 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#202529">
+  <meta name="description" content="">
+  <meta name="author" content="Ericwyn">
+  <meta name="keywords" content="Java,Golang,Coding,Programme,Ericwyn">
+  
+  <title>Markmobi开发记录 - 点石斋</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.meetwhy.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>点石斋</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                主页 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives">
+                
+                归档 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags">
+                
+                标签 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links">
+                
+                友链 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about">
+                
+                关于 
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Markmobi开发记录">
+              
+                Markmobi开发记录
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-04-05 16:00" pubdate>
+        2018年4月5日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      937 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Markmobi开发记录</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2018年11月20日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>自己使用 Kindle 已经有好几年的历史了，从高中时期看各种古文，后来一口气的看一大堆小说，再到后来看看一些技术书籍，而最近发现 Kindle 的另外一个用处就是看 Github 上面的一些电子书籍。</p>
+<p>Github 上面是有很多的技术书籍的，因为 Github 有着开放和包容的特性，所以很多的人会翻译各种技术专业的文档或者相关的书，并变成一个 repo ，后续不断更新和提交。从这看来，Github 其实像是一个大的书库。另外哪怕不是书籍，Github 上面也有很多可能并不太适合在电脑上面阅读的 README，以及那种超长的那种项目文档。某天我翻阅的时候，忽然发现或许拿 Kindle 来阅读，应该会舒服很多吧。于是就开始了探索如何把 Github 上面的文档挪到 Kindle 上面阅读的问题。准确的说来，这个问题应该是——如何让 Markdown 文档变成合适 Kindle 存储和阅读的 mobi 文件。</p>
+<p> 那既然说起将 Markdown 文件变成书，变成 Mobi，大家可能马上就可以想到 Gitbook。毕竟人家有下载按钮，有直接变成 Mobi 格式的功能。可是最大的问题在于并不是所有 Github 上面的 repo 都同样的在 Gitbook 拥有一个 repo 啊，所以说到底，还是需要一个工具来帮我们转换。</p>
+<p> 可惜，在我 google 了巨久之后，我也没有发现什么工具能够直接输入一个 markdown 文件，输出一个 mobi 文件。比较曲折的过程是 ：</p>
+<ul>
+<li>使用 <code>pandoc</code> 将 markdown 转换成 html</li>
+<li>使用 <code>KindleGen</code> 再将 html 转换成 mobi</li>
+</ul>
+<p> 虽然曲折，但是按着流程操作了两遍，发现真的还行来着，毕竟只要是 mobi 就可以，字体大小什么的都可以交给 kindle 设置。</p>
+<p> 可是每次都这么操作真的是很麻烦，作为一个程序员自然就想写一个工具过来把这些步骤放到一次完成啦，甚至是做成一个在线工具，直接上传 markdown 然后转换成 mobi ，并提供下载链接</p>
+<p> 于是就写了个 <code>Markmobi</code></p>
+<p> 实际上这只是一个调用 <code>pandoc</code> 和 <code>kindleGen</code> 的整合工具而已，内里还是使用 <code>pandoc</code>和<code>kindleGen</code>在工作</p>
+<h2 id="Markdown-文档要求"><a href="#Markdown-文档要求" class="headerlink" title="Markdown 文档要求"></a>Markdown 文档要求</h2><ul>
+<li>文档的资源文件夹（如图片存放文件夹等），需要与markdown 放在同一目录下，且使用文档中需要使用相对路径进行引用</li>
+<li>文档的命名不可包含空格</li>
+</ul>
+<h2 id="转换过程"><a href="#转换过程" class="headerlink" title="转换过程"></a>转换过程</h2><ul>
+<li>markdown –&gt; HTML</li>
+<li>HTML ——&gt; Mobi</li>
+</ul>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><h3 id="1-Pandoc"><a href="#1-Pandoc" class="headerlink" title="1 , Pandoc"></a>1 , Pandoc</h3><ul>
+<li>安装方法<pre><code>apt-get install pandoc
+</code></pre>
+</li>
+</ul>
+<h3 id="2-KindleGen"><a href="#2-KindleGen" class="headerlink" title="2 , KindleGen"></a>2 , KindleGen</h3><ul>
+<li>去 Kindle 官网上面找、或者 Google 搜索一下就好了</li>
+</ul>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
+<li><code>markmobi.cfg</code> 文件，需要设置 Kindlegen 的绝对路径<pre><code>KINDLEGEN_PATH = /media/ericwyn/kindlegen ;
+</code></pre>
+</li>
+</ul>
+<h2 id="运行示例"><a href="#运行示例" class="headerlink" title="运行示例"></a>运行示例</h2><ul>
+<li>转换成功<pre><code> check KindleGen successful
+ Version : V2.9 
+ check Pandoc successful
+ version : 1.16.0.2
+ build success
+ /media/Java并发_convert.mobi
+ 
+ Process finished with exit code 0
+ 
+</code></pre>
+</li>
+<li>转换失败<pre><code> check KindleGen successful
+ Version : V2.9 
+ check Pandoc successful
+ version : 1.16.0.2
+ build fail
+ 
+ ----------------------- log -----------------------
+ 
+ 
+ *************************************************************
+  Amazon kindlegen(Linux) V2.9 build 1028-0897292 
+  A command line e-book compiler 
+  Copyright Amazon.com and its Affiliates 2014 
+ *************************************************************
+ 
+ Error(kindlegen):E30005: Could not find file  题解_convert.mobi
+ 
+ 
+ Process finished with exit code 0
+</code></pre>
+</li>
+</ul>
+<h2 id="源码所在"><a href="#源码所在" class="headerlink" title="源码所在"></a>源码所在</h2><p> <a target="_blank" rel="noopener" href="https://github.com/Ericwyn/Markmobi/">Github_Markmobi</a></p>
+<p> 代码是使用 Java 写的，说实话总觉得用起来还是有点麻烦，并且效率也不怎么高，不过好处是我能够用这个在外面套一个 Spring Boot 和一个简单的前端之后，写成一个在线服务</p>
+<p> 当然啦～有机会的话还是觉得用 Go 来重写会比较好，交叉编译成三端二进制这一点我能吹爆！</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/graduate-1804.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">毕业惜别自题四首</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/install-win10-in-tencent-cvm.html">
+                        <span class="hidden-mobile">腾讯云CVM安装Win10</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

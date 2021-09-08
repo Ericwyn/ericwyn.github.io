@@ -1,0 +1,636 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#202529">
+  <meta name="description" content="">
+  <meta name="author" content="Ericwyn">
+  <meta name="keywords" content="Java,Golang,Coding,Programme,Ericwyn">
+  
+  <title>iMCPortal-连接过程解析及Golang实现 - 点石斋</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.meetwhy.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>点石斋</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                主页 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives">
+                
+                归档 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags">
+                
+                标签 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links">
+                
+                友链 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about">
+                
+                关于 
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="iMCPortal-连接过程解析及Golang实现">
+              
+                iMCPortal-连接过程解析及Golang实现
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-07-18 16:00" pubdate>
+        2018年7月18日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      29
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">iMCPortal-连接过程解析及Golang实现</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2018年11月20日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="0-前言"><a href="#0-前言" class="headerlink" title="0 前言"></a>0 前言</h1><p>最近学校之前开通了 iMC Portal 无线网络, 只是每次都要开启浏览器才可以登录, 并且需要一直开着一个标签, 这是件很麻烦的事情, 而且最近 (2018-07-11) 发现会出现每隔 15 分钟就断线一次的问题, 所以希望通过抓包来了解连接的过程,之后使用 java 或者其他语言实现模拟登录, 并且在断线之后自动重连</p>
+<h1 id="1-协议解析"><a href="#1-协议解析" class="headerlink" title="1 协议解析"></a>1 协议解析</h1><h2 id="1-1-获取-cookie"><a href="#1-1-获取-cookie" class="headerlink" title="1.1 获取 cookie"></a>1.1 获取 cookie</h2><p>访问学校 iMC portal 页面之后会发现有以下的一些页面请求</p>
+<p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1ftfjvp7kftj20t20dqmzl.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>emmm ? 所以学校 iMC portal 后台还是用 java 写的, 页面还是 jsp ????</p>
+<p>其中 <code>portal/templatePage/20170110154814101/login_custom.jsp</code> 的响应里面有 Set-Cookie 字段, 就是一个 <code>i_p_pl</code> 的 cookie , 先拿小本本记下来~</p>
+<p>话说我还好奇这个 <code>i_p_pl</code>是什么意思来着, 于是想着解密看看</p>
+<p>解密的话, 肯定第一步就是 base64 直接上啦~毕竟用很广泛</p>
+<p>base64 解密结果之后可以得到</p>
+<pre><code>%7B%22errorNumber%22%3A%221%22%2C%22nextUrl%22%3A%22http%3A%2F%2F10.50.15.9%3A80%2Fportal%2FtemplatePage%2F20170110154814101%2Flogin_custom.jsp%22%2C%22quickAuth%22%3Afalse%2C%22clientLanguage%22%3A%22Chinese%22%2C%22assignIpType%22%3A0%2C%22iNodePwdNeedEncrypt%22%3A1%2C%22wlannasid%22%3A%22%22%2C%22wlanssid%22%3A%22%22%2C%22nasIp%22%3A%22%22%2C%22byodServerIp%22%3A%220.0.0.0%22%2C%22byodServerIpv6%22%3A%220000%3A0000%3A0000%3A0000%3A0000%3A0000%3A0000%3A0000%22%2C%22byodServerHttpPort%22%3A%2280%22%2C%22ifTryUsePopupWindow%22%3Afalse%2C%22uamInitCustom%22%3A%220%22%2C%22customCfg%22%3A%22MTA1%22%2C%22regCodeType%22%3A%22MA%22%7D
+</code></pre>
+<p>然后我们可以发现这是一段经过 url 编码的数据, 所以使用 url 解码再看看咯~</p>
+<p>解码之后发现这是一段 <code>JSON</code></p>
+<pre><code>&#123;
+    &quot;errorNumber&quot;: &quot;1&quot;,
+    &quot;nextUrl&quot;: &quot;&quot;,
+    &quot;quickAuth&quot;: false,
+    &quot;clientLanguage&quot;: &quot;Chinese&quot;,
+    &quot;assignIpType&quot;: 0,
+    &quot;iNodePwdNeedEncrypt&quot;: 1,
+    &quot;wlannasid&quot;: &quot;&quot;,
+    &quot;wlanssid&quot;: &quot;&quot;,
+    &quot;nasIp&quot;: &quot;&quot;,
+    &quot;byodServerIp&quot;: &quot;0.0.0.0&quot;,
+    &quot;byodServerIpv6&quot;: &quot;0000:0000:0000:0000:0000:0000:0000:0000&quot;,
+    &quot;byodServerHttpPort&quot;: &quot;80&quot;,
+    &quot;ifTryUsePopupWindow&quot;: false,
+    &quot;uamInitCustom&quot;: &quot;0&quot;,
+    &quot;customCfg&quot;: &quot;MTA1&quot;,
+    &quot;regCodeType&quot;: &quot;MA&quot;
+&#125;
+</code></pre>
+<p>然而似乎没有发现什么特别厉害的东西啊,就没有管, 先记着再说, 不过倒是发现了网站信息交换时候的一般加密手段似乎就是 单纯的 </p>
+<pre><code>JSON -&gt; URLEncoder -&gt; base64 
+</code></pre>
+<h2 id="1-2-登录"><a href="#1-2-登录" class="headerlink" title="1.2 登录"></a>1.2 登录</h2><p>尝试登录的时候,发现接口的地址是 <code>portal/pws?t=li</code>, 一个 POST 请求</p>
+<p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1ftfjw2nyrfj21150k3dlg.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>在这里我们就能看到之前获得的 cookie 的用处了</p>
+<p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1ftfjw93p75j211l0jvgoy.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>而在具体的 POST 的数据上面, 有以下的内容</p>
+<pre><code>userName: 1000000000
+userPwd: MTAwMDAwMDAwMA==
+userDynamicPwd: 
+userDynamicPwdd: 
+serviceTypeHIDE: 
+serviceType: 
+userurl: 
+userip: 
+basip: 
+language: Chinese
+usermac: null
+wlannasid: 
+wlanssid: 
+entrance: null
+loginVerifyCode: 
+userDynamicPwddd: 
+customPageId: 0
+pwdMode: 0
+portalProxyIP: 10.50.15.9
+portalProxyPort: 50200
+dcPwdNeedEncrypt: 1
+assignIpType: 0
+appRootUrl: http://xx.xx.xx.xx/portal/
+manualUrl: 
+manualUrlEncryptKey: 
+</code></pre>
+<p>尝试了几次之后, 发现其实有改变的就是 <code>userName</code> 和 <code>userPwd</code> 两个参数, 而 <code>userPwd</code> 是一串有两个<code>=</code> 号的密文, 显然就是将用户密码经过 base64 之后得到</p>
+<p>而登录的返回的话是下面这样的一段密文</p>
+<pre><code>JTdCJTIycG9ydFNlcnZFcnJvckNvZGUlMjIlM0ElMjIxJTIyJTJDJTIycG9ydFNlcnZFcnJvckNvZGVEZXNjJTIyJTNBJTIyJUU4JUFFJUJFJUU1JUE0JTg3JUU2JThCJTkyJUU3JUJCJTlEJUU4JUFGJUI3JUU2JUIxJTgyJTIyJTJDJTIyZV9jJTIyJTNBJTIycG9ydFNlcnZFcnJvckNvZGUlMjIlMkMlMjJlX2QlMjIlM0ElMjJwb3J0U2VydkVycm9yQ29kZURlc2MlMjIlMkMlMjJlcnJvck51bWJlciUyMiUzQSUyMjclMjIlN0Q
+</code></pre>
+<p>和对 cookie 内容的解密一样, 我们用 base64 先解密一次, 然后用 urlDecode 就可以看到原来的 JSON 信息了, 其 JSON 信息如下</p>
+<pre><code>&#123;
+    &quot;portServErrorCode&quot;: &quot;1&quot;,
+    &quot;portServErrorCodeDesc&quot;: &quot;设备拒绝请求&quot;,
+    &quot;e_c&quot;: &quot;portServErrorCode&quot;,
+    &quot;e_d&quot;: &quot;portServErrorCodeDesc&quot;,
+    &quot;errorNumber&quot;: &quot;7&quot;
+&#125;
+</code></pre>
+<p>而经过多次的尝试之后, 发现根据输入内容及帐号状态的不同, 会有以下的一些返回</p>
+<ul>
+<li><p>设备上已经有帐号登录了</p>
+<pre><code> &#123;
+     &quot;portServErrorCode&quot;: &quot;1&quot;,
+     &quot;portServErrorCodeDesc&quot;: &quot;设备拒绝请求&quot;,
+     &quot;e_c&quot;: &quot;portServErrorCode&quot;,
+     &quot;e_d&quot;: &quot;portServErrorCodeDesc&quot;,
+     &quot;errorNumber&quot;: &quot;7&quot;
+ &#125;
+</code></pre>
+</li>
+<li><p>用户名错误</p>
+<pre><code> &#123;
+     &quot;portServIncludeFailedCode&quot;: &quot;63018&quot;,
+     &quot;portServIncludeFailedReason&quot;: &quot;E63018:用户不存在或者用户没有申请该服务。&quot;,
+     &quot;e_c&quot;: &quot;portServIncludeFailedCode&quot;,
+     &quot;e_d&quot;: &quot;portServIncludeFailedReason&quot;,
+     &quot;errorNumber&quot;: &quot;7&quot;
+ &#125;
+</code></pre>
+</li>
+<li><p>密码错误</p>
+<pre><code> &#123;
+     &quot;portServIncludeFailedCode&quot;: &quot;63032&quot;,
+     &quot;portServIncludeFailedReason&quot;: &quot;E63032:密码错误，您还可以重试8次。&quot;,
+     &quot;e_c&quot;: &quot;portServIncludeFailedCode&quot;,
+     &quot;e_d&quot;: &quot;portServIncludeFailedReason&quot;,
+     &quot;errorNumber&quot;: &quot;7&quot;
+ &#125;
+</code></pre>
+</li>
+<li><p>登录成功</p>
+<pre><code> &#123;
+     &quot;errorNumber&quot;: &quot;1&quot;,
+     &quot;heartBeatCyc&quot;: 900000,
+     &quot;heartBeatTimeoutMaxTime&quot;: 2,
+     &quot;userDevPort&quot;: &quot;Servers-Aggregation-SW-S5560X-54C-EI-vlan-01-4055@vlan&quot;,
+     &quot;userStatus&quot;: 99,
+     &quot;serialNo&quot;: 4686,
+     &quot;ifNeedModifyPwd&quot;: false,
+     &quot;browserUrl&quot;: &quot;&quot;,
+     &quot;clientPrivateIp&quot;: &quot;&quot;,
+     &quot;userurl&quot;: &quot;&quot;,
+     &quot;usermac&quot;: null,
+     &quot;nasIp&quot;: &quot;&quot;,
+     &quot;clientLanguage&quot;: &quot;Chinese&quot;,
+     &quot;ifTryUsePopupWindow&quot;: true,
+     &quot;triggerRedirectUrl&quot;: &quot;&quot;,
+     &quot;portalLink&quot;: &quot;JTdCJTIyZXJyb3JOdW1iZXIlMjIlM0ElMjIxJTIyJTJDJTIyaGVhcnRCZWF0Q3ljJTIyJTNBOTAwMDAwJTJDJTIyaGVhcnRCZWF0VGltZW91dE1heFRpbWUlMjIlM0EyJTJDJTIydXNlckRldlBvcnQlMjIlM0ElMjJTZXJ2ZXJzLUFnZ3JlZ2F0aW9uLVNXLVM1NTYwWC01NEMtRUktdmxhbi0wMS00MDU1JTQwdmxhbiUyMiUyQyUyMnVzZXJTdGF0dXMlMjIlM0E5OSUyQyUyMnNlcmlhbE5vJTIyJTNBNDY4NiUyQyUyMmlmTmVlZE1vZGlmeVB3ZCUyMiUzQWZhbHNlJTJDJTIyYnJvd3NlclVybCUyMiUzQSUyMiUyMiUyQyUyMmNsaWVudFByaXZhdGVJcCUyMiUzQSUyMiUyMiUyQyUyMnVzZXJ1cmwlMjIlM0ElMjIlMjIlMkMlMjJ1c2VybWFjJTIyJTNBbnVsbCUyQyUyMm5hc0lwJTIyJTNBJTIyJTIyJTJDJTIyY2xpZW50TGFuZ3VhZ2UlMjIlM0ElMjJDaGluZXNlJTIyJTJDJTIyaWZUcnlVc2VQb3B1cFdpbmRvdyUyMiUzQXRydWUlMkMlMjJ0cmlnZ2VyUmVkaXJlY3RVcmwlMjIlM0ElMjIlMjIlN0Q&quot;
+ &#125;
+</code></pre>
+<ul>
+<li>这里的 portalLink 解密之后如下, 似乎也没有什么有用的内容<blockquote>
+<p>{“errorNumber”:”1”,”heartBeatCyc”:900000,”heartBeatTimeoutMaxTime”:2,”userDevPort”:”Servers-Aggregation-SW-S5560X-54C-EI-vlan-01-4055@vlan”,”userStatus”:99,”serialNo”:4686,”ifNeedModifyPwd”:false,”browserUrl”:””,”clientPrivateIp”:””,”userurl”:””,”usermac”:null,”nasIp”:””,”clientLanguage”:”Chinese”,”ifTryUsePopupWindow”:true,”triggerRedirectUrl”:””}</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-3-登录成功"><a href="#1-3-登录成功" class="headerlink" title="1.3 登录成功"></a>1.3 登录成功</h2><p>当我们输入正确的帐号和密码后, 网页上的变化是, 跳转到了一个 已登录的提示页面, 从 Chrome 看到的请求有以下这些</p>
+<p><img src="http://ww1.sinaimg.cn/large/ae1a7c45gy1ftfjwehcl5j20ya0htq8r.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>出去对静态资源的请求, 剩下的就是</p>
+<br>
+
+<ul>
+<li>GET <code>afterLogin.jsp</code> 上线提示</li>
+<li>GET <code>online.jsp</code></li>
+<li>GET <code>listenClose.jsp</code></li>
+<li>GET <code>online_heartBeat.jsp</code></li>
+<li>GET <code>online_showTimer.jsp</code></li>
+</ul>
+<br>
+
+<p>其中第四个 <code>online_heartBeat.jsp</code> 显然是为了为此连接而使用的心跳包, 剩下的, 从结果来看, 似乎都只是一些用于网页上展示的页面文件而已, 例如 <code>online_showTimer.jsp</code> 就是展示倒计时的时钟的</p>
+<p>而测试中发现, 在通过 <code>portal/pws?t=li</code> 接口登录成功之后, 哪怕不往 <code>online_showTimer.jsp</code> 发送一个 GET 请求, 也依然能够联网, 所以实际上我们登录, 就只需要用到 <code>online_showTimer.jsp</code> 接口而已</p>
+<p>那么 <code>online_heartBeat.jsp</code> 接受什么信息呢, 主要是下面的这些 URL 参数</p>
+<pre><code>hlo: null
+pl: 上面 cookie 当中获取的值
+startTime: 1531901701428
+userName: null
+userPwd: null
+loginType: 3
+innerStr: null
+outerStr: null
+v_is_selfLogin: 0
+custompath: templatePage/20170110154814101/
+uamInitCustom: 0
+uamInitLogo: H3C
+customCfg: MTA1
+</code></pre>
+<p>这里面除了 startTime 和 pl 之外, 其他的参数似乎并没有什么变化, 另外就是 Referer 和 Cookie 的 Header</p>
+<h2 id="1-4-退出"><a href="#1-4-退出" class="headerlink" title="1.4 退出"></a>1.4 退出</h2><p>那么当我登录好了, 如果想要退出的话, 应该怎么办呢, 一开始通过 Chrome 查看到, 实际上退出的话, 是向两个地址发送了请求, 分别是</p>
+<ul>
+<li>GET <code>portal/pws?t=lo&amp;language=Chinese&amp;userip=&amp;basip=&amp;_=1531901705967</code></li>
+<li>POST <code>portal/templatePage/20170110154814101/logout.jsp</code></li>
+</ul>
+<p>一开始我以为 GET 请求只是获取页面而已, POST 一定是正正经经的退出接口</p>
+<p>然后尝试了好几次之后我发现我错了</p>
+<p><strong>所以这个 GET 的接口才是正确的退出接口 ????? 为什么是 GET 而不是 POST ?????</strong></p>
+<p>反正我是搞不懂了</p>
+<p>而这个 GET 接口主要接受的这么几个 URL 参数</p>
+<pre><code>pl: 上面 Cookie 中取得的值
+hlo: null
+customCfg: MTA1
+custompath: templatePage/20170110154814101/
+uamInitCustom: 0
+uamInitLogo: H3C
+</code></pre>
+<p>另外带上 Cookie 的 Header 和 Referer 的 Header, 其中 Referer 的值是</p>
+<pre><code>http://xx.xx.xx.xx/portal/templatePage/20170110154814101/online_showTimer.jsp?hlo=null&amp;pl=JTdCJTIyZXJyb3JOdW1iZXIlMjIlM0ElMjIxJTIyJTJDJTIyaGVhcnRCZWF0Q3ljJTIyJTNBOTAwMDAwJTJDJTIyaGVhcnRCZWF0VGltZW91dE1heFRpbWUlMjIlM0EyJTJDJTIydXNlckRldlBvcnQlMjIlM0ElMjJTZXJ2ZXJzLUFnZ3JlZ2F0aW9uLVNXLVM1NTYwWC01NEMtRUktdmxhbi0wMS00MDU1JTQwdmxhbiUyMiUyQyUyMnVzZXJTdGF0dXMlMjIlM0E5OSUyQyUyMnNlcmlhbE5vJTIyJTNBNzE5NiUyQyUyMmlmTmVlZE1vZGlmeVB3ZCUyMiUzQWZhbHNlJTJDJTIyYnJvd3NlclVybCUyMiUzQSUyMiUyMiUyQyUyMmNsaWVudFByaXZhdGVJcCUyMiUzQSUyMiUyMiUyQyUyMnVzZXJ1cmwlMjIlM0ElMjIlMjIlMkMlMjJ1c2VybWFjJTIyJTNBbnVsbCUyQyUyMm5hc0lwJTIyJTNBJTIyJTIyJTJDJTIyY2xpZW50TGFuZ3VhZ2UlMjIlM0ElMjJDaGluZXNlJTIyJTJDJTIyaWZUcnlVc2VQb3B1cFdpbmRvdyUyMiUzQXRydWUlMkMlMjJ0cmlnZ2VyUmVkaXJlY3RVcmwlMjIlM0ElMjIlMjIlN0Q&amp;startTime=1531901701428&amp;userName=null&amp;userPwd=null&amp;loginType=3&amp;innerStr=null&amp;outerStr=null&amp;v_is_selfLogin=0&amp;custompath=templatePage/20170110154814101/&amp;uamInitCustom=0&amp;uamInitLogo=H3C&amp;customCfg=MTA1
+</code></pre>
+<p>里面的变量除了 pl 之外就是那个 startTime 参数了, 显而易见就是连接开始的时间啦, 但是后面发现似乎怎么设置都没有关系, 因为我是用代码记录下发送登录请求的函数执行时候的时间戳, 然后填到这里来的</p>
+<h2 id="1-5-未解问题"><a href="#1-5-未解问题" class="headerlink" title="1.5 未解问题"></a>1.5 未解问题</h2><p>还是没法知道为什么学校的 iMC Portal 在连接 15 分钟后就会自动断开, 起初我以为是网页错误导致无法发送心跳包, 但是当我用代码模拟的整个过程, 并且每 5 分钟发送一次心跳包的情况下</p>
+<p><strong>连接 15 分钟后, 依然会掉线!!!???</strong></p>
+<p>此处有黑人问号, 只能猜测这样的设计是为了避免大家离开了教学去但是帐号没有下线, 导致无法在宿舍登录校园网?</p>
+<h1 id="2-最终产出"><a href="#2-最终产出" class="headerlink" title="2 最终产出"></a>2 最终产出</h1><p>详细的了解了连接的过程以及对应的数据发送内容之后, 就可以用代码来实现连接过程了, 并且最重要的是, 能够实现自动在断线后重连的功能</p>
+<p>最终程序使用 Golang 实现, 由于 Golang 方便的编译功能, 所以程序能够快速的变成 Linux\Windows\Mac 平台下的二进制文件, 方便使用和传播</p>
+<p>具体的代码在 </p>
+<pre><code>https://github.com/Besfim/iMC-Portal-Login
+</code></pre>
+<p>其中 Release 已经发布了 V0.1 版本, 下载对应平台的二进制文件就能够使用了, 使用方法如下</p>
+<pre><code>-p string
+    校园网密码 (default &quot;null&quot;)
+-u string
+    学生学号 (default &quot;null&quot;)
+-d
+    开启 DEBUG 日志打印
+-o 
+    强制退出之前登录的帐号, 确保帐号已下线, 也要求输入正确的用户名和密码参数-p s
+</code></pre>
+<p>更多代码细节请参考 Github 上面的源码</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Golang/">Golang</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/201877.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">鹊桥仙 七夕</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/norcia-document.html">
+                        <span class="hidden-mobile">Norcia文档</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,614 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#202529">
+  <meta name="description" content="">
+  <meta name="author" content="Ericwyn">
+  <meta name="keywords" content="Java,Golang,Coding,Programme,Ericwyn">
+  
+  <title>从零开始的微信支付接入（一）用户认证 - 点石斋</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.meetwhy.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>点石斋</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                主页 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives">
+                
+                归档 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags">
+                
+                标签 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links">
+                
+                友链 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about">
+                
+                关于 
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="从零开始的微信支付接入（一）用户认证">
+              
+                从零开始的微信支付接入（一）用户认证
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-02-24 12:00" pubdate>
+        2019年2月24日 中午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      28
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">从零开始的微信支付接入（一）用户认证</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2019年2月24日 中午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h1 id="一，前言"><a href="#一，前言" class="headerlink" title="一，前言"></a>一，前言</h1><p>最近接到项目需要，需要接入微信支付。微信支付的麻烦早有耳闻，所以之前也一直不敢接这样的项目，但是没办法为了生计，还是要学习。本篇教程主要讲述如何接入微信支付，分为微信浏览器内h5网页调起支付，以及小程序内调起支付。</p>
+<p>其实微信支付出来这么久了，各种教程基本 Google 就都会有，但是自己在写的时候却好像没有特别完整的，再加上微信官网文档不知道为什么总有一种让人觉得很难看懂的感觉（对不起是我太菜了 <em>(:з」∠)</em></p>
+<p>所以在对接成功了之后决定写下这么一篇教程，来完整的记录自己的对接过程，既是教程，也是我自己的备忘录。</p>
+<h2 id="1-1-开发参考"><a href="#1-1-开发参考" class="headerlink" title="1.1 开发参考"></a>1.1 开发参考</h2><p>整个对接过程，参考的最多的东西，主要是下面几个</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/Wechat-Group/WxJava">WxJava - 微信开发 Java SDK（开发工具包）</a> 的文档</li>
+<li><a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_1">微信支付官方文档-JSAPI支付</a></li>
+<li><a target="_blank" rel="noopener" href="https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_1">微信支付官方文档-小程序支付</a></li>
+</ul>
+<h2 id="1-2-到底微信支付是个啥子流程"><a href="#1-2-到底微信支付是个啥子流程" class="headerlink" title="1.2 到底微信支付是个啥子流程"></a>1.2 到底微信支付是个啥子流程</h2><p>其实微信支付的流程那里，官网的示例图已经表达的很清楚了，花点心思看一下大概就懂了</p>
+<p><img src="https://ws1.sinaimg.cn/large/ae1a7c45gy1g0gnu1vne9j20ot0rzt9d.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>其中最主要就是三步</p>
+<ul>
+<li>【业务服务器】 通过接受前端用户的消息（例如商品 id 啊什么的），向【微信支付服务器】发出请求，来创建一个预付订单</li>
+<li>【业务服务器】 获得【微信支付服务器】返回的预付订单信息返回给前端用户</li>
+<li>前端用户通过预付订单信息，调起手机端app的支付操作，并进行支付</li>
+</ul>
+<br>
+
+<p>所以整个对接的流程我会分成这几块过来讲</p>
+<ul>
+<li>（一）用户认证<br> 如何在微信浏览器内的网页中、小程序中，获取用户的 OpenId 标识</li>
+<li>（二）支付订单发起<br> 如何在我们的服务器服务器里面，创建一个预付订单，并且返回给前端用户</li>
+<li>（三）用户端发起支付<br> 用户在网页、小程序里面，如何通过已有的预付订单信息，来调起支付，</li>
+</ul>
+<br>
+
+<h2 id="1-3-开始之前"><a href="#1-3-开始之前" class="headerlink" title="1.3 开始之前"></a>1.3 开始之前</h2><p>而在开始之前呢，你需要以下东西</p>
+<ul>
+<li>一个认证了的公众号</li>
+<li>一个认证了的小程序</li>
+<li>一个商户号</li>
+</ul>
+<br>
+
+<p>如果你没有以上的条件呢，2333 就只能出门左转（划掉），其实也是可以继续看教程的<del>只是没法实操而已</del></p>
+<h1 id="二，用户认证"><a href="#二，用户认证" class="headerlink" title="二，用户认证"></a>二，用户认证</h1><h2 id="2-1-为什么需要做用户认证"><a href="#2-1-为什么需要做用户认证" class="headerlink" title="2.1 为什么需要做用户认证"></a>2.1 为什么需要做用户认证</h2><p>我们作为商家，在收钱的时候，肯定是需要知道是谁发钱过来的。微信支付也是这样的，在微信支付的预付订单创建接口，一个比需要传递的参数就是用户的 openid</p>
+<p>因此在支付之前，我们需要先进行用户认证，获取用户的openid 。所以实际上，对用户的认证，也就是获取用户的 openid。关于 openid 的介绍可以看这里</p>
+<blockquote>
+<p>小程序账户系统（openid和unionid）简介 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/34032336">https://zhuanlan.zhihu.com/p/34032336</a> </p>
+</blockquote>
+<p>小程序和网页里，获取 openid 的操作是不一样的，网页获取 openid 比起网页更加困难</p>
+<h2 id="2-2-在微信网页当中获取用户-openid"><a href="#2-2-在微信网页当中获取用户-openid" class="headerlink" title="2.2 在微信网页当中获取用户 openid"></a>2.2 在微信网页当中获取用户 openid</h2><h3 id="2-2-1-业务流程"><a href="#2-2-1-业务流程" class="headerlink" title="2.2.1 业务流程"></a>2.2.1 业务流程</h3><p>官方文档地址：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421140842">微信网页授权</a></p>
+<p>微信服务器有个专门认证的网址，当用户在微信浏览器当中访问这个网址的时候就可以获得一个 code，当然为了后续方便的操作，这个网址非常复杂，其中包含了获得 code 之后跳转的网址等。而业务服务器可以通过这个获得的 code 来向微信服务器换取用户的 openid，具体的流程如下</p>
+<br>
+
+<ul>
+<li><p>我们有个接口 <code>URI_A</code>，该接口不返回任何信息，而只是做一个 redirect 而已，让用户跳转过去访问微信服务器地址，而具体的这个微信服务器地址的拼接，就在 <code>URI_A</code> 里面完成</p>
+<pre><code> // 微信公众号的 id 和 secret
+ private static final String appid=&quot;wxad92dbbbcfehuxAfe&quot;;
+ private static final String secret=&quot;a7df6e8b55feffeufexhufidaslkf442&quot;;
+ //    //正式部署时候的域名,关系到用户获取了登录的 code 能否跳转回来
+ private static final String runDomain = &quot;https://wx.meetwhy.com&quot;;
+
+ // 一个中途转跳的 URI，用户在允许微信鉴权之后，跳转到 URI_REDIRECT?code=CODE
+ private static final String URI_REDIRECT = &quot;/user/wx/code&quot;;
+ 
+ /**
+  * 通过这个地址转跳去微信官方地址，以获取微信登录的 code
+  * 并在之后跳转到正式登录接口
+  *
+  * @return
+  */
+ @RequestMapping(&quot;/user/wx/login&quot;)
+ public String redirectToWechat()&#123;
+     return &quot;redirect:https://open.weixin.qq.com/connect/oauth2/authorize?appid=&quot;+appid+&quot;&amp;redirect_uri=&quot;+ URLEncoder.encode(runDomain+ URI_REDIRECT)+&quot;&amp;response_type=code&amp;scope=snsapi_base&amp;state=STATE#wechat_redirect&quot;;
+ &#125;
+</code></pre>
+</li>
+<li><p>我们有个 <code>URI_REDIRECT</code>,这个 URI 用户是不会自己访问的，而是由微信服务器在发给用户 code 之后跳转过来，在获得 code 之后会跳转到 <code>URI_REDIRECT?code=USER_CODE</code>, 所以在 <code>URI_REDIRECT</code> 里面我们就要对 USER_CODE 进行获取，有了这个 <code>code</code> ，加上我们的 <code>appid</code> 和 <code>appsecrect</code> 就可以向微信服务器兑换用户的 openid，兑换了 openid 之后，我们就让用户返回业务页面，比如业务主页等。</p>
+<pre><code> /**
+  * 获取 Code 之后用户就访问这个地址，URI里面会带上一个 code 参数
+  *
+  * @param request
+  * @return
+  * @throws HttpException
+  * @throws IOException
+  */
+ @RequestMapping(value = URI_REDIRECT)
+ public String wexinRegister(HttpServletRequest request) throws IOException &#123;
+     String openid ;
+     //用户微信登录获取openid
+     String code = (String) request.getParameter(&quot;code&quot;);
+     System.out.println(&quot; code 是 &quot; + code);
+     if(code == null)&#123;
+         return &quot;redirect:ErrorPageInWechatLogin.html&quot;;
+     &#125;
+     // 这里用了 Okhttp3
+     Request wxRequest = new Request.Builder()
+             .url(String.format(&quot;https://api.weixin.qq.com/sns/oauth2/access_token?appid=%s&amp;secret=%s&amp;code=%s&amp;grant_type=authorization_code&quot;, appid,secret,code))
+             .get()
+             .build();
+
+     Response response = httpClient.newCall(wxRequest).execute();
+     if (response.isSuccessful())&#123;
+         String respText = response.body().string();
+         JSONObject json = JSONObject.parseObject(respText);
+         openid = json.getString(&quot;openid&quot;);
+         // 成功之后就跳转回一个页面，带上 openid，当业务中应该是用户的 token，openid 应当保存在服务器
+         return (&quot;redirect:&quot;+runDomain+&quot;/wx.html?openid=&quot;+ openid);
+     &#125;else &#123;
+         return (&quot;redirect:&quot;+runDomain+&quot;/wx.html?openid=获取id失败&quot;);
+     &#125;
+ &#125;
+</code></pre>
+</li>
+<li><p>至此，当用户跳转到 <code>wx.html</code> 的时候，就是已经获得自己的 openid （或者是服务器分发的 token 的了）</p>
+</li>
+</ul>
+<br>
+
+<p>这部分的更加详细代码可以在 <a target="_blank" rel="noopener" href="https://gist.github.com/Ericwyn/03eda7c3b8da0625c3eaad596345a39c">这个 gist </a> 里面看到</p>
+<h2 id="2-3-在微信小程序当中获取-openid"><a href="#2-3-在微信小程序当中获取-openid" class="headerlink" title="2.3 在微信小程序当中获取 openid"></a>2.3 在微信小程序当中获取 openid</h2><p>小程序的 openid 获取大致流程和网页获取差不多，只是后台这边获取 openid 有点修改而已（小程序传参的时候会用 json 格式，所以需要加上 JSON 解析类）</p>
+<br>
+
+<ul>
+<li><p>小程序获取 code ，直接调用 wx.login 就可以了</p>
+<pre><code> wx.login(&#123;
+   success: res =&gt; &#123;
+     console.log(&quot;登录数据&quot;)
+     console.log(res.code)
+     // 发送 res.code 到后台换取 openId, sessionKey, unionId
+     wx.request(&#123;  
+       url: &quot;https://wx.meetwhy.com/api/wx/login&quot;,  
+       data: &#123;
+         &quot;code&quot;:res.code,
+         &quot;errMsg&quot;:res.errMsg
+       &#125;,  
+       method: &#39;POST&#39;, // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT  
+       // header: &#123;&#125;, // 设置请求的 header  
+       success: function(res)&#123; 
+         console.log(res)
+         if (res.data.code === 1000)&#123;
+           console.log(&quot;获取 openid 成功 &quot; + res.data.data.openid)
+           wx.setStorageSync(&#39;openid&#39;, res.data.data.openid);//存储openid  
+         &#125; else &#123;
+           console.log(&quot;获取 openid 失败&quot; + res.data.msg)
+         &#125;
+       &#125;  
+     &#125;);
+   &#125;
+ &#125;)
+</code></pre>
+</li>
+<li><p>后台对应的接口，这里使用 FastJson 来解析小程序的 http 请求参数</p>
+<pre><code> /**
+  * 微信用户登录
+  * &lt;p&gt;
+  * POST
+  * code        前台调用微信接口返回
+  * errMsg      同上
+  *
+  * @param jsonParam
+  * @return
+  */
+ @RequestMapping(value = &quot;/api/wx/login&quot;, method = RequestMethod.POST, produces = &quot;application/json; charset=utf-8&quot;)
+ public ResJson wechatLogin(@RequestBody JSONObject jsonParam) &#123;
+     String code = jsonParam.getString(&quot;code&quot;);
+     String errMsg = jsonParam.getString(&quot;errMsg&quot;);
+     String url = &quot;https://api.weixin.qq.com/sns/jscode2session?appid=&quot; + properties.getAppId() + &quot;&amp;secret=&quot; + properties.getAppSecret() + &quot;&amp;grant_type=authorization_code&amp;js_code=&quot; + code;
+     Request request = new Request.Builder()
+             .url(url)
+             .header(&quot;content-type&quot;, &quot;application/json&quot;)
+             .build();
+     Response response = null;
+     try &#123;
+         response = client.newCall(request).execute();
+         if (response.isSuccessful()) &#123;
+             String resp = response.body().string();
+             if (resp.contains(&quot;session_key&quot;) &amp;&amp; resp.contains(&quot;openid&quot;)) &#123;
+                 JSONObject obj = JSON.parseObject(resp);
+                 HashMap&lt;String, String&gt; resMap = new HashMap&lt;&gt;();
+                 resMap.put(&quot;openid&quot;, obj.getString(&quot;openid&quot;));
+                 return ResJson.successJson(&quot;login Success&quot;, resMap);
+             &#125; else &#123;
+                 return ResJson.failJson(-1, &quot;获取 openid 失败&quot;, null);
+             &#125;
+         &#125; else &#123;
+             return ResJson.failJson(-1, &quot;获取 openid 失败&quot;, null);
+         &#125;
+     &#125; catch (IOException e) &#123;
+         e.printStackTrace();
+         return ResJson.serverErrorJson(&quot;无法请求远程 openid&quot;);
+     &#125;
+ &#125;
+</code></pre>
+</li>
+</ul>
+<p>同样，这里也会有安全问题，openid 不应该直接传给客户端，而是因为保存在服务端（例如 session 里），这里只是个测试，正式写项目的时候要修改鸭~</p>
+<h1 id="三，总结"><a href="#三，总结" class="headerlink" title="三，总结"></a>三，总结</h1><p>至此我们就完成了微信用户的认证了，下一篇就到了核心的操作——我们如何去对接微信服务器，创建一个预付订单。恭喜你学会了百分之30的微信支付技能鸭~</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/">微信开发</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/extract_android_ota_payload.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">解压google 官方 ota 包获得 img 文件</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/20160222-1.html">
+                        <span class="hidden-mobile">古风 上元有感</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,817 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#202529">
+  <meta name="description" content="">
+  <meta name="author" content="Ericwyn">
+  <meta name="keywords" content="Java,Golang,Coding,Programme,Ericwyn">
+  
+  <title>点石斋</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.meetwhy.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>点石斋</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                主页 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives">
+                
+                归档 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags">
+                
+                标签 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links">
+                
+                友链 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about">
+                
+                关于 
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="天涯路远，千书作马；海角途殊，万卷成舟。">
+              
+                天涯路远，千书作马；海角途殊，万卷成舟。
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/blog/markdown-test.html" target="_self">
+          markdown测试文档
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog/markdown-test.html" target="_self">
+          
+          
+            
+          
+          前言这是一份Markdown 测试文档，用来测试 Norcia 对 markdown 文件的加载和显示
+主要内容
+Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁在用？尝试一下
+正文1. Markdown是什么？Markdown是一种轻量级标记语言，它以纯文本形式(易读、易写、易更改)编写文档，并最终以HTML格式发布。Markdown也可以理解为将以MARKDOWN语法编写的语言
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-21 19:00" pubdate>
+              2018-05-21
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+            
+              <a href="/tags/Norcia/">Norcia</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/blog/graduate-1804.html" target="_self">
+          毕业惜别自题四首
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog/graduate-1804.html" target="_self">
+          
+          
+            
+          
+          序16年中时候某天中午看到他们搬校区，又看到公众号上写满离愁别恨，那时候还年轻所以也不知道什么，只是就着假想的离别心情写了几行字，这就是第一首诗的由来。眨眼间却忽然发现已经到了自己的师兄毕业和离开的时候了。
+其（一）    淅水荷花今又红 
+    
+    年华易逝总匆匆 
+    
+    只欲为君折赠远 
+    
+    相逢仍记旧音容
+
+其（二）    骊歌今日对苍穹 
+    
+   
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-04-23 19:00" pubdate>
+              2018-04-23
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8F%A4%E6%9C%88%E8%A8%80%E8%AF%B4/">古月言说</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/blog/Markmobi.html" target="_self">
+          Markmobi开发记录
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog/Markmobi.html" target="_self">
+          
+          
+            
+          
+          前言自己使用 Kindle 已经有好几年的历史了，从高中时期看各种古文，后来一口气的看一大堆小说，再到后来看看一些技术书籍，而最近发现 Kindle 的另外一个用处就是看 Github 上面的一些电子书籍。
+Github 上面是有很多的技术书籍的，因为 Github 有着开放和包容的特性，所以很多的人会翻译各种技术专业的文档或者相关的书，并变成一个 repo ，后续不断更新和提交。从这看来，Git
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-04-05 16:00" pubdate>
+              2018-04-05
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/blog/install-win10-in-tencent-cvm.html" target="_self">
+          腾讯云CVM安装Win10
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog/install-win10-in-tencent-cvm.html" target="_self">
+          
+          
+            
+          
+          ##前言遇到一个奇怪的需求,某个软件只能在win10上面运行,而在win server 环境下会迷幻出错,本身租用了一台腾讯云CVM 想着拿来做运算,结果gg了,无奈之下只能尝试安装系统为 Win10.这里吐槽一下,为毛各个云服务器厂商就是不提供win10系统呢(难道是因为要付费么
+准备工作
+你的CVM 必须是安装了 windows server 某个版本的(推荐2016版本,毕竟与win10 同
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-03-14 22:00" pubdate>
+              2018-03-14
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/blog/jitpack-use.html" target="_self">
+          使用Jitpack发布Github项目
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog/jitpack-use.html" target="_self">
+          
+          
+            
+          
+          前言使用 Jitpack 能够很方便的把自己一些 java 的库打包成 jar 发布，并且可以在新项目当中使用 maven 引入，实在是很方便，以下是我一些关于 使用 Jitpack 发布 Github 项目的实践
+IDE
+intellij IDEA
+
+gradlegradle install
+
+然后会看到生成的.gradle文件夹
+gradle.build在项目根目录下新建一个 gradle.b
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-02-10 17:00" pubdate>
+              2018-02-10
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/blog/birth21.html" target="_self">
+          金缕曲 廿一岁生辰留记
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog/birth21.html" target="_self">
+          
+          
+            
+          
+              今廿年驰隙
+    换星霜，几人知道，几多如意
+    洒泪凌波痴梦碎，究竟红笺谁寄
+    常辗转，辛艰不已
+    始道人生需患难，怨从前年少轻磨砺
+    留旧愿，仍相系
+    
+    恍惚冬尽春来矣
+    未觉察，栏前病树，绿芽新立
+    知晓沉舟留侧畔，自在当逾千里
+    勤艺业，才为长计
+    如是修身终不枉，对孤觞几度空零涕
+    路漫漫，自不易
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-01-01 00:00" pubdate>
+              2018-01-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8F%A4%E6%9C%88%E8%A8%80%E8%AF%B4/">古月言说</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/blog/auto-package-of-r.html" target="_self">
+          R package 打包记录
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog/auto-package-of-r.html" target="_self">
+          
+          
+            
+          
+          设定工作文件目录打包R package 要求两个目录 分别是
+
+工作目录 （存放 R 代码）
+ mkdir /home/ericwyn/work
+ 
+
+
+包目录 （存放包）
+ mkdir /home/ericwyn/Rlibs
+
+
+默认情况下在mydir是找不到mylib下的包的，因为mylib不在包的搜索路径里，解决这个问题只需要在mydir新建一个文 件.Rprofile文件，里面写上：.li
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-10-13 18:00" pubdate>
+              2017-10-13
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+            
+              <a href="/tags/R%E8%AF%AD%E8%A8%80/">R语言</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/blog/install-linux-dash.html" target="_self">
+          Ubuntu Server 14.04 安装状态监控Linux Dash
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog/install-linux-dash.html" target="_self">
+          
+          
+            
+          
+          介绍Linux Dash是一款非常简单的服务器监控程序，可以通过python、php以及LAMP部署运行，此次安装的环境是Ubuntu Server 14.04 LTS,使用Linux Dash的版本是github上面一个同学的2.0汉化版， Github地址是  
+
+linux-dash 的汉化版https://github.com/NoBey/linux-dash-zh 
+
+安装Git和Pyt
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-06-16 19:00" pubdate>
+              2017-06-16
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+            
+              <a href="/tags/Server/">Server</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/blog/opencpu-learn-note.html" target="_self">
+          OpenCpu使用笔记
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog/opencpu-learn-note.html" target="_self">
+          
+          
+            
+          
+          前言Opencpu 能够将 R package 变成 Web API，以此供其他语言的程序调用
+安装# Requires Ubuntu 16.04 (Xenial)
+sudo add-apt-repository -y ppa:opencpu/opencpu-2.0
+sudo apt-get update 
+sudo apt-get upgrade
+# Installs OpenCPU serve
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-06-08 10:00" pubdate>
+              2017-06-08
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+            
+              <a href="/tags/R%E8%AF%AD%E8%A8%80/">R语言</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/blog/birth2017.html" target="_self">
+          金缕曲 弱冠生辰留记
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/blog/birth2017.html" target="_self">
+          
+          
+            
+          
+              虚度韶华否。到如今，二十秋尽，几寻回首。
+    儿语高明桑梓处，不记当时年幼。对残灯，重慈影瘦。
+    此后求学游禅桂，幸两三师友同携手。
+    洒笔墨，纸笺旧。
+     
+    人生数度别离久。与寒窗，羊城春媚，又来消受。
+    四五光景新添上，路远羁途随后。仅如愿，初心相守。
+    且看尘涛风月送，纵逍遥些许能够。
+    亦不枉，湿衣袖。
+
+丙申猴年 生辰夜，写就于家中
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-01-01 19:00" pubdate>
+              2017-01-01
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8F%A4%E6%9C%88%E8%A8%80%E8%AF%B4/">古月言说</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/3/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#board">5</a><a class="extend next" rel="next" href="/page/5/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

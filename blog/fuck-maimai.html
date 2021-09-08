@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#202529">
+  <meta name="description" content="">
+  <meta name="author" content="Ericwyn">
+  <meta name="keywords" content="Java,Golang,Coding,Programme,Ericwyn">
+  
+  <title>和脉脉斗智斗勇的一个晚上 - 点石斋</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.meetwhy.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>点石斋</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                主页 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives">
+                
+                归档 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags">
+                
+                标签 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links">
+                
+                友链 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about">
+                
+                关于 
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="和脉脉斗智斗勇的一个晚上">
+              
+                和脉脉斗智斗勇的一个晚上
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-12-12 21:00" pubdate>
+        2018年12月12日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      947 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">和脉脉斗智斗勇的一个晚上</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2018年12月12日 晚上
+                
+              </p>
+            
+            <div class="markdown-body">
+              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>脉脉作为一个职场交流的软件，在上面还是可以很快看到很多消息的（职言板块感觉有点类似于职场人的微博？，这个功能还是很赞的</p>
+<p>但是脉脉出了名的恶心是对通讯录的盗取以及胡乱使用，为了不让自己的七大姑八大姨也收到什么“xxx把你标记为职场小能手的短信”，又能注册脉脉，于是折腾了大半个晚上</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>首先，脉脉是会读取和上传通讯录的（读取和上传通讯录是不一样的），根据朋友的使用体验，发现应该是第一次注册的时候要求上传通讯录，此后不要求上传通讯录（但是可以手动更新通讯录），而至于读取通讯录的话就不知道了。会有这个结论是因为，当第一次成功注册并且上传通讯录之后，关闭掉对短信的读取权限，软件依然可以正常使用。</p>
+<h2 id="开始注册"><a href="#开始注册" class="headerlink" title="开始注册"></a>开始注册</h2><p>起初希望使用 Google Voice 来进行注册，结果脉脉空有外国手机号输入，而却没有实际的给我的 voice 号码发送验证码….让人抓鸡</p>
+<p>所以就只能使用自己的真实手机号注册了</p>
+<p>但是注册了之后发现一定要读取通讯录并且上传，才能够注册成功。于是我拒绝了，开始了探索怎样才能解决这个问题，成功注册。</p>
+<h2 id="使用权限欺骗"><a href="#使用权限欺骗" class="headerlink" title="使用权限欺骗"></a>使用权限欺骗</h2><p>Android上面，使用权限欺骗是可以伪造权限的结果，返回给 App 的，但是要基于 Xposed 才可以，我的手机版本是 Android 9，没有 Xposed ，所以没办法使用这个，（Xposed 的话似乎是使用 App Ops Xposed） 就可以了</p>
+<h2 id="在没有通讯录的手机上面注册"><a href="#在没有通讯录的手机上面注册" class="headerlink" title="在没有通讯录的手机上面注册"></a>在没有通讯录的手机上面注册</h2><p>刚好手边有一台刚刚刷好 AOSP 的测试机，于是装了个脉脉，准备注册，结果发现，如果你的通讯录完全是空白的话，他会认为你没有通讯录…软件上面显示的，和你没有启用通讯录权限时候，是一样的….</p>
+<img style="width: 400px;" src="https://ws1.sinaimg.cn/large/ae1a7c45gy1fy4abn1n99j20u01hcq4o.jpg" srcset="/img/loading.gif" lazyload>
+
+<h2 id="添加一个联系人"><a href="#添加一个联系人" class="headerlink" title="添加一个联系人"></a>添加一个联系人</h2><p>然后就添加联系人了，随便添加了一个联系人，重新注册，这个时候就提示联系人太少，无法注册</p>
+<h2 id="添加三个联系人"><a href="#添加三个联系人" class="headerlink" title="添加三个联系人"></a>添加三个联系人</h2><p>随便居然还是提示联系人太少，因为没法知道到底多少个联系人才会解除这个判定，于是决定导入一整批的虚假联系人</p>
+<h2 id="添加多个虚拟联系人"><a href="#添加多个虚拟联系人" class="headerlink" title="添加多个虚拟联系人"></a>添加多个虚拟联系人</h2><p>导出了手机里面的 vcf 格式之后，照着伪造了一份有100个虚假联系人的 vcf，再导入其中，用 js 写的一个小脚本，放到浏览器里跑一下就可以了</p>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs openscad"><span class="hljs-built_in">let</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-keyword">for</span> (<span class="hljs-built_in">let</span> i=<span class="hljs-number">100</span>;i&lt;<span class="hljs-number">199</span>;i++)&#123;<br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;BEGIN:VCARD\n&quot;</span>    <br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;VERSION:3.0\n&quot;</span><br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;N;CHARSET=UTF-8:辣鸡脉脉&quot;</span>+i+<span class="hljs-string">&quot;\n&quot;</span> <br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;FN;CHARSET=UTF-8:辣鸡脉脉&quot;</span>+i+<span class="hljs-string">&quot;\n&quot;</span> <br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;TEL;TYPE=CELL:13500000&quot;</span>+i+<span class="hljs-string">&quot;\n&quot;</span> <br>    <span class="hljs-built_in">str</span> += <span class="hljs-string">&quot;END:VCARD\n&quot;</span><br>&#125;<br>console.<span class="hljs-built_in">log</span>(<span class="hljs-built_in">str</span>)<br><br></code></pre></td></tr></table></figure>
+
+<p>复制输出然后粘贴到一个文件，重命名为 .vcf 格式，传到手机里，导入通讯里，于是终于能够通过那一个对联系人的判断了</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>进入软件之后，迎面而来的就是脉脉的老拉新活动，拉一个新用户给老用户发个5块钱红包…而具体的操作，自然也是让你选择向你通讯录当中的哪个好友发送“xxx把你标记为职场小能手”的消息了…实在是无力吐槽了</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/blog/spring-boot-external-config.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Sprinp Boot配置文件外置</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/ponza-document.html">
+                        <span class="hidden-mobile">Ponza博客评论系统-文档</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
