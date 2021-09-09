@@ -2,8 +2,8 @@
 layout: post
 title: leanote server 源码运行
 tags: [且听秋谷,leanote]
-date: 2021-09-09 23:31
-updated: 2021-09-09 23:31
+date: 2021-09-08 23:31
+updated: 2021-09-08 23:31
 ---
 ## 前言
 
