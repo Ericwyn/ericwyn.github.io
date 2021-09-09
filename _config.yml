@@ -103,3 +103,9 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# seo 优化
+sitemap: 
+    path: sitemap.xml
+baidusitemap:
+    path: baidusitemap.xml
