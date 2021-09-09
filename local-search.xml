@@ -27,7 +27,7 @@
     <link href="/blog/build-and-run-leanote-server.html"/>
     <url>/blog/build-and-run-leanote-server.html</url>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>letanote 是一个我用了非常久的的在线文档, 大概是 16, 17 年的时候就开始用了, 一直部署在自己的腾讯云服务器上.</p><h2 id="源码获取"><a href="#源码获取" class="headerlink" title="源码获取"></a>源码获取</h2><h2 id="源码运行"><a href="#源码运行" class="headerlink" title="源码运行"></a>源码运行</h2><ul><li>mongodb 并初始化</li><li>revel 安装</li><li>使用 revel 运行 leanote server</li></ul><h2 id="修改-route-去除首页"><a href="#修改-route-去除首页" class="headerlink" title="修改 route 去除首页"></a>修改 route 去除首页</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>letanote 是一个我用了非常久的的在线文档, 大概是 16, 17 年的时候就开始用了, 一直部署在自己的腾讯云服务器上.</p><h2 id="源码获取"><a href="#源码获取" class="headerlink" title="源码获取"></a>源码获取</h2><p> 参照</p><h2 id="源码运行"><a href="#源码运行" class="headerlink" title="源码运行"></a>源码运行</h2><ul><li>mongodb 并初始化</li><li>revel 安装</li><li>使用 revel 运行 leanote server</li></ul><h2 id="修改-route-去除首页"><a href="#修改-route-去除首页" class="headerlink" title="修改 route 去除首页"></a>修改 route 去除首页</h2>]]></content>
     
     
     
