@@ -216,19 +216,54 @@
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年9月8日 晚上
+                  本文最后更新于：2021年9月11日 凌晨
                 
               </p>
             
             <div class="markdown-body">
               <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>letanote 是一个我用了非常久的的在线文档, 大概是 16, 17 年的时候就开始用了, 一直部署在自己的腾讯云服务器上.</p>
-<h2 id="源码获取"><a href="#源码获取" class="headerlink" title="源码获取"></a>源码获取</h2><p> 参照</p>
-<h2 id="源码运行"><a href="#源码运行" class="headerlink" title="源码运行"></a>源码运行</h2><ul>
-<li>mongodb 并初始化</li>
-<li>revel 安装</li>
-<li>使用 revel 运行 leanote server</li>
+<h2 id="源码获取"><a href="#源码获取" class="headerlink" title="源码获取"></a>源码获取</h2><p> 参照 <a target="_blank" rel="noopener" href="https://github.com/leanote/leanote/wiki/Leanote-%E6%BA%90%E7%A0%81%E7%89%88%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B----Mac-and-Linux">官方教程</a>, 使用 git clone 直接拉取 leanote-server 源码</p>
+ <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">git clone https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/leanote/</span>leanote.git<br></code></pre></td></tr></table></figure>
+
+<h2 id="源码运行"><a href="#源码运行" class="headerlink" title="源码运行"></a>源码运行</h2><h3 id="mongodb-并初始化"><a href="#mongodb-并初始化" class="headerlink" title="mongodb 并初始化"></a>mongodb 并初始化</h3><p>leanote 的数据库是 mongodb, 所以我们需要先在系统上面安装好<br>之后按照官方的教程, 导入默认的数据, 做好配置才可以<br>之后让 mongodb 先跑起来</p>
+<p>使用的命令可以参考下面这个</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mongod --dbpath /root/drive/opt/leanote/leanoteData/Data/ --auth --bind_ip=127.0.0.1<br></code></pre></td></tr></table></figure>
+
+<h2 id="go-依赖安装"><a href="#go-依赖安装" class="headerlink" title="go 依赖安装"></a>go 依赖安装</h2><p>直接在目录下运行 go mod tidy 就可以了, 没什么好说的</p>
+<h2 id="leanote-config-配置"><a href="#leanote-config-配置" class="headerlink" title="leanote config 配置"></a>leanote config 配置</h2><p>参考官方的配置文件说明, 修改 config/app.conf 文件, 主要修改下面几个点</p>
+<ul>
+<li>adminUsername 超级管理员用户</li>
+<li>db.username</li>
+<li>db.password 数据库的用户名和密码</li>
+<li>app.secret session 的密钥(吧?)</li>
 </ul>
-<h2 id="修改-route-去除首页"><a href="#修改-route-去除首页" class="headerlink" title="修改 route 去除首页"></a>修改 route 去除首页</h2>
+<p>此外我还修改了网站默认的语言( i18n 配置默认是英语….)</p>
+<ul>
+<li>i18n.default_language 改为 zh-cn</li>
+</ul>
+<p>因为此前我一直在云服务器上面跑编译好的文件, 所以我的数据库\配置文件等都是从服务器上面复制下来的</p>
+<h3 id="revel-安装"><a href="#revel-安装" class="headerlink" title="revel 安装"></a>revel 安装</h3><p>leanote 的 server 虽然是用 go 语言写的, 但是因为时间比较早, 那时候估计 gin 之类的框架还没出来<br>所以 leanote 这边用了 revel 框架来实现了后端</p>
+<p>跟我们使用 gin 之类的框架不一样, leanote server 并不能直接编译出来一个二进制文件运行, leanote 的运行还需要安装 revel, 由 revel 来完成页面渲染之类的工作 <del>有 tomcat + servlet 那味儿了!</del></p>
+<p>官方教程写的是, 使用如下命令生成revel二进制命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash">&gt; go get -u github.com/revel/cmd/revel</span><br><span class="hljs-meta">$</span><span class="bash">&gt; revel version <span class="hljs-comment"># 看是否是1.0.0 如果低于1.0.0 则无法运行Leanote</span></span><br></code></pre></td></tr></table></figure>
+
+<p>之后使用 <code>revel run -a .</code> 来运行 leanote-server</p>
+<p>但是我运行的时候出错了, 提示</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs smali">Unable to<span class="hljs-built_in"> execute </span>error=<span class="hljs-string">&quot;Revel paths[error Failed to load module.  Import of path failed modulePath:github.com/revel/modules/static error:No files found in import path github.com/revel/modules/static ]&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>参考 github issue <a target="_blank" rel="noopener" href="https://github.com/revel/revel/issues/1528">https://github.com/revel/revel/issues/1531</a> , 发现还需要安装一些依赖, 使用下面的命令就可以了</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-keyword">go</span> <span class="hljs-built_in">get</span> github.<span class="hljs-keyword">com</span>/revel/modules/static<br><span class="hljs-keyword">go</span> <span class="hljs-built_in">get</span> github.<span class="hljs-keyword">com</span>/garyburd/redigo/redis<br><span class="hljs-keyword">go</span> <span class="hljs-built_in">get</span> github.<span class="hljs-keyword">com</span>/patrickmn/<span class="hljs-keyword">go</span>-cache<br><span class="hljs-keyword">go</span> <span class="hljs-built_in">get</span> github.<span class="hljs-keyword">com</span>/bradfitz/gomemcache/memcache<br></code></pre></td></tr></table></figure>
+
+<p>之后就可以使用 <code>revel run -a .</code> 运行了</p>
+<h2 id="修改-route-去除首页"><a href="#修改-route-去除首页" class="headerlink" title="修改 route 去除首页"></a>修改 route 去除首页</h2><p>leanote 默认的首页是一个介绍页面, 但是自己用的服务的话其实并不需要这个页面, 所以我们可以通过修改路由的方式, 让首页变成登录页面<br>revel 框架的路由配置全部都在 conf/routes 框架里面, 我们只需要修改第 8 行就可以了, 把下面这一行</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs mathematica"><span class="hljs-built_in">Get</span> 	<span class="hljs-operator">/</span>											<span class="hljs-variable">Note</span><span class="hljs-operator">.</span><span class="hljs-built_in">Default</span><br></code></pre></td></tr></table></figure>
+
+<p>改成 </p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">Get</span> 	/											Note.<span class="hljs-keyword">Index</span><br></code></pre></td></tr></table></figure>
+
+<p>之后当我们打开 localhost:9000/ 的时候, 就会默认进入登录页面</p>
+<h2 id="编译及用命令行运行"><a href="#编译及用命令行运行" class="headerlink" title="编译及用命令行运行"></a>编译及用命令行运行</h2><p>TODO</p>
+
             </div>
             <hr>
             <div>
