@@ -18,7 +18,7 @@
   <meta name="author" content="Ericwyn">
   <meta name="keywords" content="Java,Golang,Coding,Programme,Ericwyn">
   
-  <title>让 RIME 支持中英混合输入 - 点石斋</title>
+  <title>解决 ubuntu 20.04 里 nautilus 无法复制文件地址的问题 - 点石斋</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,9 +163,9 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="让 RIME 支持中英混合输入">
+            <span class="h2" id="subtitle" title="解决 ubuntu 20.04 里 nautilus 无法复制文件地址的问题">
               
-                让 RIME 支持中英混合输入
+                解决 ubuntu 20.04 里 nautilus 无法复制文件地址的问题
               
             </span>
 
@@ -175,8 +175,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-09-25 20:01" pubdate>
-        2021年9月25日 晚上
+      <time datetime="2021-10-28 10:38" pubdate>
+        2021年10月28日 上午
       </time>
     </span>
   
@@ -212,38 +212,36 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">让 RIME 支持中英混合输入</h1>
+            <h1 style="display: none">解决 ubuntu 20.04 里 nautilus 无法复制文件地址的问题</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2021年9月25日 晚上
+                  本文最后更新于：2021年10月28日 上午
                 
               </p>
             
             <div class="markdown-body">
-              <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>ubuntu 18.04 下面, 手贱升级了一下搜狗输入法, 然后就翻车了, 总是出现输入不了的问题,<br>所以决定将输入法从 fcitx 换成 ibus 的 rime, 换成 rime 之后, 换成了明月中文简体输入,<br>但是发现 rime 并不支持中英文联合输入, 这对于我来说还是不太方便, 所以决定基于 RIME 的拓展词库功能来增加一个英文输入词库,<br>由此实现中英文混合输入的功能</p>
-<h2 id="单词选择"><a href="#单词选择" class="headerlink" title="单词选择"></a>单词选择</h2><p>github 上面找到了 CET4 + CET6 单词, 7000 个左右, 看起来应该是够了的</p>
-<h2 id="词库制作"><a href="#词库制作" class="headerlink" title="词库制作"></a>词库制作</h2><p>在词库制作上面, 由于一般比较长的单词才需要联想输入, 所以只将长度大于 3 的单词列入到词库里面,<br>默认的触发阈值是当我们输入 3 个开头字母. 比如当我们输入 app 的时候, 将会联想出来 apple.</p>
-<p>而针对长度大于 8 位的单词, 我将输入阈值设置成 4 个, 也就是只有 4 个的时候才会触发</p>
-<p>所有单词的排序优先级都为 3</p>
-<p>由此我得到了第一版的词库规则, 规则类似于</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css">abandon	<span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">b</span> <span class="hljs-selector-tag">a</span>	<span class="hljs-number">3</span><br>abbreviation	<span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">b</span> <span class="hljs-selector-tag">b</span> r	<span class="hljs-number">3</span><br>abide	<span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">b</span> <span class="hljs-selector-tag">i</span>	<span class="hljs-number">3</span><br>ability	<span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">b</span> <span class="hljs-selector-tag">i</span>	<span class="hljs-number">3</span><br>abnormal	<span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">b</span> n o	<span class="hljs-number">3</span><br>apple	<span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">p</span>	<span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
+              <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>公司电脑加装了一个固态，将之前的 ubuntu18.04 升级到了 ubuntu 20.04</p>
+<p>使用的时候发现了个小问题，之前再 nautilus 文件夹里面，可以通过选中某个文件或文件夹，直接 <code>ctrl + c</code> 就复制文件地址了</p>
+<p>ubuntu 20.04 上面，这么做的话确会复制到一些奇怪的东西，如下</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">x-special/nautilus-clipboard<br>copy<br>file:<span class="hljs-regexp">//</span><span class="hljs-regexp">/home/</span>ericwyn<span class="hljs-regexp">/dev/</span>StaticDev/ericwyn.github.io<br></code></pre></td></tr></table></figure>
 
-<p>但是这样输入的时候会出现一个问题, 但我输入 a p p l 的时候, 联想的单词并不是 <code>apple</code>, 而是 <code>app了</code></p>
-<p>因为在词典看来, <code>a p p</code> 的输入联想得到 <code>apple</code>, 而 <code>l</code> 的输入则是一个新单词</p>
-<h2 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h2><p>那怎么改进这个问题呢?</p>
-<p>很简单, 我们给每个单词加多几行规则就好了, 比如 apple, 我们可以用 3 行规则来定义</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css">apple	<span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">p</span>	<span class="hljs-number">3</span><br>apple	<span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">p</span> l	<span class="hljs-number">3</span><br>apple	<span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">p</span> <span class="hljs-selector-tag">p</span> l e	<span class="hljs-number">3</span><br></code></pre></td></tr></table></figure>
+<p>没错，上面这一整段都是你在 ctrl + v 的之后得到的东西</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>google 了一下， 发现我们可以使用 nautilus 的自定义脚本来实现这个原本复制的功能，相当于在右键菜单里面加一个 “复制文件路径” 选项</p>
+<p>我们在 <code>~/.local/share/nautilus/scripts</code> 路径添加这样一个 <code>copyPath.sh</code> 文件就好了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span><br>echo  $&#123;NAUTILUS_SCRIPT_SELECTED_FILE_PATHS&#125; | tr -d &#x27;\n&#x27;| xclip -selection clipboard<br></code></pre></td></tr></table></figure>
 
-<p>这种处理的话, 我们简单写一个脚本来完成就可以了</p>
-<p>最终我们就可以得到一个支持中英混合输入的词典, 把这个字典加到 RIME 的配置里面就可以了</p>
-<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p><img src="https://github.com/Ericwyn/RimeDict/raw/main/screenshot/english.dict.png" srcset="/img/loading.gif" lazyload alt="输入效果"></p>
-<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
-<li>字典文件: <a target="_blank" rel="noopener" href="https://github.com/Ericwyn/RimeDict/blob/main/luna_pinyin_simp.english.dict.yaml">luna_pinyin_simp.english.dict.yaml</a></li>
-<li>处理脚本: <a target="_blank" rel="noopener" href="https://gist.github.com/Ericwyn/ec860c388279cefabfa543e85cf25368"> gist </a></li>
-<li>词典来源: <a target="_blank" rel="noopener" href="https://github.com/mahavivo/english-wordlists">mahavivo/english-wordlists</a></li>
-</ul>
+<p><strong>注意： 你可能还得使用 <code>apt install xclip</code> 安装一下 xclip 工具才可以</strong></p>
+<p>tr 命令是为了把 echo 命令结果末尾的回车给去掉</p>
+<p>之后重启 nautlius，不出意外的话，你应该可以在右键里面看到 “脚本” 选项，里面会有一个 copyPath.sh 了</p>
+<h2 id="更多脚本"><a href="#更多脚本" class="headerlink" title="更多脚本"></a>更多脚本</h2><p>基于上面这个，我又写了其他一些脚本， 也一起分享一下，比如</p>
+<h3 id="使用-vs-code-打开路径"><a href="#使用-vs-code-打开路径" class="headerlink" title="使用 vs code 打开路径"></a>使用 vs code 打开路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span><br>code -n $&#123;NAUTILUS_SCRIPT_SELECTED_FILE_PATHS&#125;<br></code></pre></td></tr></table></figure>
 
+<h3 id="使用-Android-Studio-打开路径"><a href="#使用-Android-Studio-打开路径" class="headerlink" title="使用 Android Studio 打开路径"></a>使用 Android Studio 打开路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span><br>/opt/android-studio/lasted/bin/studio.sh $&#123;NAUTILUS_SCRIPT_SELECTED_FILE_PATHS&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="使用-IDEA-打开路径"><a href="#使用-IDEA-打开路径" class="headerlink" title="使用 IDEA 打开路径"></a>使用 IDEA 打开路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span><br>/opt/idea/idea/bin/idea.sh $&#123;NAUTILUS_SCRIPT_SELECTED_FILE_PATHS&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="使用-Terminal-打开路径"><a href="#使用-Terminal-打开路径" class="headerlink" title="使用 Terminal 打开路径"></a>使用 Terminal 打开路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span><br>gnome-terminal --working-directory=$&#123;NAUTILUS_SCRIPT_SELECTED_FILE_PATHS&#125;<br></code></pre></td></tr></table></figure>
             </div>
             <hr>
             <div>
@@ -255,6 +253,10 @@
                     
                       <a class="hover-with-bg" href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
                     
+                      <a class="hover-with-bg" href="/tags/ubuntu/">ubuntu</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Ubuntu-%E4%BD%BF%E7%94%A8%E6%97%A5%E5%B8%B8/">Ubuntu 使用日常</a>
+                    
                   </div>
                 
               </div>
@@ -264,18 +266,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/blog/copy-file-path-in-nautilus-ubuntu20.html">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">解决 ubuntu 20.04 里 nautilus 无法复制文件地址的问题</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/blog/midAutumn2021.html">
-                        <span class="hidden-mobile">御街行.中秋</span>
+                      <a href="/blog/rime-english-dict.html">
+                        <span class="hidden-mobile">让 RIME 支持中英混合输入</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

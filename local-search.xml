@@ -4,6 +4,29 @@
   
   
   <entry>
+    <title>解决 ubuntu 20.04 里 nautilus 无法复制文件地址的问题</title>
+    <link href="/blog/copy-file-path-in-nautilus-ubuntu20.html"/>
+    <url>/blog/copy-file-path-in-nautilus-ubuntu20.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>公司电脑加装了一个固态，将之前的 ubuntu18.04 升级到了 ubuntu 20.04</p><p>使用的时候发现了个小问题，之前再 nautilus 文件夹里面，可以通过选中某个文件或文件夹，直接 <code>ctrl + c</code> 就复制文件地址了</p><p>ubuntu 20.04 上面，这么做的话确会复制到一些奇怪的东西，如下</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk">x-special/nautilus-clipboard<br>copy<br>file:<span class="hljs-regexp">//</span><span class="hljs-regexp">/home/</span>ericwyn<span class="hljs-regexp">/dev/</span>StaticDev/ericwyn.github.io<br></code></pre></td></tr></table></figure><p>没错，上面这一整段都是你在 ctrl + v 的之后得到的东西</p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>google 了一下， 发现我们可以使用 nautilus 的自定义脚本来实现这个原本复制的功能，相当于在右键菜单里面加一个 “复制文件路径” 选项</p><p>我们在 <code>~/.local/share/nautilus/scripts</code> 路径添加这样一个 <code>copyPath.sh</code> 文件就好了</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span><br>echo  $&#123;NAUTILUS_SCRIPT_SELECTED_FILE_PATHS&#125; | tr -d &#x27;\n&#x27;| xclip -selection clipboard<br></code></pre></td></tr></table></figure><p><strong>注意： 你可能还得使用 <code>apt install xclip</code> 安装一下 xclip 工具才可以</strong></p><p>tr 命令是为了把 echo 命令结果末尾的回车给去掉</p><p>之后重启 nautlius，不出意外的话，你应该可以在右键里面看到 “脚本” 选项，里面会有一个 copyPath.sh 了</p><h2 id="更多脚本"><a href="#更多脚本" class="headerlink" title="更多脚本"></a>更多脚本</h2><p>基于上面这个，我又写了其他一些脚本， 也一起分享一下，比如</p><h3 id="使用-vs-code-打开路径"><a href="#使用-vs-code-打开路径" class="headerlink" title="使用 vs code 打开路径"></a>使用 vs code 打开路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span><br>code -n $&#123;NAUTILUS_SCRIPT_SELECTED_FILE_PATHS&#125;<br></code></pre></td></tr></table></figure><h3 id="使用-Android-Studio-打开路径"><a href="#使用-Android-Studio-打开路径" class="headerlink" title="使用 Android Studio 打开路径"></a>使用 Android Studio 打开路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span><br>/opt/android-studio/lasted/bin/studio.sh $&#123;NAUTILUS_SCRIPT_SELECTED_FILE_PATHS&#125;<br></code></pre></td></tr></table></figure><h3 id="使用-IDEA-打开路径"><a href="#使用-IDEA-打开路径" class="headerlink" title="使用 IDEA 打开路径"></a>使用 IDEA 打开路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span><br>/opt/idea/idea/bin/idea.sh $&#123;NAUTILUS_SCRIPT_SELECTED_FILE_PATHS&#125;<br></code></pre></td></tr></table></figure><h3 id="使用-Terminal-打开路径"><a href="#使用-Terminal-打开路径" class="headerlink" title="使用 Terminal 打开路径"></a>使用 Terminal 打开路径</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash">!/bin/bash</span><br>gnome-terminal --working-directory=$&#123;NAUTILUS_SCRIPT_SELECTED_FILE_PATHS&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>且听秋谷</tag>
+      
+      <tag>ubuntu</tag>
+      
+      <tag>Ubuntu 使用日常</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>让 RIME 支持中英混合输入</title>
     <link href="/blog/rime-english-dict.html"/>
     <url>/blog/rime-english-dict.html</url>
