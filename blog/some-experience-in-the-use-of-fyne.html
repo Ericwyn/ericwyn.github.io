@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/null">
+  <link rel="icon" href="/null">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#202529">
+  <meta name="description" content="锲而不舍, 点石成金">
+  <meta name="author" content="Ericwyn">
+  <meta name="keywords" content="Java,Golang,Coding,Programme,Ericwyn">
+  
+  <title>fyne 框架的一些使用经验 - 点石斋</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.meetwhy.com","root":"/","version":"1.8.11","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 40vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>点石斋</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                
+                主页 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives">
+                
+                归档 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags">
+                
+                标签 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links">
+                
+                友链 
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about">
+                
+                关于 
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/bg.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="fyne 框架的一些使用经验">
+              
+                fyne 框架的一些使用经验
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-11-13 09:49" pubdate>
+        2021年11月13日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">fyne 框架的一些使用经验</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2021年11月13日 上午
+                
+              </p>
+            
+            <div class="markdown-body">
+              <p>fyne 是 go 里面一个支持多平台的 GUI 库, 很早之前就已听说过．<br>最近在尝试实现一个支持 windows 和 ubuntu 的划词翻译工具 (英语不够,工具来凑).<br>于是便希望用 fyne 来试试</p>
+<p>当前我使用到的 fyne 版本是</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs armasm"><span class="hljs-symbol">require</span> (<br>    fyne.io/fyne/<span class="hljs-built_in">v2</span> <span class="hljs-built_in">v2</span>.<span class="hljs-number">1</span>.<span class="hljs-number">1</span><br>    ...<br>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="中文字体"><a href="#中文字体" class="headerlink" title="中文字体"></a>中文字体</h2><p>fyne 安装和使用其实挺简单的, 直接 go get 然后照着文档来就可以了.<br>但是在写出来 demo 之后我就遇到了第一个问题</p>
+<p>中文乱码</p>
+<p>翻看了官方的介绍和前辈的经验, 最终从</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.wangfeng.me/article/Go-fyne-ui-kuang-jia-she-zhi-zhong-wen-bing-da-bao-dao-er-jin-zhi-wen-jian">https://www.wangfeng.me/article/Go-fyne-ui-kuang-jia-she-zhi-zhong-wen-bing-da-bao-dao-er-jin-zhi-wen-jian</a></p>
+</blockquote>
+<p>这里看到了解决的方案, 总的来说, 一般有两种方案</p>
+<h3 id="设置-FYNE-FONT-环境参数"><a href="#设置-FYNE-FONT-环境参数" class="headerlink" title="设置 FYNE_FONT 环境参数"></a>设置 FYNE_FONT 环境参数</h3><p>我们可以在程序启动的时候设置一个 FYNE_FONT 参数, 由此来定义使用的字体文件</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs go">os.Setenv(<span class="hljs-string">&quot;FYNE_FONT&quot;</span>, fontFile.AbsPath())<br></code></pre></td></tr></table></figure>
+
+<p>我试了一下这种方法, 感觉不错. Entry 文本框里面的中文终于不会是框框了</p>
+<p>但是 button 的文字仍然会乱码…</p>
+<p>而且 log 里面会有关于这个文件路径的报错 (看起来似乎是默认主题无法通过路径印用这个字体文件之类的)</p>
+<h3 id="自定义主题"><a href="#自定义主题" class="headerlink" title="自定义主题"></a>自定义主题</h3><p>这个方法的思路是使用 fyne cmd 将字体文件直接变成一个 .go 文件<br>然后我们配置一个新的自定义主题, 之后重写这个主题的 <code>Font(s fyne.TextStyle)</code> 方法, 由此让我们用上加载自定义字体的主题</p>
+<p>除了参考上面提到的 blog, 也可以参考下面这个</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/lusingander/fyne-font-example">https://github.com/lusingander/fyne-font-example</a></p>
+</blockquote>
+<p>首先第一步是把 ttf 文件变成 .go 文件, 我们需要先安装 fyne cmd</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> go get fyne.io/fyne/v2/cmd/fyne</span><br><span class="hljs-meta"></span><br><span class="hljs-meta">$</span><span class="bash"> fyne</span><br>Usage: fyne [command] [parameters], where command is one of:<br>...<br></code></pre></td></tr></table></figure>
+
+<p>之后编译本地的字体文件到 <code>.go</code> 里面</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> fyne bundle xxxxxx.ttf &gt; bundle.go</span><br></code></pre></td></tr></table></figure>
+
+<p>运行完之后就会看到一个 bundle.go 文件 </p>
+<p><del>但是大小居然高达 20M+ ….. Goland 表示我无法编辑….</del></p>
+<p>在这个 go 文件里面定义了一个 resourceXXXX</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs go"><br><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fyne.io/fyne/v2&quot;</span><br><br><span class="hljs-keyword">var</span> resourceXxxxxxTtf = &amp;fyne.StaticResource&#123;<br>	StaticName: <span class="hljs-string">&quot;xxxxxx.ttf&quot;</span>,<br>	StaticContent: []<span class="hljs-keyword">byte</span>&#123;<br>...<br></code></pre></td></tr></table></figure>
+
+<p>我们改改 package 之后就可以直接引用了</p>
+<p>然后再新建一个主题就可以了</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> resource<br><br><span class="hljs-keyword">import</span> (<br>	<span class="hljs-string">&quot;fyne.io/fyne/v2&quot;</span><br>	<span class="hljs-string">&quot;fyne.io/fyne/v2/theme&quot;</span><br>	<span class="hljs-string">&quot;image/color&quot;</span><br>)<br><br><span class="hljs-keyword">type</span> CustomerTheme <span class="hljs-keyword">struct</span>&#123;&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(t *CustomerTheme)</span> <span class="hljs-title">Color</span><span class="hljs-params">(name fyne.ThemeColorName, variant fyne.ThemeVariant)</span> <span class="hljs-title">color</span>.<span class="hljs-title">Color</span></span> &#123;<br>	<span class="hljs-keyword">return</span> theme.DefaultTheme().Color(name, variant)<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(t *CustomerTheme)</span> <span class="hljs-title">Icon</span><span class="hljs-params">(name fyne.ThemeIconName)</span> <span class="hljs-title">fyne</span>.<span class="hljs-title">Resource</span></span> &#123;<br>	<span class="hljs-keyword">return</span> theme.DefaultTheme().Icon(name)<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(t *CustomerTheme)</span> <span class="hljs-title">Size</span><span class="hljs-params">(name fyne.ThemeSizeName)</span> <span class="hljs-title">float32</span></span> &#123;<br>	<span class="hljs-keyword">return</span> theme.DefaultTheme().Size(name)<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(*CustomerTheme)</span> <span class="hljs-title">Font</span><span class="hljs-params">(s fyne.TextStyle)</span> <span class="hljs-title">fyne</span>.<span class="hljs-title">Resource</span></span> &#123;<br>	<span class="hljs-keyword">if</span> s.Monospace &#123;<br>		<span class="hljs-keyword">return</span> theme.DefaultTheme().Font(s)<br>	&#125;<br>	<span class="hljs-comment">// 此处可以根据不同字重返回不同的字体, 但是我用的都是同样的字体</span><br>	<span class="hljs-keyword">if</span> s.Bold &#123;<br>		<span class="hljs-keyword">if</span> s.Italic &#123;<br>			<span class="hljs-keyword">return</span> theme.DefaultTheme().Font(s)<br>		&#125;<br>		<span class="hljs-comment">// 返回自定义字体</span><br>		<span class="hljs-keyword">return</span> resourceXxxxxxTtf<br>	&#125;<br>	<span class="hljs-keyword">if</span> s.Italic &#123;<br>		<span class="hljs-keyword">return</span> theme.DefaultTheme().Font(s)<br>	&#125;<br>	<span class="hljs-comment">// 返回自定义字体</span><br>	<span class="hljs-keyword">return</span> resourceXxxxxxTtf<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>之后我们在创建 GUI 的时候, 用上我们自己自定义的主题就 ok 了</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs go">a := app.New()<br>a.Settings().SetTheme(&amp;resource.CustomerTheme&#123;&#125;)<br></code></pre></td></tr></table></figure>
+
+<p>经过测试, Entry 文本输入框和 Button 里面的中文都能正常显示了</p>
+<h2 id="设置程序-ICON"><a href="#设置程序-ICON" class="headerlink" title="设置程序 ICON"></a>设置程序 ICON</h2><p>设置程序图标的方法也和上面的差不多, 我们需要用 fyne 将 icon.png 编译成一个 bundle.go 文件, 以便我们可以直接引用</p>
+<p>之后就是创建 GUI 的时候调用接口设置一下就可以了</p>
+<p>图标的资源文件如下</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> resource<br><br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fyne.io/fyne&quot;</span><br><br><span class="hljs-keyword">var</span> ResourceIconPng = &amp;fyne.StaticResource&#123;<br>	StaticName: <span class="hljs-string">&quot;icon.png&quot;</span>,<br>	StaticContent: []<span class="hljs-keyword">byte</span>&#123;<br>	......<br></code></pre></td></tr></table></figure>
+
+<p>创建 GUI 的代码如下</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs go">a := app.New()<br>a.Settings().SetTheme(&amp;resource.CustomerTheme&#123;&#125;)<br>   a.SetIcon(resource.ResourceIconPng)<br></code></pre></td></tr></table></figure>
+
+<h2 id="一种更通用引入静态资源的方法"><a href="#一种更通用引入静态资源的方法" class="headerlink" title="一种更通用引入静态资源的方法"></a>一种更通用引入静态资源的方法</h2><p>观察 fyne cmd 编译静态资源得到的 go 文件, 会发现其实就是直接把文件变成 byte 数组而已</p>
+<p>既然这样我们也可以自己实现一个 loader, 然后让程序运行的时候再去加载本地路径下面的静态资源文件</p>
+<p>对吧~</p>
+<p>fyne 的静态资源定义如下</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">type</span> StaticResource <span class="hljs-keyword">struct</span> &#123;<br>	StaticName    <span class="hljs-keyword">string</span> <span class="hljs-comment">// 资源名字(好像没用到)</span><br>	StaticContent []<span class="hljs-keyword">byte</span> <span class="hljs-comment">// 资源的 []byte 表示</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>很简单的, 我们直接写一个 io 读取就可以了</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">GetResource</span><span class="hljs-params">(resourcePath <span class="hljs-keyword">string</span>)</span> *<span class="hljs-title">fyne</span>.<span class="hljs-title">StaticResource</span></span> &#123;<br>	finalByte := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">byte</span>, <span class="hljs-number">0</span>)<br><br>	fi, err := os.Open(resourcePath)<br><br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		<span class="hljs-built_in">panic</span>(err)<br>	&#125;<br><br>	<span class="hljs-keyword">defer</span> fi.Close()<br>	r := bufio.NewReader(fi)<br><br>	readBuf := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">byte</span>, <span class="hljs-number">1024</span>)<br>	<span class="hljs-keyword">for</span> &#123;<br>		n, err := r.Read(readBuf)<br>		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &amp;&amp; err != io.EOF &#123;<br>			<span class="hljs-built_in">panic</span>(err)<br>			<span class="hljs-comment">//return</span><br>		&#125;<br>		<span class="hljs-keyword">if</span> <span class="hljs-number">0</span> == n &#123;<br>			<span class="hljs-keyword">break</span><br>		&#125; <span class="hljs-keyword">else</span> &#123;<br>			finalByte = <span class="hljs-built_in">append</span>(finalByte, readBuf[:n]...)<br>		&#125;<br>	&#125;<br>	log.D(<span class="hljs-string">&quot;load resource :&quot;</span> + resourcePath + <span class="hljs-string">&quot; success !&quot;</span>)<br><br>	<span class="hljs-keyword">return</span> &amp;fyne.StaticResource&#123;<br>		StaticName:    fi.Name(),<br>		StaticContent: finalByte,<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>更进一步, 我们可以再加点 map 啊之类的做 buf, 以便每一个资源只加载一次…</p>
+<p>然后在一个 go 文件里面, 一次性加载多个静态资源</p>
+<figure class="highlight isbl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs isbl"><span class="hljs-variable">var</span> <span class="hljs-variable">ResourceIcon</span> = <span class="hljs-function"><span class="hljs-title">GetResource</span>(<span class="hljs-string">&quot;./resource/icon/icon.png&quot;</span>)</span><br><span class="hljs-variable">var</span> <span class="hljs-variable">ResourceFont</span> = <span class="hljs-function"><span class="hljs-title">GetResource</span>(<span class="hljs-string">&quot;./resource/fonts/Alibaba-PuHuiTi-Regular.ttf&quot;</span>)</span><br></code></pre></td></tr></table></figure>
+
+<p>之后我们可以就像上面设置主题字体, ICON 一样, 引用这里的 <code>ResourceIcon</code> 和 <code>ResourceFont</code> 就可以了</p>
+<p>经过测试, 这种方法能行得通</p>
+<p>对比起编译成 go 的方式, 这里的一大好处是我们不需要再提前处理了, 也不会收获一个超过 20M, 连 IDE 都无法编辑的 <code>.go</code> 文件<br>但是问题则在于后续打包的时候可能会有点麻烦</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%94%E5%90%AC%E7%A7%8B%E8%B0%B7/">且听秋谷</a>
+                    
+                  </div>
+                
+              </div>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/blog/copy-file-path-in-nautilus-ubuntu20.html">
+                        <span class="hidden-mobile">解决 ubuntu 20.04 里 nautilus 无法复制文件地址的问题</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+<!-- hexo injector body_end start -->
+  <script src="/js/addArticleNote.js"></script>
+<!-- hexo injector body_end end --></body>
+</html>
