@@ -28,8 +28,6 @@ jobs:
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
-      - name: Clean package-lock.json
-        run: rm -f package-lock.json
       - name: Install Dependencies
         run: npm install
       - name: Build
