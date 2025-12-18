@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>跳转中...</title>
+    <!-- 可选：防止跳转前页面闪烁 -->
+    <meta http-equiv="refresh" content="0; url=https://mcp-partner.github.io">
+</head>
+<body>
+    <!-- 提示文本（可选） -->
+    <div style="text-align: center; margin-top: 50px;">
+        正在跳转至 mcp-partner.github.io...<br>
+        若未自动跳转，请<a href="https://mcp-partner.github.io">点击这里</a>
+    </div>
+
+    <!-- JS 跳转核心代码 -->
+    <script>
+        // 方式1：直接跳转（保留浏览器历史记录，可返回）
+        // window.location.href = "https://mcp-partner.github.io";
+
+        // 方式2：替换当前页面（无历史记录，不可返回）
+        window.location.replace("https://mcp-partner.github.io");
+    </script>
+</body>
+</html>
